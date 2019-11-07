@@ -1,0 +1,118 @@
+// ============ large-Screens =========
+@include media-Xl {
+
+}
+
+
+// ============ Desktop =========
+@include media-Lg {
+
+    .nav-btn {
+        display: none;
+    }
+
+    nav {
+        position: fixed;
+        top: 20%;
+        left: 0;
+    
+        .nav-list {
+            width: 30rem;
+            @include ease;
+    
+            .nav-item {
+                width: 100%;
+                margin-bottom: 1.5rem;
+    
+                &:nth-child(1) {
+                    width: 90%;
+                }
+                &:nth-child(2) {
+                    width: 85%;
+                }
+                &:nth-child(3) {
+                    width: 80%;
+                }
+                &:nth-child(4) {
+                    width: 100%;
+                }
+            }
+    
+            .nav-link {
+                display: inline-block;
+                text-transform: uppercase;
+                font-size: 4rem;
+                font-weight: 400;
+                color: #fff;
+                background-color: rgba(#000, .9);
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                padding: 1rem 2rem;
+                @include ease;
+    
+                &:hover, &.current {
+                    background-color: #fff;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+
+// ============ Tablets =========
+@include media-Md {
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-image: linear-gradient(45deg, transparent 0%, transparent 10%, #000 20%);
+        @include ease;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        transform: translate3d(100%, 0, 0);
+
+        &.show {
+            transform: translate3d(00%, 0, 0);
+        }
+
+        .nav-list {
+
+            .nav-item {
+                text-align: center;
+            }
+
+            .nav-link {
+                display: inline-block;
+                padding: 1rem 2rem;
+                text-transform: uppercase;
+                font-size: 4rem;
+                text-align: center;
+                color: #fff;
+                background-image: linear-gradient(105deg, transparent 0%, transparent 50%, #fff 50%);
+                background-size: 215%;
+                @include ease;
+                margin-bottom: .3rem;
+                border-radius: 3px;
+
+                &:hover, &.current{
+                    background-position: 100%;
+                    color: #000;
+                    transform: translateX(10px);
+                }
+
+            }
+        }
+    }
+}
+
+
+// ============ Smart-Phones =========
+@include media-Sm {
+    
+}

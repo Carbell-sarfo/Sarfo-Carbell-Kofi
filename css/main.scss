@@ -1,0 +1,109 @@
+@import "config";
+
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-size: 62.5%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.logo {
+    color: #000;
+    font-size: 1.6rem;
+    position: fixed;
+    top: 3rem;
+    left: 1.3rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    z-index: 10;
+
+    &:hover {
+        color: darkgrey;
+    }
+}
+
+.nav-btn {
+    cursor: pointer;
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    @include ease;
+    z-index: 10;
+
+    .lines {
+        width: 3rem;
+        height: .3rem;
+        background-color: #000;
+        margin-bottom: .3rem;
+        @include ease;
+    }
+
+    &.close {
+        transform: rotate(-180deg);
+
+        .lines {
+            background-color: darkgray;
+
+            &:nth-child(1) {
+                width: 1rem;
+            }
+            &:nth-child(2) {
+                width: 2rem;
+            }
+            &:nth-child(3) {
+                width: 3rem;
+            }
+        }
+    }
+}
+
+
+
+.section-hero {
+    width: 100%;
+    height: calc(100% - 2rem);
+    background-image: url(../images/img-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+footer {
+    background-color: #000;
+    width: 100%;
+    height: 2rem;
+    color: #c2c2c2;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+
+
+
+@import "responsive";

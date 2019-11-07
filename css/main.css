@@ -1,0 +1,207 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.logo {
+  color: #000;
+  font-size: 1.6rem;
+  position: fixed;
+  top: 3rem;
+  left: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  z-index: 10;
+}
+
+.logo:hover {
+  color: darkgrey;
+}
+
+.nav-btn {
+  cursor: pointer;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  -webkit-transition: .4s ease-out;
+  transition: .4s ease-out;
+  z-index: 10;
+}
+
+.nav-btn .lines {
+  width: 3rem;
+  height: .3rem;
+  background-color: #000;
+  margin-bottom: .3rem;
+  -webkit-transition: .4s ease-out;
+  transition: .4s ease-out;
+}
+
+.nav-btn.close {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.nav-btn.close .lines {
+  background-color: darkgray;
+}
+
+.nav-btn.close .lines:nth-child(1) {
+  width: 1rem;
+}
+
+.nav-btn.close .lines:nth-child(2) {
+  width: 2rem;
+}
+
+.nav-btn.close .lines:nth-child(3) {
+  width: 3rem;
+}
+
+.section-hero {
+  width: 100%;
+  height: calc(100% - 2rem);
+  background-image: url(../images/img-1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+footer {
+  background-color: #000;
+  width: 100%;
+  height: 2rem;
+  color: #c2c2c2;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 769px) {
+  .nav-btn {
+    display: none;
+  }
+  nav {
+    position: fixed;
+    top: 20%;
+    left: 0;
+  }
+  nav .nav-list {
+    width: 30rem;
+    -webkit-transition: .4s ease-out;
+    transition: .4s ease-out;
+  }
+  nav .nav-list .nav-item {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  nav .nav-list .nav-item:nth-child(1) {
+    width: 90%;
+  }
+  nav .nav-list .nav-item:nth-child(2) {
+    width: 85%;
+  }
+  nav .nav-list .nav-item:nth-child(3) {
+    width: 80%;
+  }
+  nav .nav-list .nav-item:nth-child(4) {
+    width: 100%;
+  }
+  nav .nav-list .nav-link {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.9);
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+    -webkit-transition: .4s ease-out;
+    transition: .4s ease-out;
+  }
+  nav .nav-list .nav-link:hover, nav .nav-list .nav-link.current {
+    background-color: #fff;
+    color: #000;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(45deg, transparent 0%, transparent 10%, #000 20%);
+    -webkit-transition: .4s ease-out;
+    transition: .4s ease-out;
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
+  }
+  nav.show {
+    -webkit-transform: translate3d(0%, 0, 0);
+            transform: translate3d(0%, 0, 0);
+  }
+  nav .nav-list .nav-item {
+    text-align: center;
+  }
+  nav .nav-list .nav-link {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+    color: #fff;
+    background-image: linear-gradient(105deg, transparent 0%, transparent 50%, #fff 50%);
+    background-size: 215%;
+    -webkit-transition: .4s ease-out;
+    transition: .4s ease-out;
+    margin-bottom: .3rem;
+    border-radius: 3px;
+  }
+  nav .nav-list .nav-link:hover, nav .nav-list .nav-link.current {
+    background-position: 100%;
+    color: #000;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+}
+/*# sourceMappingURL=main.css.map */
