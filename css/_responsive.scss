@@ -11,13 +11,16 @@
         display: none;
     }
 
+    
     nav {
         position: fixed;
         top: 20%;
         left: 0;
+        z-index: 8;
+        width: 30rem;
+        height: calc(100vh - -2rem);
     
         .nav-list {
-            width: 30rem;
             @include ease;
     
             .nav-item {
@@ -64,18 +67,24 @@
 // ============ Tablets =========
 @include media-Md {
 
+    .container {
+        grid-template-columns: 1fr;
+     }
+
+
     nav {
         position: fixed;
         top: 0;
         left: 0;
         height: 100vh;
         width: 100%;
-        background-image: linear-gradient(45deg, transparent 0%, transparent 10%, #000 20%);
+        background-color: #000;
         @include ease;
         display: grid;
         justify-items: center;
         align-items: center;
         transform: translate3d(100%, 0, 0);
+        z-index: 8;
 
         &.show {
             transform: translate3d(00%, 0, 0);
