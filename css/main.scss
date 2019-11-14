@@ -34,6 +34,10 @@ ul {
     list-style: none;
 }
 
+img {
+    width: 100%;
+}
+
 .nav-bar {
     display: flex;
     height: 60px;
@@ -63,6 +67,7 @@ ul {
         cursor: pointer;
         @include ease;
         z-index: 10;
+
     
         .lines {
             width: 3rem;
@@ -183,6 +188,45 @@ ul {
     }
 }
 
+
+
+// =============== SECTION-gallery ===============
+.section-gallery {
+    width: 80%;
+    height: 100%;
+    margin-bottom: 3rem;
+    margin: 0 auto;
+    padding: 10rem 0rem 0;
+    text-align: center;
+    grid-column-start: 2;
+
+
+    p {
+        font-size: 1.6rem;
+        margin-bottom: 3rem;
+    }
+
+    .gallery-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-gap: 2rem;
+
+        img {
+            // max-height: 60rem;
+            @include ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+
+
+// =============== SECTION-CONTACT ===============
 .section-contact {
     width: 80%;
     margin: 0 auto ;
@@ -277,8 +321,8 @@ ul {
 
                 &:hover,
                 &:focus {
-                    background-color: #000;
-                    color: $color-yellow;
+                    background-color: lighten($color: $color-yellow, $amount: 10);
+                    color: #000;
                 }
             }
         }
@@ -300,8 +344,10 @@ ul {
             color: $color-yellow;
             margin-right: 1rem;
             font-size: 1.4rem;
+            outline: none;
 
-            &:hover {
+            &:hover,
+            &:focus {
                 color: #fff;
                 border: 1px solid #fff;
             }

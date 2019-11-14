@@ -52,13 +52,22 @@
                 height: 100%;
                 text-align: center;
                 padding: 1rem 2rem;
+                outline: none;
                 @include ease;
     
-                &:hover, &.current {
+                &:hover, &.current, &:focus {
                     background-color: #fff;
                     color: #000;
                 }
             }
+        }
+    }
+
+
+    .section-gallery {
+
+        .gallery-container {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }

@@ -14,20 +14,20 @@ $color-yellow: #ffdc40;
 }
 
 .main-heading {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     position: relative;
     
     &::after {
         content: '';
         display: block;
-        background-color: #000;
+        background-color: $color-yellow;
         width: 7rem;
         height: .2rem;
         position: absolute;
         left: 50%;
-        transform: translateX(30%);
+        transform: translateX(-50%);
     }
 }
 
