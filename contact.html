@@ -76,7 +76,7 @@
             </ul>
           </div>
 
-          <form action="!@">
+          <form action="POST" data-netlify="true">
             <h3>Send a message</h3>
             <div class="input-field">
               <input
@@ -111,6 +111,10 @@
                 placeholder="Type your message here"
                 requrired
               ></textarea>
+
+              <div class="field">
+                <div data-netlify-recaptcha="true"></div>
+              </div>
               <input type="submit" value="Send &rarr;" />
             </div>
           </form>
