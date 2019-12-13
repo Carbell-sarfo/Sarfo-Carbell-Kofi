@@ -132,6 +132,7 @@ img {
 }
 
 
+// ============Section-Home ===========
 .section-hero {
     height: calc(100vh - 2rem);
     width: 80%;
@@ -190,37 +191,18 @@ img {
 
 
 
-// =============== SECTION-gallery ===============
-.section-gallery {
-    width: 80%;
-    height: 100%;
-    margin-bottom: 3rem;
-    margin: 0 auto;
-    padding: 10rem 0rem 0;
-    text-align: center;
+// =============== SECTION-Portfolio ===============
+.section-portfolio {
     grid-column-start: 2;
+    width: 80%;
+    margin: 0 auto;   
+    text-align: center;
+    padding: 10rem 5rem 0;
 
-
-    p {
-        font-size: 1.6rem;
-        margin-bottom: 3rem;
-    }
-
-    .gallery-container {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-gap: 2rem;
-
-        img {
-            // max-height: 60rem;
-            @include ease;
-
-            &:hover {
-                transform: scale(1.1);
-            }
-        }
-    }
+p {
+    font-size: 1.6rem;
+    margin-bottom: 3rem;
+}
 }
 
 
