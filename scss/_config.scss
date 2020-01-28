@@ -1,3 +1,4 @@
+$color-primary: darkgray;
 $color-yellow: #ffdc40;
 
 .btn-main {
@@ -6,19 +7,19 @@ $color-yellow: #ffdc40;
     padding: 1rem 2rem;
     font-size: 1.4rem;
     background-color: $color-yellow;
-    font-weight: 400;
+    font-weight: 400;ffe573
 
     &:hover {
-        background-color: lighten($color-yellow, 10);
+        background-color: #ffe573;
     }
 }
-
+  
 .main-heading {
     font-size: 4.5rem;
     font-weight: 400;
     margin-bottom: 3rem;
     position: relative;
-    
+
     &::after {
         content: '';
         display: block;
@@ -27,51 +28,50 @@ $color-yellow: #ffdc40;
         height: .2rem;
         position: absolute;
         left: 50%;
+        -webkit-transform: translateX(-50%);
         transform: translateX(-50%);
     }
 }
-
+  
 .yellow-text {
     color: $color-yellow;
-}
-
-
-
-
-// ============ animation ==========
+  }
+  
 @keyframes clickme {
+    
     0% {
-        transform: translateY(-1rem);
+        -webkit-transform: translateY(-1rem);
+                transform: translateY(-1rem);
     }
     50% {
-        transform: translateY(1rem);
+        -webkit-transform: translateY(1rem);
+                transform: translateY(1rem);
     }
     100% {
-        transform: translateY(-1rem);
+        -webkit-transform: translateY(-1rem);
+                transform: translateY(-1rem);
     }
 }
 
-@mixin ease {
-    transition: .4s ease-out;
-}
 
-@mixin media-Sm {
+// === media- Queries ===
+@mixin mediaSm {
     @media screen and (max-width: 500px) {
         @content;
     }
 }
-@mixin media-Md {
+@mixin mediaMd {
     @media screen and (max-width: 768px) {
         @content;
     }
 }
-@mixin media-Lg {
-    @media screen and (min-width: 769px) {
+@mixin mediaLg {
+    @media screen and (min-width: 789px) {
         @content;
     }
 }
-@mixin media-Xl {
-    @media screen and (min-width: 1150px) {
+@mixin mediaXl {
+    @media screen and (min-width: 1500px) {
         @content;
     }
 }
