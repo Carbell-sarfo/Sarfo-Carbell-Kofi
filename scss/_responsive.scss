@@ -3,6 +3,10 @@
 // === Desktop ===
 @include mediaLg {
 
+  body {
+    font-size: 2rem;
+  }
+
     .nav-btn {
       display: none;
     }
@@ -25,15 +29,31 @@
 
             &:nth-child(1) {
                 width: 90%;
+
+                &:hover {
+                  width: 100%;
+                }
               }
             &:nth-child(2) {
                 width: 85%;
+
+                &:hover {
+                  width: 100%;
+                }
               }
             &:nth-child(3) {
                 width: 90%;
+
+                &:hover {
+                  width: 100%;
+                }
               }
             &:nth-child(4) {
                 width: 100%;
+
+                &:hover {
+                  width: 100%;
+                }
               }
           }
 
@@ -43,21 +63,37 @@
             font-size: 4rem;
             font-weight: 400;
             color: #fff;
-            background-color: rgba(0, 0, 0, 0.9);
+            background-image: linear-gradient(105deg, #000 0%, #000 50%, #fff 50%);
+            background-size: 220%;
             width: 100%;
             height: 100%;
             text-align: center;
             padding: 1rem 2rem;
             outline: none;
-            -webkit-transition: .4s ease-out;
             transition: .4s ease-out;
 
             &:hover,
             &.current,
             &:focus {
-                background-color: #fff;
+                background-position: 100%;
                 color: #000;
              }
+        }
+      }
+    }
+
+    .section-gallery {
+
+      .gallery-container {
+
+
+        img {
+          transition: .4s;
+          overflow: hidden;
+          
+          &:hover {
+            transform: scale(1.5);
+          }
         }
       }
     }
