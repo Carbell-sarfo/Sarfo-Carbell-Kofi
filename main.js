@@ -27,3 +27,49 @@ function openMenu() {
     showMenu = false;
   }
 }
+
+// hide menu on click
+navItem.forEach(item => {
+  item.addEventListener("click", openMenu);
+});
+
+// ====== // Observer // =======
+const sectionHome = document.querySelector(".section-home");
+const sectionAbout = document.querySelector(".section-about");
+const sectionPortfolio = document.querySelector(".section-portfolio");
+const sectionContact = document.querySelector(".section-contact");
+const homeLink = document.querySelector(".home");
+const options = {
+  rootMargin: "-70px 0px 0px 0px"
+};
+const sectionObserver = new IntersectionObserver(function(
+  entries,
+  sectionObserver
+) {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      // navMenu.classList.add("nav-scrolled");
+      homeLink.classList.remove("current");
+      console.log(entry.target);
+      return;
+    } else {
+      // navMenu.classList.remove("nav-scrolled");
+      homeLink.classList.add("current");
+      console.log(entry.target);
+    }
+  });
+},
+options);
+
+sectionObserver.observe(sectionHome);
+
+// slick carousel
+$(".testimonials")
+  .not(".slick-intialized")
+  .slick({
+    autoplay: true,
+    autoplaySpeed: 3000,
+    dots: true,
+    prevArrow: ".section-testimonial .slider-btn .prev",
+    nextArrow: ".section-testimonial .slider-btn .next"
+  });

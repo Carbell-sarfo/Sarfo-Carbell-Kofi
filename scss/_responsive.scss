@@ -7,136 +7,115 @@
     font-size: 2rem;
   }
 
+
+
+  nav {
+    background-color: var(--secondary);
+
+
     .nav-btn {
       display: none;
     }
 
-    nav {
-      position: fixed;
-      top: 20%;
-      left: 0;
-      z-index: 8;
-      width: 30rem;
-      height: calc(100vh - -2rem);
+    .nav-list {
+      display: flex;
 
-      .nav-list {
-        transition: .4s ease-out;
+      .nav-item {
 
-        .nav-item {
-            width: 100%;
-            margin-bottom: 1.5rem;
-            transition: .4s ease-out;
+        .nav-link {
+          padding: 1rem 2rem;
+          color: var(--primary);
+          transition: .3s;
+          text-transform: uppercase;
+          font-weight: 600;
 
-            &:nth-child(1) {
-                width: 90%;
-
-                &:hover {
-                  width: 100%;
-                }
-              }
-            &:nth-child(2) {
-                width: 85%;
-
-                &:hover {
-                  width: 100%;
-                }
-              }
-            &:nth-child(3) {
-                width: 90%;
-
-                &:hover {
-                  width: 100%;
-                }
-              }
-            &:nth-child(4) {
-                width: 100%;
-
-                &:hover {
-                  width: 100%;
-                }
-              }
+          &:hover,&.current {
+            background-color: var(--primary);
+            color: var(--secondary);
           }
 
-          .nav-link {
-            display: inline-block;
-            text-transform: uppercase;
-            font-size: 4rem;
-            font-weight: 400;
-            color: #fff;
-            background-image: linear-gradient(105deg, #000 0%, #000 50%, #fff 50%);
-            background-size: 220%;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-            padding: 1rem 2rem;
-            outline: none;
-            transition: .4s ease-out;
-
-            &:hover,
-            &.current,
-            &:focus {
-                background-position: 100%;
-                color: #000;
-             }
-        }
-      }
-    }
-
-    .section-gallery {
-
-      .gallery-container {
-
-
-        img {
-          transition: .4s;
-          overflow: hidden;
           
-          &:hover {
-            transform: scale(1.5);
-          }
         }
       }
     }
-   
+
+  }
+
+  .section-home {
+
+    .home-text {
+    }
+
+    .home-text {
+      text-align: left;
+    }
+  }
+
+  //  ====== sectioon- about
     .section-about {
 
-      .about-container {
-        grid-template-columns: repeat(2, 1fr);
+      .about-content {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+       
+        .about-text {
+          grid-column: 1/2;
+          grid-row: 1/2;
 
-        .bio {
-          grid-column: 1 / 3;
+          p {
+            display: inline-block;
+
+          }
+        }
+        .about-image {
+          grid-column: 2/3;
+          grid-row: 1/3;
         }
       }
     }
 }
+
+
+// ====== testimonials ==========
+.section-testimonial {
+  .testimony {
+    // width: 
+  }
+}
+
   
 
 // === tablets ===
 @include mediaMd {
-    .container {
-        grid-template-columns: 1fr;
-    }
+
+  .main-heading {
+    font-size: 6rem;
+    font-weight: 900;
+}
 
     nav {
       position: fixed;
       top: 0;
       left: 0;
-      height: 100vh;
-      width: 100%;
-      background-color: #000;
-      -webkit-transition: .4s ease-out;
-      transition: .4s ease-out;
-      display: grid;
-      justify-items: center;
-      align-items: center;
-      transform: translate3d(100%, 0, 0);
-      z-index: 8;
-
-      &.show {
-          transform: translate3d(0%, 0, 0);
-      }
 
       .nav-list {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: #000;
+        transition: .4s ease-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transform: translate3d(100%, 0, 0);
+        z-index: 8;
+  
+        &.show {
+            transform: translate3d(0%, 0, 0);
+        }
 
         .nav-item {
             text-align: center;
@@ -168,5 +147,17 @@
 
     }
 
+    .section-home {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
     
+}
+
+@include mediaSm {
+  .main-heading {
+    font-size: 4rem;
+    font-weight: 900;
+}
 }
