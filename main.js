@@ -48,14 +48,14 @@ const sectionObserver = new IntersectionObserver(function(
 ) {
   entries.forEach(entry => {
     if (!entry.isIntersecting) {
-      // navMenu.classList.add("nav-scrolled");
+      navMenu.classList.add("nav-scrolled");
       homeLink.classList.remove("current");
-      console.log(entry.target);
+      // console.log(entry.target);
       return;
     } else {
-      // navMenu.classList.remove("nav-scrolled");
+      navMenu.classList.remove("nav-scrolled");
       homeLink.classList.add("current");
-      console.log(entry.target);
+      // console.log(entry.target);
     }
   });
 },
