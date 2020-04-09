@@ -62,14 +62,3 @@ const sectionObserver = new IntersectionObserver(function(
 options);
 
 sectionObserver.observe(sectionHome);
-
-// slick carousel
-$(".testimonials")
-  .not(".slick-intialized")
-  .slick({
-    autoplay: true,
-    autoplaySpeed: 3000,
-    dots: true,
-    prevArrow: ".section-testimonial .slider-btn .prev",
-    nextArrow: ".section-testimonial .slider-btn .next"
-  });
