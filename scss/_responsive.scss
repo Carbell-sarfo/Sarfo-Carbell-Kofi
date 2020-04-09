@@ -236,8 +236,9 @@
     text-align: center;
 
     .btn-1 {
-      margin: 0;
-      margin-bottom: 1rem;
+    }
+    .btn-2 {
+
     }
   }
 }
@@ -245,16 +246,16 @@
 
 
 
-// @media screen and (max-width: 424px) {
+@media screen and (max-width: 424px) {
 
-//   .section-home {
+  .section-home {
 
-//     .home-text {
-//       text-align: center;
+    .home-text {
+      text-align: center;
   
-//       .btn-1 {
-//         margin-bottom: 1rem;
-//       }
-//     }
-//   }
-// }
+      .btn-1 {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

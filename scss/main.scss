@@ -40,6 +40,12 @@ img {
   width: 100%;
 }
 
+// ====== logo ======
+.logo {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
 .nav-scrolled {
   --primary: #1a1a1d;
   --secondary: #fff;
@@ -66,8 +72,6 @@ nav {
 
   .logo {
     color: var(--primary);
-    text-transform: uppercase;
-    font-size: 1.8rem;
   }
 
 
@@ -128,11 +132,15 @@ nav {
   .home-text {
     margin-top: 15rem;
 
+    .m-left {
+      transition: .2s;
+    }
 
     span {
       display: inline-block;
       font-size: 5rem;
       color: $color-neutral;
+      cursor: default;
 
       &:hover {
         color: lightseagreen;

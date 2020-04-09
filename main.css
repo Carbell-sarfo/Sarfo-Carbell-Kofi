@@ -10,34 +10,9 @@
   color: #1a1a1d;
 }
 
-@-webkit-keyframes clickme {
-  0% {
-    -webkit-transform: translateY(-1rem);
-    transform: translateY(-1rem);
-  }
-  50% {
-    -webkit-transform: translateY(1rem);
-    transform: translateY(1rem);
-  }
-  100% {
-    -webkit-transform: translateY(-1rem);
-    transform: translateY(-1rem);
-  }
-}
-
-@keyframes clickme {
-  0% {
-    -webkit-transform: translateY(-1rem);
-    transform: translateY(-1rem);
-  }
-  50% {
-    -webkit-transform: translateY(1rem);
-    transform: translateY(1rem);
-  }
-  100% {
-    -webkit-transform: translateY(-1rem);
-    transform: translateY(-1rem);
-  }
+.hop {
+  -webkit-transform: translateY(-4px) scale(0.8);
+          transform: translateY(-4px) scale(0.8);
 }
 
 *,
@@ -87,6 +62,11 @@ img {
   width: 100%;
 }
 
+.logo {
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
 .nav-scrolled {
   --primary: #1a1a1d;
   --secondary: #fff;
@@ -120,8 +100,6 @@ nav {
 
 nav .logo {
   color: var(--primary);
-  text-transform: uppercase;
-  font-size: 1.8rem;
 }
 
 nav .nav-btn {
@@ -185,10 +163,16 @@ nav .nav-btn.close .lines:nth-child(3) {
   margin-top: 15rem;
 }
 
+.section-home .home-text .m-left {
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
 .section-home .home-text span {
   display: inline-block;
   font-size: 5rem;
   color: #D8EBF4;
+  cursor: default;
 }
 
 .section-home .home-text span:hover {
@@ -1012,8 +996,13 @@ footer {
   .section-home .home-text {
     text-align: center;
   }
+}
+
+@media screen and (max-width: 424px) {
+  .section-home .home-text {
+    text-align: center;
+  }
   .section-home .home-text .btn-1 {
-    margin: 0;
     margin-bottom: 1rem;
   }
 }

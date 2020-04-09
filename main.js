@@ -60,5 +60,17 @@ const sectionObserver = new IntersectionObserver(function(
   });
 },
 options);
-
 sectionObserver.observe(sectionHome);
+
+// ====== hop =======
+const hopItem = document.querySelectorAll(".m-left");
+hopItem.forEach(item => {
+  item.addEventListener("mouseover", function() {
+    item.classList.add("hop");
+  });
+});
+hopItem.forEach(item => {
+  item.addEventListener("mouseout", function() {
+    item.classList.remove("hop");
+  });
+});
