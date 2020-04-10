@@ -484,7 +484,7 @@ nav .nav-btn.close .lines:nth-child(3) {
 
 .section-testimonial .testimonials .testimony {
   width: 80%;
-  max-width: 600px;
+  max-width: 700px;
   margin: auto;
   padding: 2rem;
   -webkit-box-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.3);
@@ -871,6 +871,12 @@ footer {
   display: inline-block;
 }
 
+@media screen and (min-width: 1500px) {
+  html {
+    font-size: 100%;
+  }
+}
+
 @media screen and (min-width: 769px) {
   body {
     font-size: 2rem;
@@ -897,6 +903,14 @@ footer {
   nav .nav-list .nav-item .nav-link:hover, nav .nav-list .nav-item .nav-link.current {
     background-color: var(--primary);
     color: var(--secondary);
+  }
+  .section-home {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 10rem;
   }
   .section-home .home-text {
     text-align: left;

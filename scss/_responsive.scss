@@ -1,4 +1,10 @@
+// Large screens
+@include mediaXl {
 
+  html {
+    font-size: 100%;
+  }
+}
 
 // === Desktop ===
 @include mediaLg {
@@ -43,6 +49,9 @@
 
   //===== section-home ======
   .section-home {
+    display: grid;
+    align-items: center;
+    padding-left: 10rem;
 
     .home-text {
       text-align: left;
