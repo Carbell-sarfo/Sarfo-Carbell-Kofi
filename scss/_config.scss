@@ -23,6 +23,25 @@ $color-neutral: #D8EBF4;
 
 
 
+
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
 // === media- Queries ===
 @mixin mediaSm {
     @media screen and (max-width: 500px) {

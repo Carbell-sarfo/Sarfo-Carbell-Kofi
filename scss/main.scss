@@ -149,6 +149,7 @@ nav {
 
     .name {
       color: $color-primary;
+      animation: inLeft .4s ease forwards 1s;
     }
 
       p {
@@ -172,6 +173,11 @@ nav {
         z-index: 1;
         overflow: hidden;
         border-radius: 2px;
+        animation-name: fadeIn;
+        animation-delay: 2s;
+        animation-duration: .5s;
+        opacity: 0;
+        animation-fill-mode: forwards;
 
         &:hover,
         &:focus {
@@ -209,6 +215,11 @@ nav {
         overflow: hidden;
         background-color: $color-primary;
         border-radius: 2px;
+        animation-name: fadeIn;
+        animation-delay: 2s;
+        animation-duration: 2s;
+        opacity: 0;
+        animation-fill-mode: forwards;
 
         &:focus,
         &:hover {

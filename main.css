@@ -15,6 +15,30 @@
           transform: translateY(-4px) scale(0.8);
 }
 
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 *,
 *::after,
 *::before {
@@ -181,6 +205,8 @@ nav .nav-btn.close .lines:nth-child(3) {
 
 .section-home .home-text .name {
   color: #00C6C2;
+  -webkit-animation: inLeft .4s ease forwards 1s;
+          animation: inLeft .4s ease forwards 1s;
 }
 
 .section-home .home-text p {
@@ -204,6 +230,15 @@ nav .nav-btn.close .lines:nth-child(3) {
   z-index: 1;
   overflow: hidden;
   border-radius: 2px;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .section-home .home-text .btn-2:hover, .section-home .home-text .btn-2:focus {
@@ -241,6 +276,15 @@ nav .nav-btn.close .lines:nth-child(3) {
   overflow: hidden;
   background-color: #00C6C2;
   border-radius: 2px;
+  -webkit-animation-name: fadeIn;
+          animation-name: fadeIn;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  opacity: 0;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .section-home .home-text .btn-1:focus, .section-home .home-text .btn-1:hover {
