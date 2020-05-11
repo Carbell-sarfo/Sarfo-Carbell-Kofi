@@ -764,6 +764,10 @@ nav .nav-btn.close .lines:nth-child(3) {
   background-color: #0077b5;
 }
 
+.section-contact .social-list .social-item:nth-child(4) .social-link::after {
+  background-color: red;
+}
+
 .section-contact .social-list .social-link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -993,7 +997,8 @@ footer {
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: #000;
+    background-image: -webkit-gradient(linear, left top, right bottom, from(#009390), to(#1a1a1d));
+    background-image: linear-gradient(to right bottom, #009390, #1a1a1d);
     -webkit-transition: .4s ease-out;
     transition: .4s ease-out;
     display: -webkit-box;

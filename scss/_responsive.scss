@@ -158,7 +158,7 @@
         left: 0;
         height: 100vh;
         width: 100%;
-        background-color: #000;
+        background-image: linear-gradient(to right bottom, darken($color-primary, 10), $color-secondary);
         transition: .4s ease-out;
         display: flex;
         flex-direction: column;
