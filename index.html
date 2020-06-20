@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <meta
       name="description"
-      content="Hello, I am a currently based in Accra, Ghana. I'm a passionate and a self taught
-    UI/Ux with skills to make your website memorable."
+      content="Hello, I'm a passionate and a self taught
+    UI/Ux with skills to make your website memorable. I am a currently based in Accra, Ghana. "
     />
     <title>Sarfo Carbell Kofi</title>
     <!-- google-fonts -->
@@ -48,10 +48,10 @@
 
   <body>
     <!-- ========= Loaders ========= -->
-    <div class="loaders">
+    <!-- <div class="loaders">
       <div class="circle"></div>
       <div class="circle"></div>
-    </div>
+    </div> -->
 
     <div class="main">
       <nav class="">
@@ -61,7 +61,7 @@
           <div class="lines"></div>
         </div>
 
-        <a href="index.html" class="logo"><strong>S.k Carbell</strong></a>
+        <a href="index.html" class="logo"><strong>carbell</strong></a>
 
         <ul class="nav-list">
           <li class="nav-item">
@@ -82,7 +82,7 @@
       </nav>
 
       <!-- ==== section-Home === -->
-      <section class="container section-home" id="section-home">
+      <section class="section-home" id="section-home">
         <div class="home-text">
           <h1>
             <span>H</span>
@@ -97,17 +97,23 @@
             <span class="m-left">,</span>
           </h1>
           <p>
-            currently based in Accra, Ghana. I'm a passionate and a self taught
+            I'm a passionate and a self taught
             <strong class="">UI/Ux</strong> with <br />
-            skills to make your website memorable.
+            skills to make your website memorable. currently based in Accra, Ghana. 
           </p>
-          <a href="#section-contact" class="btn-1">Get in touch</a>
-          <a href="#section-portfolio" class="btn-2">View Projects</a>
+          <a href="#section-contact" class="btn-main">Get in touch</a>
+          <a href="#section-portfolio" class="btn-secondary">View Projects</a>
         </div>
+        <div class="home-profile">
+          <img src="images/profilie.png" alt="Sarfo Carbell" srcset="">
+        </div>
+
+        <span class="scroll"></span>
+        <h1 class="watermark">designer</h1>
       </section>
 
-      <!-- === Section-About === -->
-      <section class="section-about container" id="section-about">
+      <!-- ========== Section-About ============== -->
+      <section class="section-about" id="section-about">
         <h2 class="main-heading">About</h2>
         <div class="about-content">
           <div class="about-image">
@@ -156,13 +162,13 @@
               No project is <strong>small</strong> or <strong>big</strong>. If
               you're passionate about it, We can make it a reality.
             </p>
-            <a href="mailto:sarfocarbell@gmail.com">Send a messsage</a>
+            <a href="mailto:sarfocarbell@gmail.com" class="btn-main">Send a messsage</a>
           </div>
         </div>
       </section>
 
-      <!-- === Section-Portfolio -->
-      <section class="section-portfolio container" id="section-portfolio">
+      <!-- ========= Section-Portfolio ===========-->
+      <section class="section-portfolio" id="section-portfolio">
         <h2 class="main-heading">Work</h2>
         <p class="portfolio-p">
           Here a few of the projects I have embarked on. Hopefully Yours will be
@@ -184,8 +190,8 @@
           </div>
         </div>
       </section>
-      <!-- === Section-testimonial -->
-      <section class="section-testimonial container" id="section-testimonial">
+      <!-- ========= Section-testimonial ========-->
+      <section class="section-testimonial" id="section-testimonial">
         <h2 class="main-heading">Testimonies</h2>
 
         <input type="radio" name="r1" id="r1" checked />
@@ -195,10 +201,10 @@
         <div class="testimonials">
           <div class="testimony-container t-1">
             <div class="testimony">
-              <figure>
+              <div class="testimonial-image">
                 <img src="images/profile-1.jpg" alt="falhass" />
-                <figcaption>Falhass</figcaption>
-              </figure>
+                <span>Falhass</span>
+              </div class="testimonial-image">
               <div class="testimonial-text">
                 <p>
                   Getting a personal website was a problem until I met Sarfo. He
@@ -209,6 +215,10 @@
                   exhorbitant prices.
                 </p>
               </div>
+            </div>
+            <div class="slider-btn">
+              <label for="r3" class="fa fa-chevron-left prev"></label>
+              <label for="r2" class="fa fa-chevron-right next"></label>
             </div>
           </div>
           <div class="testimony-container">
@@ -227,6 +237,10 @@
                 </p>
               </div>
             </div>
+            <div class="slider-btn">
+              <label for="r1" class="fa fa-chevron-left prev"></label>
+              <label for="r3" class="fa fa-chevron-right next"></label>
+            </div>
           </div>
           <div class="testimony-container">
             <div class="testimony">
@@ -242,6 +256,10 @@
                 </p>
               </div>
             </div>
+            <div class="slider-btn">
+              <label for="r2" class="fa fa-chevron-left prev"></label>
+              <label for="r1" class="fa fa-chevron-right next"></label>
+            </div>
           </div>
         </div>
 
@@ -253,7 +271,7 @@
       </section>
 
       <!-- ==== section-Contact === -->
-      <section class="section-contact container" id="section-contact">
+      <section class="section-contact" id="section-contact">
         <h2 class="main-heading">Contact</h2>
         <p class="contact-p">
           If you are interested in my work, feel free to contact me with my
@@ -327,13 +345,16 @@
             </li>
           </ul>
         </div>
+        
+        <h2>Follow me on social media</h2>
+        <p>You are a click away from our social media pages</p>
         <ul class="social-list">
           <li class="social-item">
             <a
               href="https://www.facebook.com/carbell.sarfo.5"
               class="social-link"
             >
-              <i class="fa fa-facebook"></i>
+              <i class="fa fa-youtube-play"></i>
             </a>
           </li>
           <li class="social-item">
@@ -357,7 +378,7 @@
               href="https://www.youtube.com/channel/UCdC_rW9x4MnQvubSJOg4ihQ?view_as="
               class="social-link"
             >
-              <i class="fa fa-youtube-play"></i>
+              <i class="fa fa-facebook"></i>
             </a>
           </li>
         </ul>

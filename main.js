@@ -49,12 +49,12 @@ const sectionObserver = new IntersectionObserver(function (
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
       navMenu.classList.add("nav-scrolled");
-      homeLink.classList.remove("current");
+      // homeLink.classList.remove("current");
       // console.log(entry.target);
       return;
     } else {
       navMenu.classList.remove("nav-scrolled");
-      homeLink.classList.add("current");
+      // homeLink.classList.add("current");
       // console.log(entry.target);
     }
   });
@@ -76,13 +76,13 @@ hopItem.forEach((item) => {
 });
 
 // ================ loaders ================
-const main = document.querySelector(".main");
-const loaders = document.querySelector(".loaders");
+// const main = document.querySelector(".main");
+// const loaders = document.querySelector(".loaders");
 
-setTimeout(() => {
-  loaders.style.opacity = 0;
-  loaders.style.display = "none";
+// setTimeout(() => {
+//   loaders.style.opacity = 0;
+//   loaders.style.display = "none";
 
-  main.style.display = "block";
-  main.style.opacity = 1;
-}, 4000);
+//   main.style.display = "block";
+//   main.style.opacity = 1;
+// }, 4000);

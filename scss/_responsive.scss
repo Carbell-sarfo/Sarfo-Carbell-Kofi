@@ -2,7 +2,15 @@
 @include mediaXl {
 
   html {
-    font-size: 100%;
+    font-size: 70%;
+  }
+
+  .section-contact {
+
+    .contact-container {
+      flex-direction: row;
+      background-image: linear-gradient(90deg, #fff 0%, #fff 55%, rgba(#0072c6, .8) 55%), url(images/imagee.jpg);
+    }
   }
 }
 
@@ -31,16 +39,34 @@
         .nav-link {
           padding: 1rem 2rem;
           color: var(--primary);
+          display: flex;
           transition: .3s;
           text-transform: uppercase;
           font-weight: 600;
+          position: relative;
+          z-index: 1;
+          overflow: hidden;
+          // background-color: red;
+          // display: inline-block;
 
-          &:hover,&.current {
-            background-color: var(--primary);
-            color: var(--secondary);
+          &:hover::after {
+            left: 48%;
           }
 
-          
+          &::after {
+            content: "";
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: var(--primary);
+            position: absolute;
+            z-index: -1;
+            bottom: 1px;
+            left: -20px;
+            transition: .4s;
+          }
+         
         }
       }
     }
@@ -49,7 +75,7 @@
 
   //===== section-home ======
   .section-home {
-    display: grid;
+    display: flex;
     align-items: center;
     padding-left: 10rem;
 
@@ -66,6 +92,7 @@
 
   //  ====== section-about ======
     .section-about {
+      padding-top: 30rem;
 
       .about-content {
         display: flex;
@@ -80,7 +107,7 @@
           }
         }
         .about-image {
-      
+          margin-top: 10rem;
         }
       }
     }
@@ -88,9 +115,11 @@
 
 // ============ section-portfolio ==============
 .section-portfolio {
-  font-size: 1.5rem;;
+  font-size: 1.5rem;
+  padding-top: 25rem;
 }
 
+// ===== Section-case =======
 .section-case {
 
   .case-container {
@@ -124,6 +153,7 @@
 
 //  ====== section-contact ========
  .section-contact {
+   padding-top: 25rem;
 
   .contact-container {
 
@@ -143,7 +173,7 @@
 @include mediaMd {
 
   .main-heading {
-    font-size: 6rem;
+    font-size: 15rem;
     font-weight: 900;
 }
 
@@ -158,7 +188,7 @@
         left: 0;
         height: 100vh;
         width: 100%;
-        background-image: linear-gradient(to right bottom, darken($color-primary, 10), $color-secondary);
+        background: $color-secondary;
         transition: .4s ease-out;
         display: flex;
         flex-direction: column;
@@ -202,7 +232,7 @@
     }
 
     .section-home {
-      display: grid;
+      display: flex;
       align-items: center;
       justify-content: center;
        
@@ -212,21 +242,22 @@
             
         }
     
+    .section-about {
+      padding-top: 25rem;
+
+      .about-content {
+
+        .about-image {
+          height: 400px;
+        }
+      }
+    }
 
     .section-contact {
+      padding-top: 20rem;
 
       .contact-container {
-        grid-template-columns: 1fr;
-        // grid-template-rows: 1fr 2fr;
-        padding: 2rem;
-
-        background-image: linear-gradient(-20deg, $color-secondary 0%, $color-secondary 60%, rgba(#636363, .8) 60%), url(images/imagee.jpg);
-        background-position: top;
-        text-align: center;
-      }
-
-      .contact-list {
-        grid-row-start: 1;
+       
       }
     
 }
@@ -234,9 +265,67 @@
 }
 
 @include mediaSm {
+  body {
+    text-align: center;
+  }
+
   .main-heading {
-    font-size: 4rem;
+    font-size: 10rem;
     font-weight: 900;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .nav-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background: $color-secondary;
+    transition: .4s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate3d(100%, 0, 0);
+    z-index: 8;
+
+    &.show {
+        transform: translate3d(0%, 0, 0);
+    }
+
+    .nav-item {
+        text-align: center;
+      }
+
+    .nav-link {
+        display: inline-block;
+        padding: 1rem 2rem;
+        text-transform: uppercase;
+        font-size: 4rem;
+        text-align: center;
+        color: #fff;
+        background-image: linear-gradient(105deg, transparent 0%, transparent 50%, #fff 50%);
+        background-size: 215%;
+        -webkit-transition: .4s ease-out;
+        transition: .4s ease-out;
+        margin-bottom: .3rem;
+        border-radius: 3px;
+
+
+        &:hover,
+        &.current {
+            background-position: 100%;
+            color: #000;
+            transform: translateX(10px);
+        }
+      }
+  }
+
 }
 
 .section-home {
@@ -250,14 +339,24 @@
 
     }
   }
+
+  .home-profile {
+    display: none;
+  }
+
+  .watermark {
+    font-size: 20rem;
+    left: -10rem;
+  }
 }
 }
 
 
 
-@media screen and (max-width: 424px) {
+@media screen and (max-width: 400px) {
 
   .section-home {
+    height: 100vh;
 
     .home-text {
       text-align: center;
