@@ -34,7 +34,7 @@ navItem.forEach((item) => {
 });
 
 // ====== // Observer // =======
-const sectionHome = document.querySelector(".section-home");
+const sectionHome = document.getElementById("banner");
 const sectionAbout = document.querySelector(".section-about");
 const sectionPortfolio = document.querySelector(".section-portfolio");
 const sectionContact = document.querySelector(".section-contact");
@@ -61,28 +61,3 @@ const sectionObserver = new IntersectionObserver(function (
 },
 options);
 sectionObserver.observe(sectionHome);
-
-// ====== hop =======
-const hopItem = document.querySelectorAll(".m-left");
-hopItem.forEach((item) => {
-  item.addEventListener("mouseover", function () {
-    item.classList.add("hop");
-  });
-});
-hopItem.forEach((item) => {
-  item.addEventListener("mouseout", function () {
-    item.classList.remove("hop");
-  });
-});
-
-// ================ loaders ================
-// const main = document.querySelector(".main");
-// const loaders = document.querySelector(".loaders");
-
-// setTimeout(() => {
-//   loaders.style.opacity = 0;
-//   loaders.style.display = "none";
-
-//   main.style.display = "block";
-//   main.style.opacity = 1;
-// }, 4000);
