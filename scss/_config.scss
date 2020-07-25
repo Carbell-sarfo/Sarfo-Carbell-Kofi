@@ -1,14 +1,11 @@
-$color-primary: #0072c6;
-$color-secondary: #ea4c89;
-$color-neutral: #D8EBF4;
-  
+
 .main-heading {
     display: inline-block;
     font-size: 6rem;
     font-weight: 900;
     margin-bottom: 3rem;
     color: transparent;
-    background-image: linear-gradient(to right, $color-primary, $color-secondary);
+    background-image: linear-gradient(to right, var(--clr-primary), var(--clr-secondary));
     background-clip: text;
     -webkit-background-clip: text;
 }
@@ -16,7 +13,7 @@ $color-neutral: #D8EBF4;
 
   
 .secondary-text {
-    color: $color-secondary;
+    color: var(--clr-secondary);
   }
   
 
@@ -45,7 +42,7 @@ $color-neutral: #D8EBF4;
     font-weight: 600;
     border: 2px solid rgba(255, 255, 255, 0.404);
     z-index: 1;
-    background-color: $color-secondary;
+    background-color: var(--clr-secondary);
     border-radius: 2px;
     transition: .4s ease-out;
     box-shadow: 0 .5rem .5rem rgba(#000, .5);
@@ -69,7 +66,7 @@ $color-neutral: #D8EBF4;
 .btn-secondary {
     display: inline-block;
     color: #fff;
-    background-color: $color-primary;
+    background-color: var(--clr-primary);
     padding: 1.5rem 3rem;
     font-size: 1.6rem;
     font-weight: 600;
@@ -82,7 +79,7 @@ $color-neutral: #D8EBF4;
 
     &:hover,
     &:focus {
-      background-color: $color-primary;
+      background-color: var(--clr-primary);
       transform: scale(1.1);
       box-shadow: 0 .6rem 1.5rem rgba(#000, .3);
       z-index: 2;

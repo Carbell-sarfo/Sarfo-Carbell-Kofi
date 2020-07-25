@@ -21,10 +21,15 @@
     font-size: 2rem;
   }
 
+  .container {
+    padding-left: 10rem;
+    padding-right: 10rem;
+  }
+
 
 // ======= nav-btn =======
   nav {
-    background-color: var(--secondary);
+    background-color: var(--clr-secondary);
 
 
     .nav-btn {
@@ -38,7 +43,7 @@
 
         .nav-link {
           padding: 1rem 2rem;
-          color: var(--primary);
+          color: var(--clr-primary);
           display: flex;
           transition: .3s;
           text-transform: uppercase;
@@ -57,7 +62,7 @@
             width: 7px;
             height: 7px;
             border-radius: 50%;
-            background-color: var(--primary);
+            background-color: var(--clr-primary);
             position: absolute;
             z-index: -1;
             bottom: 1px;
@@ -174,7 +179,7 @@
         left: 0;
         height: 100vh;
         width: 100%;
-        background: $color-secondary;
+        background: var(--clr-secondary);
         transition: .4s ease-out;
         display: flex;
         flex-direction: column;
@@ -271,7 +276,7 @@ nav {
     left: 0;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(to right bottom, #02457c,$color-primary, $color-secondary);
+    background: linear-gradient(to right bottom, #02457c,#0072c6, #ea4c89);
     transition: .4s ease-out;
     display: flex;
     flex-direction: column;
