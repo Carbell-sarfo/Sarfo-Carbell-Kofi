@@ -16,31 +16,36 @@
 
 html {
   height: 100%;
+  width: 100%;
   font-size: 62.5%;
   scroll-behavior: smooth;
   font-family: sans-serif;
 }
 
 body {
-  max-width: initial;
-  min-height: 100vh;
+  max-width: 100%;
+  height: 100vh;
   line-height: 1.5;
   padding: 0;
   margin: 0;
   font-family: "Lato", sans-serif;
-  font-size: 2rem;
+  font-family: 'Lato', sans-serif;
   color: rgb(68, 74, 81);
-  display: grid;
+  overflow-x: hidden;
 }
 
 a {
   text-decoration: none;
-  // color: #000;
   font-size: 1.4rem;
 }
 
-p {
+p{
   font-size: 1.9rem;
+  font-family: "Lato",sans-serif;
+}
+
+h2 {
+  font-family: 'Permanent Marker', cursive;  font-size: 2rem;
 }
 
 ul {
@@ -53,9 +58,16 @@ img {
 
 // ========= Container ===========
 .container {
-  width: 100%;
-  padding-left: 3rem;
-  padding-right: 3rem;
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.s1 {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #e7e7e7;
+}
+.s2 {
+  border-top: 1px solid #e7e7e7;
 }
 
 // ====== logo ======
@@ -63,6 +75,7 @@ img {
   font-weight: 600;
   font-size: 1.8rem;
   text-transform: uppercase;
+  color: var(--clr-primary);
 }
 
 .nav-scrolled {
@@ -83,7 +96,7 @@ nav {
   padding: 0 3rem;
   justify-content: space-between;
   z-index: 9;
-  position: fixed;
+  position: sticky;
   top: 0;
   left: 0;
   background-color: var(--clr-secondary);
@@ -109,7 +122,7 @@ nav {
 
     &:hover .lines,
     &:focus .lines {
-      background-color: var(--clr-primary);
+      background-color: #ea4c89;
     }
 
     .lines {
@@ -117,7 +130,7 @@ nav {
         height: .2rem;
         margin-bottom: .7rem;
         transition: .4s ease-out;
-        background-color: var(--clr-neutral);
+        background-color: var(--clr-primary);
 
         &:not(:last-child) {
           margin-bottom: .7rem;
@@ -128,7 +141,7 @@ nav {
           transform: rotate(-180deg);
 
         .lines {
-            background-color: var(--clr-primary);
+            background-color: var(--clr-neutral);
 
             &:nth-child(1) {
                 transform: rotate(45deg) translate(6px, 6px);
@@ -146,20 +159,26 @@ nav {
 }
 
 
-//   ==== section-home ======
+//   ======================================================
+//                   section-home 
+// =========================================================
 .section-home {
   width: 100%;
-  height: 90vh;
+  height: 80vh;
   display: grid;  
-  justify-content: space-between;
-  align-items: center;
+  grid-template-columns: 1fr;
   background-color: var(--clr-primary);
   position: relative;
   overflow: hidden;
-  grid-column: 1/-1;
+
+  .home-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding-top: 10rem;
+    align-content: center;
+  }
 
   .home-text {
-    // margin-top: 15rem;
     z-index: 2;
 
     h1 {
@@ -189,7 +208,6 @@ nav {
   .home-profile {
     width: 100%;
     max-width: 400px;
-    z-index: 2;
   }
 
   .scroll {
@@ -231,47 +249,41 @@ nav {
 
 
 
-// === Section-about =========
+// =======================================================
+//                Section-about
+// ==================================================  =========
 .section-about {
-    // padding: 8rem 5rem;
-    padding-top: 10rem;
-    // font-size: 1.6rem;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
+    padding: 5rem 0;
 
     .about-content {
       width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+      'about-image'
+      'about-text-1'
+      'about-text-2'
+      ;
 
       .about-image {
-        width: 100%;
-        height: 300px;
-        overflow: hidden;
-        // margin-top: -5rem;
-        text-align: center;
-
-        img {
-          display: inline-block;
-          max-width: 500px;
-          width: 100%;
-          clip-path: circle(30% at 50% 30%);
-        }
+        grid-area: about-image;
       }
 
-      .about-text {
-        width: 100%;
+      .about-text-1 {
+        grid-area: about-text-1;
 
-        a {
-          margin: 4rem 0;
-        }
+      }
 
-        h2 {
-          font-size: 3.2rem;
-        }
+      .about-text-2 {
+        grid-area: about-text-2;
+      }
+
+      h3 {
+        font-size: 3.2rem;
+      }
+
+      a {
+        margin: 4rem 0;
       }
 
     }
@@ -279,12 +291,11 @@ nav {
 }
 
 
-
-
-// ==== section-portfolio ====
+// =======================================================
+//                Section-portfolio
+// =======================================================
 .section-portfolio {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
+ padding: 5rem 0;
   position: relative;
 
   .main-heading {
@@ -369,11 +380,20 @@ nav {
 }
 
 
+// =======================================================
+//                Section-youtube
+// ==================================================  =========
+.section-youtube {
+  padding: 5rem 0;
+}
 
-// === Section-C0ntact=== 
+
+// =======================================================
+//                Section-contact
+// ==================================================  =========
 .section-contact {
   width: 100%;
-  padding-top: 15rem;
+  padding-top: 5rem;
   position: relative;
 
   .contact-p {
@@ -548,8 +568,10 @@ nav {
 
     .social-link {
         display: flex;
-        width: 8rem;
-        height: 8rem;
+        width: 6rem;
+        height: 6rem;
+        max-width: 8rem;
+        max-height: 8rem;
         border-radius: 50%;
         justify-content: center;
         align-items: center;
