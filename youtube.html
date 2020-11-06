@@ -22,20 +22,21 @@
     />
 
    
-    <!-- === Loaders === -->
+    <!-- === main-css === -->
     <link rel="stylesheet" href="main.css" />
   </head>
 
   <body>
     <div class="main">
       <nav class="">
+        <a href="index.html" class="logo"><strong>carbell</strong></a>
+
         <div class="nav-btn">
           <div class="lines"></div>
           <div class="lines"></div>
           <div class="lines"></div>
         </div>
 
-        <a href="index.html" class="logo"><strong>carbell</strong></a>
 
         <ul class="nav-list">
           <li class="nav-item">
@@ -55,20 +56,76 @@
         </ul>
       </nav>
 
-     
+     <section style="padding-top: 10rem;">
+       <div class="container">
+       <h2 class="main-heading">YouTube</h2>
+       <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Learn For Free</h2>
+       <img src="images/youtube-img.PNG" style="margin-bottom: 2rem;""></img>
+        <h2>Weekly front-end web development & design tips, tricks and tutorials.</h2>
+        <p>With a focus on HTML & CSS and sometimes with very little Javascript,
+          some videos focus on properly understanding fundermental concepts, others
+           explore little known of often musused CSS 
+          properties. There are also series that take everything from designing to building complete projects.
+          <br>
+          <a href="youtube.com">My YouTube channel </a>is where everthing started, and its what continues to drive things.
+        </p>
+        <br>
+          <h2>How it started</h2>
+          <p>The journey is quite funny as a few friends were talking about "coding" and how that is used to create website.
+            As curious as I am, I searched it up and met "Bucky Robert's html and css video for absolute beginnerrs" and was immediately hooked.
+            <br>
+            The journey then translated from being hooked to Learning to now teaching and the teaching came as a result of my unique teaching gift.
+            <br>
+            I started by teaching simple designs to give your projects an amazing feel. But I was missing something.
+            </p>
+          <br>
+          <p>I wanted something that would let me be creative and push me to keep relevant, so after thinking about it for a really long time, I started my channel in October of 2016</p>
+          <br>
+          <h2>Progress is slow</h2>
+          <p>Good thing it is a passion project because the progress is really slow.
+          <br>
+          After 3 months of creating a video weekly, I have 150 subs. But that is okay, because
+          I am having fun making them
+        </p>
+        <br>
+        <h2>Something will happen</h2>
+        <p>After some months from now things are going to happen. Hopefully, my videos are going to be found and my content creation 
+          game is also going to upgrade to much higher level.
+          <br>
+          As iit stands now, I have over <strong>150</strong> subscriber and over <strong>900</strong> total views.
+          that totally is blowing my mind. So if you're one of those people who've watched a video or who've taken the time to subscribe, <strong>A VERY BIG THANK YOU</strong>
+        </p>
+        <br>
+        <a href="https://www.youtube.com/channel/UCdC_rW9x4MnQvubSJOg4ihQ?view_as=" class="btn-main">check out my channel</a>
+      </div>
+     </section>
+
+     <!-- ============ Section-newsletter ========== -->
+     <section class="section-newsletter">
+      <div class="container">
+        <h2>Don't Miss a Chance to improve</h2>
+        <p>Subscribe to my news letter and receive weekly tips and tricks
+          <br>Your email address will never be shared.
+        </p>
+        <form method="POST" action="/" data-netlify="true" name="newsletter">
+          <input type="email" required placeholder="example@email.com" name="email">
+          <input type="submit" value="JOIN THE FAMILY">
+        </form>
+      </div>
+    </section>
 
       <!-- ==== section-Contact === -->
-      <section class="section-contact" id="section-contact">
-        <h2 class="main-heading">Contact</h2>
-        <p class="contact-p">
+      <section class="section-contact container" id="section-contact">
+        <h2 class="main-heading">contact</h2>
+        <p>
           If you are interested in my work, feel free to contact me with my
           information below or send me a message. I will be glad to know more
-          about you and look forward to hearing from you.
+          about you and your project.
         </p>
 
         <div class="contact-container">
-          <form action="POST" data-netlify="true">
-            <h3>Send a message</h3>
+          <form method="POST" action="/" data-netlify="true" name="Message form">
+            <h2 style="text-align: center">Send me a message</h2>
             <div class="input-field">
               <input
                 type="text"
@@ -103,7 +160,7 @@
                 required
               ></textarea>
 
-              <input type="submit" value="Send &rarr;" />
+              <input type="submit" value="Send &rarr;"/>
             </div>
           </form>
 
@@ -133,13 +190,13 @@
           </ul>
         </div>
         
-        <h2>Follow me on social media</h2>
+        <h2 style="text-align: center">Follow me on social media</h2>
         <p>You are a click away from my social media pages</p>
         <ul class="social-list">
           <li class="social-item">
             <a
               href="https://www.youtube.com/channel/UCdC_rW9x4MnQvubSJOg4ihQ?view_as="
-              class="social-link"
+              class="social-link" title="Check out my YouTube channel"
             >
               <i class="fa fa-youtube-play"></i>
             </a>
@@ -147,7 +204,7 @@
           <li class="social-item">
             <a
               href="https://www.instagram.com/sarfo_does_designs/"
-              class="social-link"
+              class="social-link" title="My instagram page is up and ready"
             >
               <i class="fa fa-instagram"></i>
             </a>
@@ -155,7 +212,7 @@
           <li class="social-item">
             <a
               href="https://www.linkedin.com/in/carbell-sarfo-969929182/"
-              class="social-link"
+              class="social-link" title="let's connect on LinkedIn"
             >
               <i class="fa fa-linkedin"></i>
             </a>
@@ -163,7 +220,7 @@
           <li class="social-item">
             <a
               href="https://www.facebook.com/carbell.sarfo.5"
-              class="social-link"
+              class="social-link" title="Let's be friends on facebook"
             >
               <i class="fa fa-facebook"></i>
             </a>

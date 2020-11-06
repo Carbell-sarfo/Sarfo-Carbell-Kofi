@@ -3,6 +3,8 @@ const navMenu = document.querySelector("nav");
 const navList = document.querySelector(".nav-list");
 const navItem = document.querySelectorAll(".nav-item");
 
+
+// ============ HAMBURGER MENU ===============
 let showMenu = false;
 navButton.addEventListener("click", openMenu);
 
@@ -33,6 +35,9 @@ navItem.forEach((item) => {
   item.addEventListener("click", openMenu);
 });
 
+
+
+
 // ====== // Observer // =======
 const sectionHome = document.getElementById("banner");
 const sectionAbout = document.querySelector(".section-about");
@@ -49,13 +54,12 @@ const sectionObserver = new IntersectionObserver(function (
   entries.forEach((entry) => {
     if (!entry.isIntersecting) {
       navMenu.classList.add("nav-scrolled");
-      // homeLink.classList.remove("current");
-      // console.log(entry.target);
+      console.log("not intersecting");
+  
       return;
     } else {
       navMenu.classList.remove("nav-scrolled");
-      // homeLink.classList.add("current");
-      // console.log(entry.target);
+      console.log("is intersecting"); 
     }
   });
 },
