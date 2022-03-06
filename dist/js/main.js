@@ -9,7 +9,19 @@ let showMenu = false;
 navButton.addEventListener("click", openMenu);
 navOverlay.addEventListener("click", openMenu);
 navItem.forEach(item=>{
-    item.addEventListener("click", openMenu)
+    item.addEventListener("click", () =>{
+        if(showMenu === true) {
+            navButton.classList.remove("close")
+            navOverlay.classList.remove("show");
+            leftList.classList.remove("show");
+            navMenu.classList.remove("show");
+            navItem.forEach(item=>{
+                item.classList.remove("show")
+            });
+            document.body.classList.remove("noscroll");
+            showMenu = false;
+        }
+    })
 });
 
 function openMenu() {

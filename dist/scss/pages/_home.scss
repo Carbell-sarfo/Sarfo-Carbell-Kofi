@@ -3,8 +3,8 @@
 // == Section-hero ==
 .section-hero {
     width: 100%;
-    height: 100%;
-    background-color: var(--clr-gray-light);
+    height: 90vh;
+    background-color: var(--clr-white);
     @include ease;
 
     .hero-container {
@@ -42,43 +42,98 @@
 // ======= SECTION ABOUT =======
 .section-about {
     padding: 10rem 0;
+    background: var(--clr-gray-light);
 
     .about-container {
         display: grid;
         grid-template-columns: 1fr;
         gap: 3rem;
     }
+    .about-img {
+        // grid-area: aboutImage;
+        aspect-ratio: 8/5;
+    }
+    .about-text {
+        // grid-area: aboutText;
+    }
 }
 
 
 // ============== SECTION PORTFOLIO ==============
 .section-portfolio {
-    padding: 10rem 0 5rem;
+    padding: 12rem 0;
     background-color: var(--clr-gray-light);
     text-align: center;
 
     .portfolio-container {
-        margin-bottom: 5rem;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem 2rem;
     }
-    .project {
-        text-align: center;
-        border-radius: 20px;
-        @include ease;
-        // @include shadow;
-        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.16);
-        overflow: hidden;
-        padding-bottom: 3rem;
-        background-color: var(--clr-white);
 
-        &-name {
-            margin: 5px 0;
+    .portfolio {
+        width: 100%;
+
+        &__name {
+            display: block;
+            margin: 2rem 0 .2rem;
+            color: var(--clr-gray-dark-2);
+            text-transform: uppercase;
+            font-size: 2.5rem;
         }
-
-        .btn {
-            margin-top: 4rem;
+        &__detail {
+            display: block;
+            font-weight: lighter;
+            color: darkgray;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 3rem;
         }
     }
 }
+
+
+
+// ================ SECTION-INFO =============
+.section-info {
+    padding: 10rem 0;
+    background: url(/dist/Assets/info-bg.jpg);
+    background-size: cover;
+    background-position: bottom;
+    // background-attachment: fixed;
+
+    .info-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 10rem 3rem;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .info {
+        text-align: center;
+        color: #fff;
+
+        &__icon {
+            display: block;
+            font-size: 3rem;
+        }
+        &__number {
+            display: block;
+            font-size: 5rem;
+            font-weight: bold;
+            margin: 2rem 0 1rem;
+        }
+        &__detail {
+            display: block;
+        }
+    }
+}
+
+
 
 
 // ============= SECTION TESTIMONIAL ===============
@@ -93,7 +148,6 @@
         margin-right: auto;
         width: 100%;
         max-width: 1100px;
-        // background: red;
     }
     .testimonial {
         background: var(--clr-white);
@@ -117,7 +171,7 @@
 // ============== SECTION YOUTUBE ==============
 .section-youtube {
     padding: 10rem 0;
-    border-bottom: 1px solid var(--clr-gray-light);
+    background-color: var(--clr-gray-light);
 
     .youtube-container {
         display: grid;
@@ -127,12 +181,17 @@
         align-items: center;
         justify-items: center;
 
+        iframe {
+            cursor: pointer;
+        }
+
         .yt-video {
             width: 100%;
             height: auto;
             aspect-ratio: 1.8;
             @include ease;
             @include shadow;
+            cursor: pointer;
 
             &:hover, &:focus {
                 transform: scale(1.05) translateY(-5px);
@@ -143,6 +202,50 @@
 }
 
 
+.section-blog {
+    padding: 10rem 0;
+    background: var(--clr-gray-light);
+    border-bottom: 1px solid var(--clr-gray-dark-1);
+
+    .blog-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 10rem;
+    }
+
+    .article {
+        width: 100%;
+        text-align: center;
+        @include ease;
+        @include shadow;
+        border-radius: 10px;
+        background-color: var(--clr-white);
+        overflow: hidden;
+
+        &__img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1/0.7;
+        }
+        &__date {
+            font-weight: lighter;
+            color: darkgray;
+            font-size: 1.5rem;
+            margin: 1rem 2rem;
+        }
+        &__description {
+            margin: 1rem;
+            line-height: 1;
+        }
+        &__text {
+            margin: 0 1rem 4rem;
+        }
+        .btn {
+            margin-bottom: 3rem;
+        }
+    }
+}
 
 
 
@@ -203,7 +306,7 @@
 
 // Slick Prev & Slick Next
 .slick-arrow {
-  // background: orange;
+  background: var(--clr-white);
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -217,6 +320,7 @@
   .fa-solid {
     font-size: 30px;
     color: var(--clr-gray-dark-2);
+    // color: green;
     @include ease;
 
     &:hover, &:focus {
@@ -244,27 +348,45 @@
 
 
 @media screen and (max-width: 766px) {
-  .section-testimonials {
-
-    .testimonials-container {
-
-    }
-  }
+ 
 }
 
 
 @media screen and (min-width: 767px) {
 
-    .section-youtube {
-        .youtube-container {
-            // grid-template-columns: 1fr 1fr;
+    .section-about {
+
+        .about-container {
+            grid-template-columns: 1fr 1fr;
         }
     }
 }
 @media screen and (min-width: 1023px) {
 
+    .section-portfolio {
+
+        .portfolio-container {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    .section-info {
+        padding: 12rem 0;
+
+        .info-container {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
     .section-youtube {
         .youtube-container {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    .section-blog {
+
+        .blog-container {
             grid-template-columns: 1fr 1fr 1fr;
         }
     }

@@ -206,7 +206,7 @@
 
         .nav-list {
             position: fixed;
-            top: 30%;
+            top: 20%;
             left: 80px;
             flex-direction: column;
             text-align: center;
@@ -240,12 +240,15 @@
                     &:nth-child(5) {
                         transition-delay: 1s;
                     }
+                    &:nth-child(6) {
+                        transition-delay: 1.2s;
+                    }
                 }
             }
             }
         .nav-left {
             position: fixed;
-            bottom: 100px;
+            bottom: 70px;
             left: 60px;
             flex-direction: column;
             // @include ease;

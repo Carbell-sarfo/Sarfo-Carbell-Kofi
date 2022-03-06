@@ -56,7 +56,7 @@
 
     &:hover, &:focus {
         color: var(--clr-gray-dark-2);
-        background: #fff;
+        background: var(--clr-black);
         border: 2px solid var(--clr-gray-dark-2);
     }
     &::after {
