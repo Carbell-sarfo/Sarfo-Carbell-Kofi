@@ -1,0 +1,32 @@
+
+// ========= Col-2 =========
+.col-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+}
+
+
+
+
+
+// ========== Container =============
+.container {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 2580px;
+    height: 100%;
+}
+.wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+@media (min-width: 768px) {
+    .wrapper {
+        padding-right: 64px;
+        padding-left: 64px;
+    }
+}

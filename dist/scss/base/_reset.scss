@@ -1,0 +1,80 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    --clr-red: #E5202B;
+    --clr-white: #fff;
+    --clr-black: #0C0C0C;
+    --clr-gray-light: #E9EAED;
+    --clr-gray-dark-1: #111111;
+    --clr-gray-dark-2: #27292A;
+
+
+
+    width: 100%;
+    height: 100%;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--clr-white);
+    color: var(--clr-gray-dark-2);
+    font-size: 1.6rem;
+    @include ease;
+}
+
+
+h1, h2, h3, h4, h5 {
+    font-family: "Oswald", sans-serif;
+}
+a {
+    font-family: "Helvetica rounded", sans-serif;
+}
+img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+
+
+
+
+// Day and night 
+.night {
+    // DARK MODE
+    --clr-white: #0C0C0C;
+    --clr-black: #fff;
+    --clr-gray-light: #111111;
+    --clr-gray-dark-1: #27292A;
+    --clr-gray-dark-2: #E9EAED;
+}
+
+// Automatically Switch to dark mode when user has darkmode on in their phone or pc setting
+// @media (prefers-color-scheme: dark) {
+    
+//     body {
+//         --clr-white: #0C0C0C;
+//         --clr-black: #fff;
+//         --clr-gray-light: #111111;
+//         --clr-gray-dark-1: #27292A;
+//         --clr-gray-dark-2: #E9EAED;
+//     }
+// }
+
+
+// NOSCROLL
+.noscroll {
+    overflow-y: hidden;
+}
