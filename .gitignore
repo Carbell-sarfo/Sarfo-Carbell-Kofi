@@ -1,7 +1,7 @@
 node_modules
 
 # build artifacts
-public
+# public
 
 # secrets and errors
 .env
