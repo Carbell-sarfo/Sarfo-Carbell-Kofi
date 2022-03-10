@@ -10,14 +10,16 @@
     font-family: "helvetica rounded", sans-serif;
     font-size: 1.3rem;
     border: 2px solid transparent;
-    @include shadow;
+    box-shadow: 5px 5px 0px var(--clr-gray-dark-2),
+                7px 7px 0px var(--clr-red);
     @include ease;
     position: relative;
     overflow: hidden;
     z-index: 1;
 
     &:hover, &:focus {
-        
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.542);
+        transform: translateY(3px);
     }
 
     &:hover::after, &:focus::after {
@@ -38,7 +40,8 @@
 .btn-red {
     background-color: var(--clr-red);
     color: #fff;
-    border: 2px solid var(--clr-gray-light);
+    border: 2px solid var(--clr-red);
+    // box-shadow: 8px 8px 0px var(--clr-gray-dark-1);
 
     &:hover, &:focus {
         color: var(--clr-red);
@@ -46,7 +49,7 @@
         border: 2px solid var(--clr-red);
     }
     &::after {
-        background-color: #fff;
+        // background-color: #fff;
     }
 }
 .btn-neutral {
@@ -60,7 +63,7 @@
         border: 2px solid var(--clr-gray-dark-2);
     }
     &::after {
-        background-color: var(--clr-gray-light);
+        background-color: var(--clr-white);
     }
 }
 
