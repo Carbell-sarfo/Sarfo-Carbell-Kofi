@@ -3,8 +3,11 @@
 
 // ======= SECTION FOOTER =======
 .section-footer {
-    padding: 10rem 0 5rem;
-    // text-align: center;
+    padding: 17rem 0 10rem;
+    clip-path: polygon(0 0, 50% 10rem, 100% 0, 100% 100%, 0 100%);
+    margin-top: -10rem;
+    background: var(--clr-white);
+
 
     .footer-container {
         display: flex;
@@ -13,8 +16,8 @@
         height: 100%;
         align-items: center;
         justify-content: space-between;
-        row-gap: 3rem;
-        max-width: 840px;
+        row-gap: 10rem;
+        max-width: 920px;
         position: relative;
         margin-left: auto;
         margin-right: auto;
@@ -22,7 +25,8 @@
     }
 
     .contact-form {
-        width: 400px;
+        width: 90%;
+        max-width: 500px;
         text-align: center;
 
         .input-field {
@@ -45,8 +49,7 @@
     }
 
     .contact-right {
-        width: 400px;
-        
+        width: 400px;        
     }
 
 
@@ -169,6 +172,15 @@ footer {
         // Media Querries
 ///////////////////////////////////
 /* Begin Media Queries*/
+
+@media screen and (max-width: 350px) {
+
+    .section-footer {
+        clip-path: polygon(0 0, 50% 7rem, 100% 0, 100% 100%, 0 100%);
+    }
+}
+
+
 @media screen and (max-width: 850px) {
 
     
@@ -176,6 +188,10 @@ footer {
         .footer-container {
           flex-direction: column;
           gap: 5rem;
+        }
+
+        .contact-form {
+            width: 100%;
         }
 
         .contact-details {

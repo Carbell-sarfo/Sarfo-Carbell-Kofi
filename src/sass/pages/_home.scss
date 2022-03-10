@@ -3,9 +3,10 @@
 // == Section-hero ==
 .section-hero {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     background-color: var(--clr-white);
     @include ease;
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 95vh, 0 85vh, 0 0);
 
     .hero-container {
         width: 100%;
@@ -26,14 +27,19 @@
         h1 {
             font-size: 100px;
             text-transform: uppercase;
-            letter-spacing: 2px;
-            font-weight: 400;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bolder;
+            font-style: italic;
+            text-shadow: 3px 5px 0px var(--clr-red);
+            color: var(--clr-black);
+            letter-spacing: 3px;
             line-height: 1;
             margin: 5px 0;
         }
         p {
-            margin-bottom: 10px;
+            margin-bottom: 30px;
         }
+
     }
 }
 
@@ -41,7 +47,8 @@
 
 // ======= SECTION ABOUT =======
 .section-about {
-    padding: 10rem 0;
+    padding: 20rem 0 10rem;
+    margin-top: -15rem;
     background: var(--clr-gray-light);
 
     .about-container {
@@ -61,7 +68,7 @@
 
 // ============== SECTION PORTFOLIO ==============
 .section-portfolio {
-    padding: 12rem 0;
+    padding: 12rem 0 20rem;
     background-color: var(--clr-gray-light);
     text-align: center;
 
@@ -98,10 +105,10 @@
 // ================ SECTION-INFO =============
 .section-info {
     padding: 10rem 0;
-    background: url(/dist/Assets/info-bg.jpg);
+    margin-top: -5rem;
+    background: url(/assets/images/info-bg.jpg);
     background-size: cover;
     background-position: bottom;
-    // background-attachment: fixed;
 
     .info-container {
         width: 100%;
@@ -138,7 +145,7 @@
 
 // ============= SECTION TESTIMONIAL ===============
 .section-testimonials {
-    padding: 10rem 0 15rem;
+    padding: 15rem 0 10rem;
     background: var(--clr-gray-light);
 
     .testimonials-container {
@@ -170,7 +177,7 @@
 
 // ============== SECTION YOUTUBE ==============
 .section-youtube {
-    padding: 10rem 0;
+    padding: 15rem 0;
     background-color: var(--clr-gray-light);
 
     .youtube-container {
@@ -205,7 +212,6 @@
 .section-blog {
     padding: 10rem 0;
     background: var(--clr-gray-light);
-    border-bottom: 1px solid var(--clr-gray-dark-1);
 
     .blog-container {
         display: grid;
@@ -347,12 +353,86 @@
 
 
 
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 325px) {
  
+    .section-hero {
+        padding-top: 5rem;
+        clip-path: polygon(0 0, 100% 0, 100% 95vh, 50% 100vh, 0 95vh, 0 0);
+
+        .hero-container {
+
+            h1 {
+                font-size: 85px;
+                letter-spacing: 5px;
+                margin-bottom: 2rem;
+            }
+            .btn {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .section-blog {
+        padding-bottom: 15rem;
+    }
+}
+@media screen and (max-width: 500px) {
+
+    .section-hero {
+
+        .hero-container {
+
+            h1 {
+                font-size: 75px;
+                letter-spacing: 5px;
+                margin-bottom: 2rem;
+            }
+            
+        }
+    }
+
+    .section-testimonials {
+
+        .testimonials-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+ 
+    .slick-arrow {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+ 
+    .section-hero {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 95vh, 0 85vh, 0 0);
+
+        .btn-red {
+            margin-right: 1rem;
+        }
+    }
 }
 
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 769px) {
+
+    .section-hero {
+
+        .hero-container {
+
+            h1 {
+                font-size: 180px;
+                letter-spacing: 10px;
+                margin-bottom: 2rem;
+            }
+            p {
+                margin-right: 7rem;
+            }
+            .btn-red {
+                margin-right: 2rem;
+            }
+        }
+    }
 
     .section-about {
 

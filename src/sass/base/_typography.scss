@@ -5,6 +5,7 @@
     font-size: 1.8rem;
     position: relative;
     margin-bottom: 40px;
+    text-transform: capitalize;
 
     &::before, &::after {
         content: "";
@@ -37,4 +38,15 @@
 .thin-text {
     font-weight: lighter;
     letter-spacing: 2px;
+}
+
+
+
+
+@media screen and (max-width: 766px) {
+
+  .heading-secondary {
+      font-size: 25px;
+      font-weight: bolder;
+  }
 }
