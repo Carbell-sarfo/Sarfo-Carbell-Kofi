@@ -25,10 +25,11 @@ body {
 
 
     width: 100%;
+    overflow-x: scroll;
     height: 100%;
     line-height: 1.5;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--clr-white);
+    // background-color: var(--clr-white);
     color: var(--clr-gray-dark-2);
     font-size: 1.6rem;
     @include ease;

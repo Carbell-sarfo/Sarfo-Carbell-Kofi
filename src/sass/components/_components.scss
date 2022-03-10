@@ -41,7 +41,6 @@
     background-color: var(--clr-red);
     color: #fff;
     border: 2px solid var(--clr-red);
-    // box-shadow: 8px 8px 0px var(--clr-gray-dark-1);
 
     &:hover, &:focus {
         color: var(--clr-red);
@@ -49,7 +48,7 @@
         border: 2px solid var(--clr-red);
     }
     &::after {
-        // background-color: #fff;
+        background-color: #fff;
     }
 }
 .btn-neutral {

@@ -1,3 +1,6 @@
+section {
+   
+}
 
 
 // == Section-hero ==
@@ -150,7 +153,7 @@
 
     .testimonials-container {
         position: relative;
-        padding: 5rem 50px;
+        padding: 0rem 50px 5rem;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
@@ -353,66 +356,6 @@
 
 
 
-@media screen and (max-width: 325px) {
- 
-    .section-hero {
-        padding-top: 5rem;
-        clip-path: polygon(0 0, 100% 0, 100% 95vh, 50% 100vh, 0 95vh, 0 0);
-
-        .hero-container {
-
-            h1 {
-                font-size: 85px;
-                letter-spacing: 5px;
-                margin-bottom: 2rem;
-            }
-            .btn {
-                margin-bottom: 1rem;
-            }
-        }
-    }
-    .section-blog {
-        padding-bottom: 15rem;
-    }
-}
-@media screen and (max-width: 500px) {
-
-    .section-hero {
-
-        .hero-container {
-
-            h1 {
-                font-size: 75px;
-                letter-spacing: 5px;
-                margin-bottom: 2rem;
-            }
-            
-        }
-    }
-
-    .section-testimonials {
-
-        .testimonials-container {
-            padding-left: 0;
-            padding-right: 0;
-        }
-    }
- 
-    .slick-arrow {
-        display: none;
-    }
-}
-@media screen and (max-width: 768px) {
- 
-    .section-hero {
-        clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 95vh, 0 85vh, 0 0);
-
-        .btn-red {
-            margin-right: 1rem;
-        }
-    }
-}
-
 
 @media screen and (min-width: 769px) {
 
@@ -472,6 +415,63 @@
     }
 }
 
+@media screen and (max-width: 325px) {
+ 
+    .section-hero {
+        padding-top: 5rem;
+        clip-path: polygon(0 0, 100% 0, 100% 95vh, 50% 100vh, 0 95vh, 0 0);
+
+        .hero-container {
+
+            h1 {
+                font-size: 85px;
+                letter-spacing: 5px;
+                margin-bottom: 2rem;
+            }
+            .btn {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    .section-blog {
+        padding-bottom: 15rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .section-hero {
+
+        .hero-container {
+
+            h1 {
+                font-size: 75px;
+                letter-spacing: 5px;
+                margin-bottom: 2rem;
+            }
+            
+        }
+    }
+
+    .section-testimonials {
+
+        .testimonials-container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+ 
+}
+@media screen and (max-width: 768px) {
+ 
+    .section-hero {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 95vh, 0 85vh, 0 0);
+
+        .btn-red {
+            margin-right: 1rem;
+        }
+    }
+}
 
 
 
