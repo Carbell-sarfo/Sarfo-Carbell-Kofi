@@ -9,3 +9,7 @@ node_modules
 
 # macOS related files
 .DS_Store
+
+
+#  "start": "npm-run-all build:sass --parallel watch:*",
+#  "build": "npm-run-all build:sass build:eleventy"
