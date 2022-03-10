@@ -4,7 +4,7 @@
 // ======= SECTION FOOTER =======
 .section-footer {
     padding: 17rem 0 10rem;
-    clip-path: polygon(0 0, 50% 10rem, 100% 0, 100% 100%, 0 100%);
+    // clip-path: polygon(0 0, 50% 10rem, 100% 0, 100% 100%, 0 100%);
     margin-top: -10rem;
     background: var(--clr-white);
 
@@ -176,7 +176,7 @@ footer {
 @media screen and (max-width: 350px) {
 
     .section-footer {
-        clip-path: polygon(0 0, 50% 7rem, 100% 0, 100% 100%, 0 100%);
+        // clip-path: polygon(0 0, 50% 7rem, 100% 0, 100% 100%, 0 100%);
     }
 }
 

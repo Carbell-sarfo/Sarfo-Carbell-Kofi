@@ -106,6 +106,7 @@ body {
   height: 100%;
   line-height: 1.5;
   font-family: "Poppins", sans-serif;
+  background: #bababa;
   color: var(--clr-gray-dark-2);
   font-size: 1.6rem;
   transition: 0.4s ease;
@@ -275,7 +276,6 @@ img {
 }
 .section-footer {
   padding: 17rem 0 10rem;
-  clip-path: polygon(0 0, 50% 10rem, 100% 0, 100% 100%, 0 100%);
   margin-top: -10rem;
   background: var(--clr-white);
 }
@@ -412,11 +412,6 @@ footer p {
 }
 
 /* Begin Media Queries*/
-@media screen and (max-width: 350px) {
-  .section-footer {
-    clip-path: polygon(0 0, 50% 7rem, 100% 0, 100% 100%, 0 100%);
-  }
-}
 @media screen and (max-width: 850px) {
   .section-footer .footer-container {
     flex-direction: column;
@@ -436,7 +431,7 @@ footer p {
   }
 }
 .nav-overlay {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -492,7 +487,7 @@ footer p {
 .nav-bar {
   width: 100%;
   height: 60px;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   background: var(--clr-white);
@@ -586,7 +581,7 @@ footer p {
     width: 260px;
     background-color: var(--clr-white);
     height: 100%;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 9;
@@ -598,8 +593,8 @@ footer p {
   }
 
   .nav-bar .nav-list {
-    position: fixed;
-    top: 20%;
+    position: absolute;
+    top: 30%;
     left: 80px;
     flex-direction: column;
     text-align: center;
@@ -636,7 +631,7 @@ footer p {
     transition-delay: 1.2s;
   }
   .nav-bar .nav-left {
-    position: fixed;
+    position: absolute;
     bottom: 70px;
     left: 60px;
     flex-direction: column;

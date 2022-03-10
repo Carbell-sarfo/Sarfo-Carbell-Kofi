@@ -1,6 +1,6 @@
 // nav Overlay for mobile view
 .nav-overlay {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -22,7 +22,7 @@
 .nav-btn {
     width: 50px;
     height: 40px;
-    // position: fixed;
+    // position: absolute;
     top: 20px;
     // left: 10px;
     cursor: pointer;
@@ -71,7 +71,7 @@
 .nav-bar {
     width: 100%;
     height: 60px;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     background: var(--clr-white);
@@ -195,7 +195,7 @@
         width: 260px;
         background-color: var(--clr-white);
         height: 100%;
-        position: fixed;
+        position: absolute;
         top: 0;
         left: 0;
         z-index: 9;
@@ -209,8 +209,8 @@
     .nav-bar {
 
         .nav-list {
-            position: fixed;
-            top: 20%;
+            position: absolute;
+            top: 30%;
             left: 80px;
             flex-direction: column;
             text-align: center;
@@ -251,7 +251,7 @@
             }
             }
         .nav-left {
-            position: fixed;
+            position: absolute;
             bottom: 70px;
             left: 60px;
             flex-direction: column;
