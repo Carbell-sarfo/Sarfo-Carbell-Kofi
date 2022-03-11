@@ -1,0 +1,22 @@
+.contact-form {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+
+    .input-field {
+        width: 100%;
+        font-family: inherit;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        font-size: inherit;
+        background-color: transparent;
+        border-bottom: 1px solid rgb(89, 89, 89);
+        margin-bottom: 2rem;
+        resize: none;
+
+        &:hover, &:focus, &:valid {
+            border-bottom: 1px solid var(--clr-red);
+        }
+    }
+}

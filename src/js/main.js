@@ -1,49 +1,37 @@
-// SLIDE IN NAVIGATION
 const navButton = document.querySelector(".nav-btn");
+const navList = document.querySelector(".nav-list");
+const navLeft = document.querySelector(".nav-left");
 const navOverlay = document.querySelector(".nav-overlay");
-const leftList = document.querySelector(".nav-left");
-const navMenu = document.querySelector(".nav-menu");
 const navItem = document.querySelectorAll(".nav-item");
 
 let showMenu = false;
 navButton.addEventListener("click", openMenu);
 navOverlay.addEventListener("click", openMenu);
-navItem.forEach(item=>{
-    item.addEventListener("click", () =>{
-        if(showMenu === true) {
-            navButton.classList.remove("close")
-            navOverlay.classList.remove("show");
-            leftList.classList.remove("show");
-            navMenu.classList.remove("show");
-            navItem.forEach(item=>{
-                item.classList.remove("show")
-            });
-            document.body.classList.remove("noscroll");
-            showMenu = false;
-        }
-    })
-});
+navItem.forEach(item => {
+    item.addEventListener("click", openMenu)
+})
 
-function openMenu() {
+function openMenu () {
     if(!showMenu) {
         navButton.classList.add("close");
+        navList.classList.add("show");
+        navLeft.classList.add("show");
         navOverlay.classList.add("show");
-        leftList.classList.add("show");
-        navMenu.classList.add("show");
-        navItem.forEach(item=>{
-            item.classList.add("show")
+        navItem.forEach(item => {
+            item.classList.add("show");
         });
-        document.body.classList.add("noscroll");
+        document.body.classList.add("no-scroll");
         showMenu = true;
     }else {
-        navButton.classList.remove("close")
+        navButton.classList.remove("close");
+        navList.classList.remove("show");
+        navLeft.classList.remove("show");
+        navButton.classList.remove("show");
         navOverlay.classList.remove("show");
-        leftList.classList.remove("show");
-        navMenu.classList.remove("show");
-        navItem.forEach(item=>{
-            item.classList.remove("show")
+        navItem.forEach(item => {
+            item.classList.remove("show");
         });
-        document.body.classList.remove("noscroll");
+        document.body.classList.remove("no-scroll");
         showMenu = false;
     }
 }
@@ -82,3 +70,39 @@ darkModeSwitch.addEventListener("click", () => {
         disableDarkMode();
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// day and night icon animation
+// function initIntIcon(i){if(i.classList.contains("js-nc-int-icon-loaded")) return;i.classList.add("js-nc-int-icon-loaded");i.closest("svg").addEventListener("click",function(n){i.classList.toggle("nc-int-icon-state-b")});};var intIcons=document.getElementsByClassName("js-nc-int-icon");for(var i=0;intIcons.length>i;i++){initIntIcon(intIcons[i]);}

@@ -1,9 +1,9 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     text-decoration: none;
 }
 
@@ -16,33 +16,33 @@ html {
 
 body {
     --clr-red: #E5202B;
-    --clr-white: #fff;
+    --clr-white: #ffffff;
     --clr-black: #0C0C0C;
     --clr-gray-light: #E9EAED;
     --clr-gray-dark-1: #111111;
     --clr-gray-dark-2: #27292A;
 
-
-
     width: 100%;
-    overflow-x: scroll;
     height: 100%;
     line-height: 1.5;
-    font-family: 'Poppins', sans-serif;
-    // background-color: var(--clr-white);
-
-    background: #bababa;
-    color: var(--clr-gray-dark-2);
+    font-family: "Poppins", sans-serif;
+    background: var(--clr-white);
+    color: var(--clr-black);
     font-size: 1.6rem;
-    @include ease;
 }
-
 
 h1, h2, h3, h4, h5 {
     font-family: "Oswald", sans-serif;
 }
+p, i, span, article {
+    font-family: inherit;
+    font-size: 1.6rem;
+}
 a {
-    font-family: "Helvetica rounded", sans-serif;
+    font-family: "Helveitca rounded", sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: inherit;
 }
 img {
     width: 100%;
@@ -51,33 +51,13 @@ img {
 }
 
 
-
-
-
-// Day and night 
 .night {
-    // DARK MODE
     --clr-white: #0C0C0C;
     --clr-black: #fff;
     --clr-gray-light: #111111;
     --clr-gray-dark-1: #27292A;
     --clr-gray-dark-2: #E9EAED;
 }
-
-// Automatically Switch to dark mode when user has darkmode on in their phone or pc setting
-// @media (prefers-color-scheme: dark) {
-    
-//     body {
-//         --clr-white: #0C0C0C;
-//         --clr-black: #fff;
-//         --clr-gray-light: #111111;
-//         --clr-gray-dark-1: #27292A;
-//         --clr-gray-dark-2: #E9EAED;
-//     }
-// }
-
-
-// NOSCROLL
-.noscroll {
+.no-scroll {
     overflow-y: hidden;
 }

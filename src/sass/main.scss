@@ -8,12 +8,13 @@
 // Components
 @import "components/components";
 
-// Layout
-@import "layout/container";
-@import "layout/footer";
-@import "layout/forms";
-@import "layout/navigation";
+// Layouts
+@import "layouts/container";
+@import "layouts/navigation";
+@import "layouts/footer";
+@import "layouts/forms";
+
 
 // Pages
-@import "pages/home";
-@import "pages/privacy&terms";
+@import "pages/index";
+@import "pages/privacy"

@@ -1,0 +1,39 @@
+.section-footer {
+    background: var(--clr-white);
+    padding: 8rem 0 5rem;
+
+    .footer-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem 1rem;
+    }
+
+    .footere-right {
+        
+    }
+}
+
+
+
+footer {
+    background-color: var(--clr-white);
+    text-align: center;
+    padding: 5px 0;
+
+    p {
+        font-size: 1.3rem;
+        color: var(--clr-gray-dark-1)
+    }
+}
+
+
+
+
+
+
+
+/////////////////////////////////////
+        // Media Querries
+///////////////////////////////////
+/* Begin Media Queries*/

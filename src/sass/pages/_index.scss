@@ -1,15 +1,9 @@
-section {
-   
-}
-
-
 // == Section-hero ==
 .section-hero {
     width: 100%;
     height: 100vh;
     background-color: var(--clr-white);
-    @include ease;
-    clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 95vh, 0 85vh, 0 0);
+    @include ease(.4s);
 
     .hero-container {
         width: 100%;
@@ -47,24 +41,26 @@ section {
 }
 
 
-
 // ======= SECTION ABOUT =======
 .section-about {
     padding: 20rem 0 10rem;
-    margin-top: -15rem;
     background: var(--clr-gray-light);
 
     .about-container {
         display: grid;
         grid-template-columns: 1fr;
         gap: 3rem;
+        grid-template-areas: 
+        "aboutImage"
+        "aboutText"
+        ;
     }
     .about-img {
-        // grid-area: aboutImage;
+        grid-area: aboutImage;
         aspect-ratio: 8/5;
     }
     .about-text {
-        // grid-area: aboutText;
+        grid-area: aboutText;
     }
 }
 
@@ -104,11 +100,9 @@ section {
 }
 
 
-
 // ================ SECTION-INFO =============
 .section-info {
     padding: 10rem 0;
-    margin-top: -5rem;
     background: url(/assets/images/info-bg.jpg);
     background-size: cover;
     background-position: bottom;
@@ -143,9 +137,6 @@ section {
     }
 }
 
-
-
-
 // ============= SECTION TESTIMONIAL ===============
 .section-testimonials {
     padding: 15rem 0 10rem;
@@ -164,7 +155,7 @@ section {
         width: 100%;
         text-align: center;
         border-radius: 20px;
-        @include ease;
+        @include ease(.4s);
         padding: 5rem 1rem;
         margin-left: auto;
         margin-right: auto;
@@ -176,6 +167,8 @@ section {
         }
     }
 }
+
+
 
 
 // ============== SECTION YOUTUBE ==============
@@ -199,7 +192,7 @@ section {
             width: 100%;
             height: auto;
             aspect-ratio: 1.8;
-            @include ease;
+            @include ease(.4s);
             @include shadow;
             cursor: pointer;
 
@@ -226,7 +219,7 @@ section {
     .article {
         width: 100%;
         text-align: center;
-        @include ease;
+        @include ease(.4s);
         @include shadow;
         border-radius: 10px;
         background-color: var(--clr-white);
@@ -263,99 +256,105 @@ section {
 
 
 
+
+
+
+
+
+
+
 ////////////////////////////////////////
 //            SLICK JS 
 ///////////////////////////////////////
 
 .slick-dots {
-  position: absolute;
-  bottom: -45px;
-  left: 50%;
-  transform: translateX(-50%);
-  // display: block;
-  // width: 100%;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-
-  li {
-      position: relative;
-      display: inline-block;
-      width: 6px;
-      height: 6px;
-      margin: 0 5px;
-      padding: 0;
-      cursor: pointer;
-
-      &::before {
-          content: "";
-          top: 1px;
-          @include ease;
-          width: 8px;
-          height: 8px;
-          background: darkgray;
-          position: absolute;
-          @include shadow;
-          border-radius: 50%;
-      }
-      &.slick-active::before {
-          top: 0;
-          width: 12px;
-          height: 12px;
-          margin-left: -2px;
-          background: var(--clr-red);
-      }
-
-      button {
-          display: none;
-      }
-
-  }
-}
-
-// Slick Prev & Slick Next
-.slick-arrow {
-  background: var(--clr-white);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  outline: none;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-
-  .fa-solid {
-    font-size: 30px;
-    color: var(--clr-gray-dark-2);
-    // color: green;
-    @include ease;
-
-    &:hover, &:focus {
-      color: var(--clr-red);
+    position: absolute;
+    bottom: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    // display: block;
+    // width: 100%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  
+    li {
+        position: relative;
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin: 0 5px;
+        padding: 0;
+        cursor: pointer;
+  
+        &::before {
+            content: "";
+            top: 1px;
+            @include ease(.4s);
+            width: 8px;
+            height: 8px;
+            background: darkgray;
+            position: absolute;
+            @include shadow;
+            border-radius: 50%;
+        }
+        &.slick-active::before {
+            top: 0;
+            width: 12px;
+            height: 12px;
+            margin-left: -2px;
+            background: var(--clr-red);
+        }
+  
+        button {
+            display: none;
+        }
+  
     }
   }
-}
+  
+  // Slick Prev & Slick Next
+  .slick-arrow {
+    background: var(--clr-white);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+  
+    .fa-solid {
+      font-size: 30px;
+      color: var(--clr-gray-dark-2);
+      @include ease(.4s);
+
+      &:hover, &:focus {
+        color: var(--clr-red);
+      }
+    }
+  }
+  
+  
+  .prev-arrow {
+    left: 0;
+  }
+  .next-arrow {
+    right: 0;
+  }
 
 
-.prev-arrow {
-  left: 0;
-}
-.next-arrow {
-  right: 0;
-}
 
 
 
 
 
 
-
-
-
-
-
+  ///////////////////////////////////////////////
+  //             MEDIA QUERIES
+  /////////////////////////////////////////////////
 
 @media screen and (min-width: 769px) {
 
@@ -381,6 +380,10 @@ section {
 
         .about-container {
             grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+                "aboutText aboutImage"
+                "aboutText aboutImage"
+            ;
         }
     }
 }
@@ -452,6 +455,9 @@ section {
             
         }
     }
+    .section-about {
+        text-align: center;
+    }
 
     .section-testimonials {
 
@@ -472,7 +478,4 @@ section {
         }
     }
 }
-
-
-
 

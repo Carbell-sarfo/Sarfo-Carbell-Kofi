@@ -21,7 +21,12 @@
 <body>
 <!-- nav-button and overlay -->
 <div class="nav-overlay"></div>
-<div class="nav-menu"></div>  
+
+    
+<!-- Back to the top switch -->
+<a href="#hero" class="to-top">
+    <i class="fa-solid fa-chevron-up"></i>    
+</a>
 
 <!-- =============== Navigation ================ -->
 <nav class="nav-bar">
@@ -33,33 +38,39 @@
                 <div class="lines"></div>
             </div>
             <div class="nav-left">
+                <ul class="left-social">
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+                <!-- Day and Night Switch -->
                 <div class="switch-box">
                     <input type="checkbox" name="switch" id="switch" />
                     <label for="switch" class="label-left"></label>
                     <label for="switch" class="label"></label>
                 </div>
-                <ul class="left-list">
-                    <li class="left-item">
-                        <a href="#" class="left-link">
-                            <i class="fab fa-instagram"></i>
-                        </a>
-                    </li>
-                    <li class="left-item">
-                        <a href="#" class="left-link">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="left-item">
-                        <a href="#" class="left-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                    </li>
-                </ul>
             </div>
 
-            <!-- <a href="/index.html" class="logo">
+            <a href="/index.html" class="logo">
                 <img src="/assets/images/LOGO.png" alt="Carbell Sarfo logo">
-            </a> -->
+            </a>
             <ul class="nav-list">
                 <li class="nav-item">
                     <a href="#section-about" class="nav-link">About Me</a>
@@ -85,7 +96,7 @@
 </nav>
 
 <!-- =============== LANDING PAGE ============== -->
-<section class="section-hero" id="section-hero">
+<section class="section-hero" id="hero">
     <div class="container wrapper">
         <div class="hero-container">
             <h3>hello, I'm</h3>
