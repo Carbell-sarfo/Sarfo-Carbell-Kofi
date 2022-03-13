@@ -6,10 +6,16 @@
     transform: scale(1.1) skew(5deg, 3deg);
 }
 
-@mixin shadow {
+@mixin shadow  {
     box-shadow: 0 4px 10px rgba(5, 0, 41, 0.274);
-}
 
+    &:hover, &:focus {
+        box-shadow: 0 2px 5px rgba(5, 0, 41, 0.44);
+    }
+}
+@mixin clr-shadow ($color) {
+    box-shadow: 0 4px 10px rgba($color, .3);
+}
 
 .text-center {
     text-align: center;

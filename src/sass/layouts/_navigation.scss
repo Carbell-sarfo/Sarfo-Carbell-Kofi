@@ -40,7 +40,7 @@
 
         }
         &.close {
-            transform: rotate(360deg);
+            transform: translate(0px, -50%) rotate(180deg);
 
             .lines {
 
@@ -129,6 +129,7 @@
 
         i {
             font-size: 2.4rem;
+            color: var(--clr-black);
         }
     }
 }
@@ -156,6 +157,7 @@
             left: 0;
             z-index: -1;
             background: var(--clr-white);
+            opacity: .8;
             display: flex;
             flex-direction: column;
             padding-top: 4rem;
@@ -202,6 +204,7 @@
             width: 260px;
             height: 200px;
             background: var(--clr-white);
+            opacity: .8;
             position: fixed;
             bottom: 0;
             left: 0;
@@ -229,6 +232,7 @@
         position: fixed;
         top: 0;
         left: 0;
+        z-index: 9;
         background-color: rgba(60, 60, 60, 0.712);
         @include ease(.2s);
         opacity: 0;
