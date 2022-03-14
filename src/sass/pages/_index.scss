@@ -4,6 +4,9 @@
     height: 100vh;
     background-color: var(--clr-white);
     @include ease(.4s);
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 95vh, 0 85vh, 0 0);
+    overflow: hidden;
 
     .hero-container {
         width: 100%;
@@ -38,12 +41,14 @@
         }
 
     }
+
+    
 }
 
 
 // ======= SECTION ABOUT =======
 .section-about {
-    padding: 20rem 0 10rem;
+    padding: 10rem 0 10rem;
     background: var(--clr-gray-light);
 
     .about-container {
@@ -258,92 +263,6 @@
 
 
 
-
-
-
-
-
-////////////////////////////////////////
-//            SLICK JS 
-///////////////////////////////////////
-
-.slick-dots {
-    position: absolute;
-    bottom: -45px;
-    left: 50%;
-    transform: translateX(-50%);
-    // display: block;
-    // width: 100%;
-    padding: 0;
-    list-style: none;
-    text-align: center;
-  
-    li {
-        position: relative;
-        display: inline-block;
-        width: 6px;
-        height: 6px;
-        margin: 0 5px;
-        padding: 0;
-        cursor: pointer;
-  
-        &::before {
-            content: "";
-            top: 1px;
-            @include ease(.4s);
-            width: 8px;
-            height: 8px;
-            background: darkgray;
-            position: absolute;
-            @include shadow;
-            border-radius: 50%;
-        }
-        &.slick-active::before {
-            top: 0;
-            width: 12px;
-            height: 12px;
-            margin-left: -2px;
-            background: var(--clr-red);
-        }
-  
-        button {
-            display: none;
-        }
-  
-    }
-  }
-  
-  // Slick Prev & Slick Next
-  .slick-arrow {
-    background: var(--clr-white);
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 30px;
-    height: 30px;
-    outline: none;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-  
-    .fa-solid {
-      font-size: 30px;
-      color: var(--clr-gray-dark-2);
-      @include ease(.4s);
-
-      &:hover, &:focus {
-        color: var(--clr-red);
-      }
-    }
-  }
-  
-  
-  .prev-arrow {
-    left: 0;
-  }
-  .next-arrow {
-    right: 0;
-  }
 
 
 

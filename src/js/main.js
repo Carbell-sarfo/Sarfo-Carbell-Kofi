@@ -35,6 +35,18 @@ function openMenu () {
         showMenu = false;
     }
 }
+// DISABLE OPEN MENU IN DESTOP MODE
+// const mediaLg = window.matchMedia("(min-width: 1020px)");
+// function handleTabletChange(e) {
+//     if(e.matches) {
+//         console.log("Desktop Mode activated");
+//         // document.body.classList.remove("no-scroll");
+//         openMenu()
+//     }
+// }
+
+// mediaLg.addListener(handleTabletChange);
+// handleTabletChange(mediaLg);
 
 
 
