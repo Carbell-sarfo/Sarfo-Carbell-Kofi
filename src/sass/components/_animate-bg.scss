@@ -59,7 +59,7 @@ $stars-big:    generateStars(100);
 #stars-container
 {
   height: 200vh;
-  width: 200%;
+  width: 100%;
   background: radial-gradient(ellipse at bottom, var(--clr-white) 0%, var(--gray-light) 100%);
   overflow: hidden;
   @include translate50;
