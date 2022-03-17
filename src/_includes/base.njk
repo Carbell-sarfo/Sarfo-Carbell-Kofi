@@ -17,6 +17,8 @@
      <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
 </head>
 <body>
     {% include 'navigation.njk' %}
@@ -26,7 +28,18 @@
     {% include 'footer.njk' %}
 
         <!-- main js file -->
-        <script src="/js/main.js"></script
+        <script src="/js/main.js"></script>
 
+        <script>
+            if (window.netlifyIdentity) {
+              window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                  window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                  });
+                }
+              });
+            }
+          </script>
 </body>
 </html>

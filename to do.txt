@@ -1,12 +1,7 @@
-1. make section youtube responsive
+ISSUES
+1. on desktop mode, when you click the nav-links, it adds no-scroll to the body and that is wrong.
 
-2. are we using cards for the various sections or sticking to design????
-
-3. saving darkmode on localStorage
-
-4. adding other pages
-
-
+2. problems with links to different pages.
 
 
 
