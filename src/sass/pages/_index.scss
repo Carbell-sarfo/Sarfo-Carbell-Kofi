@@ -8,6 +8,10 @@
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 95vh, 0 85vh, 0 0);
     overflow: hidden;
 
+    &#hero {
+        padding-top: 0;
+    }
+
     .hero-container {
         width: 100%;
         max-width: 600px;
@@ -72,7 +76,7 @@
 
 // ============== SECTION PORTFOLIO ==============
 .section-portfolio {
-    padding: 12rem 0 20rem;
+    padding: 12rem 0 10rem;
     background-color: var(--clr-gray-light);
     text-align: center;
 
@@ -85,6 +89,10 @@
 
     .portfolio {
         width: 100%;
+        background: var(--clr-white);
+        border-radius: 0 0 20px 20px ;
+        @include ease(.4s);
+        @include shadow;
 
         &__name {
             display: block;
@@ -95,11 +103,15 @@
         }
         &__detail {
             display: block;
-            font-weight: lighter;
-            color: darkgray;
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: var(--clr-gray-dark-1);
             letter-spacing: 2px;
             text-transform: uppercase;
             margin-bottom: 1rem;
+        }
+        .btn {
+            margin-bottom: 4rem;
         }
     }
 }
@@ -128,16 +140,19 @@
 
         &__icon {
             display: block;
-            font-size: 3rem;
+            font-size: 4rem;
+            text-shadow: 1px 1px 0px #000;
         }
         &__number {
             display: block;
             font-size: 5rem;
             font-weight: bold;
             margin: 2rem 0 1rem;
+            text-shadow: 1px 1px 0px #000;
         }
         &__detail {
             display: block;
+            text-shadow: 1px 1px 0px #000;
         }
     }
 }
@@ -229,6 +244,31 @@
         border-radius: 10px;
         background-color: var(--clr-white);
         overflow: hidden;
+
+        .snippet {
+
+            &__title {
+                color: var(--clr-gray-dark-2);
+                font-size: 2.5rem;
+                text-transform: capitalize;
+
+                a {
+                    color: inherit;
+
+                    &:hover, &:focus {
+                        color: var(--clr-red);
+                    }
+                }
+            }
+            &__meta {
+                color: var(--clr-gray-dark-1);
+                font-size: 1.2rem;
+                margin: .5rem 0;
+            }
+            &__body {
+                margin: 0 1rem 2rem;
+            }
+        }
 
         &__img {
             width: 100%;

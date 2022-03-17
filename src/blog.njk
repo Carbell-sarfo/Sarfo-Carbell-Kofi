@@ -1,0 +1,27 @@
+--- 
+
+title: Recent articles
+layout: 'base.njk'
+
+--- 
+<div class="section-blog__post" id="hero">
+  <div class="container wrapper">
+    <h1 class="heading-secondary">Recent articles</h1>
+    <div role="list" class="articles__list flow">
+      {%- for post in collections.post | reverse -%}
+        {% include 'article-snippet.njk' %}
+      {%- endfor-%}
+    </div>
+  </div>
+</div>
+ 
+  
+<!-- <li>
+  <article class="snippet">
+    <img src="/assets/blog/article-1.jpg" alt="a man on his computer" class="snippet__image">
+    <h3 class="snippet__title"><a href="/blog/another-article/">Another article!!</a></h3>
+    <p class="snippet__meta">by <span>Carbell Sarfo</span> on <span>Jun 15, 2021</span></p>
+    <p class="snippet__body">This is a new article that I&#39;ll be posting Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis repellendus exercitationem placeat tempora delectus, pariatur nemo facere soluta dicta aspernatur! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sit, explicabo dolorum adipisci blanditiis natus accusantium.</p> 
+    <a href="/blog/another-article/" class="btn btn-red">Continue Reading</a>
+  </article>
+</li> -->
