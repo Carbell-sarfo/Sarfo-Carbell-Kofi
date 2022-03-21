@@ -16,7 +16,7 @@
         resize: none;
 
         &:focus, &:valid {
-            border-bottom: 1px solid var(--clr-red);
+            border-bottom: 1px solid var(--clr-primary);
         }
     }
 }

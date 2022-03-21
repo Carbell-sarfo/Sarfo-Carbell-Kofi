@@ -42,7 +42,7 @@
 
                 &:hover, &:focus {
                     @include skewUp;
-                    color: var(--clr-red);
+                    color: var(--clr-primary);
                 }
             }
 
@@ -103,7 +103,7 @@
 
             &:hover, &:focus {
                 @include skewUp;
-                color: var(--clr-red);
+                color: var(--clr-primary);
             }
         }
     }

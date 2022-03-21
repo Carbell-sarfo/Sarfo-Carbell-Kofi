@@ -34,7 +34,7 @@
             font-family: 'Oswald', sans-serif;
             font-weight: bolder;
             font-style: italic;
-            text-shadow: 3px 5px 0px var(--clr-red);
+            text-shadow: 3px 5px 0px var(--clr-primary);
             color: var(--clr-black);
             letter-spacing: 3px;
             line-height: 1;
@@ -256,7 +256,7 @@
                     color: inherit;
 
                     &:hover, &:focus {
-                        color: var(--clr-red);
+                        color: var(--clr-primary);
                     }
                 }
             }
@@ -329,7 +329,7 @@
             p {
                 // margin-right: 7rem;
             }
-            .btn-red {
+            .btn-primary {
                 margin-right: 2rem;
             }
         }
@@ -432,7 +432,7 @@
     .section-hero {
         clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 95vh, 0 85vh, 0 0);
 
-        .btn-red {
+        .btn-primary {
             margin-right: 1rem;
         }
     }

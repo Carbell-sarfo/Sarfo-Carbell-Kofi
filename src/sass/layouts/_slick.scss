@@ -38,7 +38,7 @@
             width: 12px;
             height: 12px;
             margin-left: -2px;
-            background: var(--clr-red);
+            background: var(--clr-primary);
         }
   
         button {
@@ -67,7 +67,7 @@
       @include ease(.4s);
 
       &:hover, &:focus {
-        color: var(--clr-red);
+        color: var(--clr-primary);
       }
     }
   }

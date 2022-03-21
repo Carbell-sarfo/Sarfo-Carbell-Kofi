@@ -103,7 +103,7 @@
     @include ease(.2s);
 
     &:hover, &:focus {
-        background-color: var(--clr-red);
+        background-color: var(--clr-primary);
         color: #fff;
         transform: translateY(-3px);
     }
@@ -138,7 +138,7 @@
     font-size: 1.3rem;
     border: 2px solid transparent;
     box-shadow: 5px 5px 0px var(--clr-gray-dark-2),
-                7px 7px 0px var(--clr-red);
+                7px 7px 0px var(--clr-primary);
     @include ease(.4s);
     position: relative;
     overflow: hidden;
@@ -164,15 +164,15 @@
         @include ease(.4s);
     }
 }
-.btn-red {
-    background-color: var(--clr-red);
+.btn-primary {
+    background-color: var(--clr-primary);
     color: #fff;
-    border: 2px solid var(--clr-red);
+    border: 2px solid var(--clr-primary);
 
     &:hover, &:focus {
-        color: var(--clr-red);
+        color: var(--clr-primary);
         background: #fff;
-        border: 2px solid var(--clr-red);
+        border: 2px solid var(--clr-primary);
     }
     &::after {
         background-color: #fff;

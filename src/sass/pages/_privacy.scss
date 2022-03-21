@@ -13,13 +13,13 @@
     }
 
     a {
-        color: var(--clr-red);
+        color: var(--clr-primary);
         cursor: pointer;
         @include ease(.4s);
         word-wrap: break-word;
 
         &:hover, &:focus {
-            color: darken(red, 20);
+            color: #920000;
         }
     }
 }
