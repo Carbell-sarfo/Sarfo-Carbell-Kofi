@@ -119,3 +119,6 @@ darkModeSwitch.addEventListener("click", () => {
 document.querySelector(".cart").addEventListener("click", () => {
     alert("This website does not have mechandise to buy from yet. Thank you")
 })
+document.querySelector("#shop").addEventListener("click", () => {
+    alert("This website does not have mechandise to buy from yet. Thank you")
+})

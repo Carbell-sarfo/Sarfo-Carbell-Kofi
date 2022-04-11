@@ -59,18 +59,9 @@
         display: grid;
         grid-template-columns: 1fr;
         gap: 3rem;
-        grid-template-areas: 
-        "aboutImage"
-        "aboutText"
-        ;
+        text-align: justify;
     }
-    .about-img {
-        grid-area: aboutImage;
-        aspect-ratio: 8/5;
-    }
-    .about-text {
-        grid-area: aboutText;
-    }
+    
 }
 
 
@@ -89,10 +80,10 @@
 
     .portfolio {
         width: 100%;
-        background: var(--clr-white);
-        border-radius: 0 0 20px 20px ;
-        @include ease(.4s);
-        @include shadow;
+        // background: var(--clr-white);
+        // border-radius: 0 0 20px 20px ;
+        // @include ease(.4s);
+        // @include shadow;
 
         &__name {
             display: block;
@@ -140,8 +131,9 @@
 
         &__icon {
             display: block;
-            font-size: 4rem;
+            font-size: 6rem;
             text-shadow: 1px 1px 0px #000;
+            margin-bottom: 5rem;
         }
         &__number {
             display: block;
@@ -179,11 +171,22 @@
         padding: 5rem 1rem;
         margin-left: auto;
         margin-right: auto;
+        position: relative;
+        z-index: 1;
+
+
+        &__text {
+            text-align: justify;
+        }
 
         &__img {
             width: 200px;
             height: auto;
             margin: 3rem auto 1rem;
+        }
+
+        &__name {
+            text-align: center;
         }
     }
 }
@@ -360,6 +363,13 @@
 
         .info-container {
             grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+    
+    .section-testimonials {
+
+        .testimonial {
+            padding-inline: 10rem;
         }
     }
 

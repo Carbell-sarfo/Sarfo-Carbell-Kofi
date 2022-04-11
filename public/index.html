@@ -79,7 +79,7 @@
                     <a href="/" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/shop" class="nav-link">Shop</a>
+                    <a href="/shop" class="nav-link" id="shop">Shop</a>
                 </li>
                 <li class="nav-item">
                     <a href="https://www.youtube.com/channel/UCdC_rW9x4MnQvubSJOg4ihQ/" target="_blank" class="nav-link">Youtube</a>
@@ -136,15 +136,29 @@
             <div>
                 <img src="/assets/images/about-image.png" alt="Carbell Kofi" class="about-img">
             </div>
-            <div  class="about-text">
+            <div  class="about-text-1">
                 <h3 class="heading-tertiary">Who am I</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis a animi porro earum, et obcaecati accusamus in fugit quia? Quam totam ipsum quas explicabo reprehenderit quos dicta vel, ea accusantium.
-                    <br> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora repudiandae deserunt neque, obcaecati facilis tempore!
+                <p>
+                    Hi, I am Carbell Kofi Sarfo.
                     <br>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo animi distinctio, labore perferendis ut optio libero nostrum! Mollitia magnam, obcaecati laboriosam illo delectus fugit unde, fugiat blanditiis, aspernatur deleniti modi?
+                    You can call me many things. You can call me a leader, graphics desinger, web developer, music lover or by any market defined function-title. I am multi-disciplinary maker with over 3 years of experience in wide range of design disciplines, management, entrepreneur, front-end developer, music enthusiast, photographer, you name it and you will be shocked I am there.
                 </p>
                 <br>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore reiciendis nisi molestias adipisci maiores distinctio fugiat aliquam itaque et ducimus!</p>
+                <p>I don't like to define myself by the work I have done. I define myself by the work towards the goals I am headed. Skills can be taught, personality is inherent. I prefer to keep learning, continue challenging myself, and do interesting things that are both aligned and not aligned to my future goals.</p>
+            </div>
+            <div class="about-text-2">
+                <h3 class="heading-tertiary">Where I am at the Moment</h3>
+                <p>I am currently in my final year in the University of Professional Studies pursuing a Bachelor of Art in Business Administration. My experiences here have not only thought me but built me in many areas of my life. I have been able to amass lots of soft and hard skills. Knowing about myself, building my public speaking skills, leadership skills..</p>
+                <br>
+
+                <h3 class="heading-tertiary">Where I am headed</h3>
+                <p>I see a future of IT, a future where innovation is a must, a future where business leaders have to be equipped in many disciplines and knowledge background. And that is the future I am painting.</p>
+                <p>In the PDF attachment below, you may learn more about my life, experience, talents, education, and much more.</p>
+                <br>
+                <a href="#" class="btn btn-primary">Download CV</a>
+            </div>
+            <div>
+                <img src="/assets/images/about-image.png" alt="Carbell Kofi" class="about-img">
             </div>
         </div>
     </div>
@@ -189,24 +203,24 @@
     <div class="container wrapper">
         <div class="info-container">
             <div class="info">
-              <i class="fa-solid fa-briefcase info__icon"></i> 
-              <span class="info__number">30</span>
-                <span class="info__detail">Projects Completed</span>
+                <i class="fa-solid fa-camera info__icon"></i>              
+                <!-- <span class="info__number">30</span> -->
+                <span class="info__detail">photography</span>
             </div>
             <div class="info">
-              <i class="fa-solid fa-users info__icon"></i>  
-              <span class="info__number">10</span>
-                <span class="info__detail">Projects Completed</span>
+                <i class="fa-solid fa-code info__icon"></i>
+              <!-- <span class="info__number">10</span> -->
+                <span class="info__detail">Web Development</span>
             </div>
             <div class="info">
-              <i class="fa-solid fa-heart-pulse info__icon"></i>
-              <span class="info__number">30</span>
-                <span class="info__detail">Projects Completed</span>
+                <i class="fa-solid fa-pen-ruler info__icon"></i>
+                <!-- <span class="info__number">30</span> -->
+                <span class="info__detail">Graphic Design</span>
             </div>
             <div class="info">
-                <i class="fab fa-linkedin-in info__icon"></i>
-                <span class="info__number">5</span>
-                <span class="info__detail">Projects Completed</span>
+                <i class="fa-solid fa-bullhorn info__icon"></i> 
+                <!-- <span class="info__number">5</span> -->
+                <span class="info__detail">Public Speaking</span>
             </div>
         </div>
     </div>
@@ -225,7 +239,7 @@
         </div>
         <div class="testimonials-container">
             <div class="testimonial">
-                <div class="testimonial__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, dolore incidunt assumenda obcaecati placeat ducimus rem deserunt quae dignissimos accusantium odio quaerat earum quam quo excepturi sint hic iste alias! Inventore soluta reiciendis doloremque animi quis vitae libero aliquid dicta.</div>
+                <div class="testimonial__text">"Building a website. I thought to myself, how, where and from whom would I be able to get a simple, elegant website. Well, I worried until I found out a dear friend who gave his all in making this a reality for me. A person open and willing to listen and willing to learn to be able to provide the best for you  are qualities that best suits him. I recommend and always will, the work of a dear friend Sarfo Carbell, to provide you with the best you could only wish for."</div>
                 <img src="/assets/images/testimonial-1.png" alt="Sameul Botchwey" class="testimonial__img">
                 <h4 class="testimonial__name">Samuel Botchwey</h4>
             </div>
@@ -344,7 +358,7 @@
     <div class="container wrapper">
         <h2 class="heading-secondary text-center">Send a message</h2>
         <div class="footer-container">
-            <form action="3" class="contact-form">
+            <form action="/form-success" class="contact-form" name="contact" method="POST" data-netlify="true">
                 <input type="text" name="Full Name" id="fname" placeholder="Full Name" required class="input-field">
                 <input type="email" name="Email Address" id="email" placeholder="Email Address" required class="input-field">
                 <input type="text" name="Telephone" id="tel" placeholder="Telephone" required class="input-field">
@@ -369,27 +383,27 @@
                 </ul>
                 <ul class="nav-social">
                     <li>
-                        <a href="https://www.instagram.com/carbelldidit/" class="social-link" title="check me out on Instagram">
+                        <a href="https://www.instagram.com/carbelldidit/" target="_blank" class="social-link" title="check me out on Instagram">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://web.facebook.com/profile.php?id=100079153059971" class="social-link" title="Let's be freinds on Facebook">
+                        <a href="https://web.facebook.com/profile.php?id=100079153059971" target="_blank" class="social-link" title="Let's be freinds on Facebook">
                             <i class="fab fa-facebook-f"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/carbell-sarfo/" class="social-link" title="Let's connect on Linked In">
+                        <a href="https://www.linkedin.com/in/carbell-sarfo/" target="_blank" class="social-link" title="Let's connect on Linked In">
                             <i class="fab fa-linkedin-in"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://github.com/Carbell-sarfo" class="social-link" title="Github">
+                        <a href="https://github.com/Carbell-sarfo" target="_blank" class="social-link" title="Github">
                             <i class="fab fa-github"></i>
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/Carbelldidit" class="social-link" title="Twitter">
+                        <a href="https://twitter.com/Carbelldidit" target="_blank" class="social-link" title="Twitter">
                             <i class="fab fa-twitter"></i>
                         </a>
                     </li>
