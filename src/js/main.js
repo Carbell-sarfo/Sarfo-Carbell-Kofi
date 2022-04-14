@@ -20,7 +20,7 @@ function openMenu () {
         navItem.forEach(item => {
             item.classList.add("show");
         });
-        document.body.classList.add("no-scroll");
+        // document.body.classList.add("no-scroll");
         showMenu = true;
     }else {
         navButton.classList.remove("close");
@@ -31,7 +31,7 @@ function openMenu () {
         navItem.forEach(item => {
             item.classList.remove("show");
         });
-        document.body.classList.remove("no-scroll");
+        // document.body.classList.remove("no-scroll");
         showMenu = false;
     }
 }
