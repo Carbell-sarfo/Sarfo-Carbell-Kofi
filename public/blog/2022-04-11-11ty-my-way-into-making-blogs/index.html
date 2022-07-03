@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>First trial </title>
+    <title>11ty, My way into making Blogs</title>
 
    
     <!-- main css file -->
@@ -20,7 +20,7 @@
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 </head>
-<body>
+<body onload="toggleDarkMode()">
     
 <!-- nav-button and overlay -->
 <div class="nav-overlay"></div>
@@ -64,15 +64,28 @@
                     </li>
                 </ul>
                 <!-- Day and Night Switch -->
-                <div class="switch-box">
+                <!-- <div class="switch-box">
                     <input type="checkbox" name="switch" id="switch" />
                     <label for="switch" class="label-left"></label>
                     <label for="switch" class="label"></label>
-                </div>
+                </div> -->
+                <label>
+                    <input class='toggle-input' type='checkbox' id="switch"></input>
+                    <div class='toggle-slot'>
+                      <div class='sun-icon-wrapper'>
+                        <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                      </div>
+                      <div class='toggle-button'></div>
+                      <div class='moon-icon-wrapper'>
+                        <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                      </div>
+                    </div>
+                  </label>
+                  
             </div>
 
             <a href="/" class="logo">
-                <img src="/assets/images/LOGO.png" alt="Carbell Sarfo logo">
+                <img src="/assets/images/logo-light.png" alt="Carbell Sarfo logo">
             </a>
             <ul class="nav-list">
                 <li class="nav-item">
@@ -105,17 +118,29 @@
 <div class="individual-article__page" id="hero">
   <div class="container wrapper">
     <div class="container container--narrow flow">
-        <h1 class="heading-secondary"> First trial  </h1>
+        <h1 class="heading-secondary"> 11ty, My way into making Blogs </h1>
         <figure class="main-article__figure">
-          <img src="/assets/blog/instagram-post-–-3.jpg" alt="samuel Botchwey website">
+          <img src="/assets/blog/11ty-logo.png" alt="11ty Rocks">
         </figure>    
   
-        <p>accumsan lacus vel. Donec ultrices tincidunt arcu non sodales. Mattis rhoncus urna neque viverra justo nec ultrices dui sapien. Pretium quam vulputate dignissim suspendisse in est. Lobortis mattis aliquam faucibus purus in massa tempor nec. Elit ullamcorper dignissim cras tincidunt lobortis feugiat vivamus at augue. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat. Vulputate eu scelerisque felis imperdiet proin. Nisl nisi scelerisque eu ultrices.</p>
-<p>Enim nulla aliquet porttitor lacus luctus accumsan. Vulputate mi sit amet mauris commodo quis. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor. Tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Placerat orci nulla pellentesque dignissim. Consequat mauris nunc congue nisi. Nec nam aliquam sem et tortor consequat. Consequat semper viverra nam libero justo laoreet sit amet. Id interdum velit laoreet id donec. Turpis in eu mi bibendum neque. Tincidunt vitae semper quis lectus. Suscipit adipiscing bibendum est ultricies integer quis auctor. Posuere urna nec tincidunt praesent semper. Sagittis id consectetur purus ut faucibus pulvinar elementum. Diam maecenas ultricies mi eget mauris. Nunc mi ipsum faucibus vitae aliquet nec ullamcorper. Dui sapien eget mi proin sed.</p>
-<p>In iaculis nunc sed augue lacus. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum. Consectetur adipiscing elit ut aliquam. Tortor consequat id porta nibh venenatis cras sed. Integer enim neque volutpat ac tincidunt. Pellentesque pulvinar pellentesque habitant morbi. Ut enim blandit volutpat maecenas. Risus quis varius quam quisque id. Turpis tincidunt id aliquet risus. Congue eu consequat ac felis donec.</p>
-<p>Aliquam vestibulum morbi blandit cursus risus at. Malesuada fames ac turpis egestas sed tempus. Donec et odio pellentesque diam volutpat commodo sed egestas egestas. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus. Enim diam vulputate ut pharetra sit amet aliquam. Est ante in nibh mauris cursus mattis. Viverra ipsum nunc aliquet bibendum enim facilisis gravida neque. Nec ultrices dui sapien eget mi proin sed libero enim. Sed sed risus pretium quam vulputate. Sit amet luctus venenatis lectus magna.</p>
-<p>Mauris nunc congue nisi vitae suscipit tellus mauris. Vitae et leo duis ut. Arcu cursus euismod quis viverra nibh. Amet mauris commodo quis imperdiet. Condimentum lacinia quis vel eros donec. Enim neque volutpat ac tincidunt vitae semper quis lectus nulla. Faucibus nisl tincidunt eget nullam. Cursus metus aliquam eleifend mi in nulla. Ut placerat orci nulla pellentesque dignissim enim sit amet. Lobortis feugiat vivamus at augue eget arcu dictum. Nunc faucibus a pellentesque sit amet porttitor. Quis varius quam quisque id diam vel quam elementum pulvinar.</p>
-
+        <!--StartFragment-->
+<p>I searched, I kept searching for a way to be able to be in full control of my blog website. To personally write every code and see how it performs. Well my search is almost at it end now that I have found 11ty.</p>
+<p><strong>*A friend</strong>:* &quot;Carbell, Can you make a website that has blog for me?&quot; <br>
+<em><strong>Me</strong></em>: Yes. We will meet on ... (date chosen) to go through so that we find out you actually want and how we can make it possible</p>
+<p>When I said Yes, I didn't clearly didn't know how to build a blog. But I definitely knew how to build a website. That is something I had been doing for quite a while and have really gained lots of experience and exposure.</p>
+<p>I tried once to find a way to be able to build a blog for myself a year earlier but truth be told I wasn't ready yet and the frameworks I had to learn were above the level I was in my front-end development.</p>
+<p><code>&lt;br&gt;</code></p>
+<p>Fast-forward a year and half later, I will say I am more equipped to take on a bigger bite. I always wanted to get a blog but wanted one that I had to create myself. When I was asked to build the blog and website, that was an obvious and clear challenge for me because at that time, I had not created one at least not as a side project. but YES was my answer and would always be my answer.</p>
+<p>Fast-forward a month later, not only does have his personal website designed, built and deployed, the blog is very active and if you are reading this, you know I have my blog as well.</p>
+<p>11ty made it very easy for me to be able to transform my static HTML websites that I am used to building into more dynamic static website. It made use of templating engines such as handlebars and over 11 templating engines to help produce your html code.</p>
+<p><code>&lt;br&gt;</code></p>
+<p>11ty allows you to turn markdown files into static html. making it easy for generating content on website. It has zero client-side JavaScript dependencies as other platforms and static site generators making your website a static site. cool right?</p>
+<p>With help from Kevin Powell's tutorials and 11ty rocks resources, I managed my way around a little and I am still getting there, trying stuff out and understanding how things work.</p>
+<p><code>&lt;br&gt;</code></p>
+<p>I no longer build website like I used to. I know have 11ty helping me build all my projects. If you are new to web development and on your way, you should definitely check 11ty out and embrace it as it can allow you take your web development game to another level. Once again a big thanks to <a href="https://www.kevinpowell.co/"></a><a href="https://www.kevinpowell.co/">Kevin Powell</a>  and <a href="https://www.kevinpowell.co/">Steph from 11ty</a></p>
+<p>That's my first Blog and I will be in touch soon. Till then, if you cannot see the end goal, check to see if you can see the next step, if you can see it, take it. Signing out</p>
+<p><a href="https://11ty.rocks/"></a></p>
+<!--EndFragment-->
     </div>
   </div>
 </div>
@@ -132,7 +157,7 @@
                 <input type="email" name="Email Address" id="email" placeholder="Email Address" required class="input-field">
                 <input type="text" name="Telephone" id="tel" placeholder="Telephone" required class="input-field">
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required class="input-field"></textarea>
-                <input type="submit" value="Send Message &longrightarrow;" class="btn btn-primary">
+                <input type="submit" value="Send Message &longrightarrow;" >
             </form>
     
             <div class="contact-right">
@@ -196,6 +221,7 @@
 
         <!-- main js file -->
         <script src="/js/main.js"></script>
+        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
 
         <script>
             if (window.netlifyIdentity) {

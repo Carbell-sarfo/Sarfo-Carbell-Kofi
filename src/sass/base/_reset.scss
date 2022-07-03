@@ -17,14 +17,16 @@ html {
 body {
     --clr-primary: #E5202B;
     --clr-white: #ffffff;
+    --clr-white-rgb: 255, 255, 255;
     --clr-black: #0C0C0C;
     --clr-gray-light: #E9EAED;
     --clr-gray-dark-1: #878787;
-    --clr-gray-dark-2: #27292A;
+    --clr-gray-dark-2: #212222;
 
     width: 100%;
     height: 100%;
-    line-height: 1.5;
+    line-height: 2.0;
+    transition: all .4s ease-in-out;
     font-family: "Poppins", sans-serif;
     background: var(--clr-gray-light);
     color: var(--clr-gray-dark-2);
@@ -36,7 +38,7 @@ h1, h2, h3, h4, h5 {
 }
 p, i, span, article {
     font-family: inherit;
-    font-size: 1.6rem;
+    font-size: inherit;
 }
 a {
     font-family: "Helveitca rounded", sans-serif;
@@ -51,13 +53,26 @@ img {
 }
 
 
-.night {
-    --clr-white: #0C0C0C;
-    --clr-black: #fff;
-    --clr-gray-light: #111111;
-    --clr-gray-dark-1: #5e5e5e;
-    --clr-gray-dark-2: #E9EAED;
+section {
+    transition: .3s;
 }
-.no-scroll {
-    overflow-y: hidden;
+
+
+@media (perfers-color-scheme: dark) {
+
+    body {
+        --clr-white: #0C0C0C;
+        --clr-black: #fff;
+        --clr-white-rgb: 0, 0, 0;
+        --clr-gray-light: #111111;
+        --clr-gray-dark-1: #5e5e5e;
+        --clr-gray-dark-2: #E9EAED;
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 1.4rem;
+    }
 }

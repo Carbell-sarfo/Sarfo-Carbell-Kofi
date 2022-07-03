@@ -20,7 +20,7 @@
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 </head>
-<body>
+<body onload="toggleDarkMode()">
     {% include 'navigation.njk' %}
 
     {{ content | safe }}
@@ -29,6 +29,7 @@
 
         <!-- main js file -->
         <script src="/js/main.js"></script>
+        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
 
         <script>
             if (window.netlifyIdentity) {

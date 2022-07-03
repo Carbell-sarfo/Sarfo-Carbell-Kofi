@@ -16,6 +16,7 @@
         position: relative;
     }
 
+    // =========  Nav-Button   =============
     .nav-btn {
         cursor: pointer;
         @include ease(.4s);
@@ -57,6 +58,7 @@
         }
     }
 
+    // =========  LOGO   =============
     .logo {
         position: absolute;
         top: 50%;
@@ -64,7 +66,8 @@
         transform: translate(-50%, -50%);
 
         img {
-            width: 70px;
+            width: 100px;
+            height: auto;
         }
     }
 
@@ -127,6 +130,10 @@
         right: 0;
         transform: translate(0, -50%);
 
+        &:hover i, &:focus i {
+            color: var(--clr-primary);
+        }
+
         i {
             font-size: 2.4rem;
             color: var(--clr-black);
@@ -156,10 +163,11 @@
             top: 0;
             left: 0;
             z-index: -1;
-            background: var(--clr-white);
+            background: rgb(var(--clr-white-rgb), .8);
+            backdrop-filter: blur(.1rem);
             display: flex;
             flex-direction: column;
-            padding-top: 4rem;
+            padding-top: min(20vh, 4rem);
             justify-content: center;
             text-align: center;
             @include ease(.4s);
@@ -202,7 +210,8 @@
         .nav-left {
             width: 260px;
             height: 200px;
-            background: var(--clr-white);
+            background: rgb(var(--clr-white-rgb), .8);
+            backdrop-filter: blur(.1rem);
             position: fixed;
             bottom: 0;
             left: 0;
@@ -251,7 +260,7 @@
             display: flex;
             position: absolute;
             top: 50%;
-            right: 0%;
+            right: 10rem;
             transform: translate(00px, -50%);
 
             li {
@@ -283,7 +292,7 @@
         }
 
         .cart {
-            display: none;
+            // display: none;
         }
     }
 }

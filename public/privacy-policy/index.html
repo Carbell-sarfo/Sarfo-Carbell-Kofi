@@ -20,7 +20,7 @@
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 </head>
-<body>
+<body onload="toggleDarkMode()">
     
 <!-- nav-button and overlay -->
 <div class="nav-overlay"></div>
@@ -64,15 +64,28 @@
                     </li>
                 </ul>
                 <!-- Day and Night Switch -->
-                <div class="switch-box">
+                <!-- <div class="switch-box">
                     <input type="checkbox" name="switch" id="switch" />
                     <label for="switch" class="label-left"></label>
                     <label for="switch" class="label"></label>
-                </div>
+                </div> -->
+                <label>
+                    <input class='toggle-input' type='checkbox' id="switch"></input>
+                    <div class='toggle-slot'>
+                      <div class='sun-icon-wrapper'>
+                        <div class="iconify sun-icon" data-icon="feather-sun" data-inline="false"></div>
+                      </div>
+                      <div class='toggle-button'></div>
+                      <div class='moon-icon-wrapper'>
+                        <div class="iconify moon-icon" data-icon="feather-moon" data-inline="false"></div>
+                      </div>
+                    </div>
+                  </label>
+                  
             </div>
 
             <a href="/" class="logo">
-                <img src="/assets/images/LOGO.png" alt="Carbell Sarfo logo">
+                <img src="/assets/images/logo-light.png" alt="Carbell Sarfo logo">
             </a>
             <ul class="nav-list">
                 <li class="nav-item">
@@ -183,7 +196,7 @@
                 <input type="email" name="Email Address" id="email" placeholder="Email Address" required class="input-field">
                 <input type="text" name="Telephone" id="tel" placeholder="Telephone" required class="input-field">
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required class="input-field"></textarea>
-                <input type="submit" value="Send Message &longrightarrow;" class="btn btn-primary">
+                <input type="submit" value="Send Message &longrightarrow;" >
             </form>
     
             <div class="contact-right">
@@ -247,6 +260,7 @@
 
         <!-- main js file -->
         <script src="/js/main.js"></script>
+        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
 
         <script>
             if (window.netlifyIdentity) {

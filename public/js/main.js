@@ -1,3 +1,41 @@
+// =========== DAY AND NIGHT SWITCH =============
+// let darkMode = localStorage.getItem("darkMode");
+// const darkModeSwitch = document.querySelector("#switch");
+// console.log(darkMode);
+
+// // Check if darkmode is enabled
+// // if it is disabled, turn it on
+// // if it is enabled, turn it off
+
+// const enableDarkMode = () => {
+//     document.body.classList.add("night");
+//     localStorage.setItem('darkMode', "enabled");
+// }
+// const disableDarkMode = () => {
+//     document.body.classList.remove("night");
+//     localStorage.setItem('darkMode', null);
+// }
+
+// if(darkMode === "enabled") {
+//     // enableDarkMode();
+//     console.log(darkMode);
+//     // darkModeSwitch.checked = true;
+// }
+
+// darkModeSwitch.addEventListener("click", toggleDarkMode);
+
+// function toggleDarkMode () {
+//     darkMode = localStorage.getItem('darkMode');
+//     if(darkMode !== "enabled") {
+//         enableDarkMode();
+//     }else {
+//         disableDarkMode();
+//     }
+// }
+
+
+
+
 const navButton = document.querySelector(".nav-btn");
 const navList = document.querySelector(".nav-list");
 const navLeft = document.querySelector(".nav-left");
@@ -20,7 +58,7 @@ function openMenu () {
         navItem.forEach(item => {
             item.classList.add("show");
         });
-        document.body.classList.add("no-scroll");
+        // document.body.classList.add("no-scroll");
         showMenu = true;
     }else {
         navButton.classList.remove("close");
@@ -31,7 +69,7 @@ function openMenu () {
         navItem.forEach(item => {
             item.classList.remove("show");
         });
-        document.body.classList.remove("no-scroll");
+        // document.body.classList.remove("no-scroll");
         showMenu = false;
     }
 }
@@ -52,45 +90,28 @@ function openMenu () {
 
 
 
-// =========== DAY AND NIGHT SWITCH =============
-let darkMode = localStorage.getItem("darkMode");
-const darkModeSwitch = document.querySelector("#switch");
-
-// Check if darkmode is enabled
-// if it is disabled, turn it on
-// if it is enabled, turn it off
-
-const enableDarkMode = () => {
-    document.body.classList.add("night");
-    localStorage.setItem('darkMode', "enabled");
-}
-const disableDarkMode = () => {
-    document.body.classList.remove("night");
-    localStorage.setItem('darkMode', null);
-}
-
-if(darkMode === "enabled") {
-    enableDarkMode();
-    darkModeSwitch.checked = true;
-}
-
-darkModeSwitch.addEventListener("click", () => {
-    darkMode = localStorage.getItem('darkMode');
-    if(darkMode !== "enabled") {
-        enableDarkMode();
-    }else {
-        disableDarkMode();
-    }
-});
 
 
 
+// INTERSECTION OBSERVER
+const sectionHero = document.querySelector("#hero");
+const toTopButton = document.querySelector('.to-top');
+const options = {
+    rootMargin: "-100px"
+};
 
+const observer = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting) {
+            console.log(entry);
+            toTopButton.classList.add("visible");
+        }else{
+            toTopButton.classList.remove("visible");
+        }
+    })
+}, options)
 
-
-
-
-
+observer.observe(sectionHero);
 
 
 

@@ -1,85 +1,103 @@
 //////////////////////
 //   DARK MODE TOGGLE
 /////////////////////
-.label-left:empty{
-    // margin-left: 10px;
+  
+  .toggle-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
   }
   
-
-  .label-left::before, 
-  .label-left::after{
-      @include ease(.4s);
+  .toggle-slot {
+    position: relative;
+    height: 4rem;
+    width: 8rem;
+    border: 4px solid #ffbb52;
+    border-radius: 10em;
+    background-color: white;
+    box-shadow: 0px 2px 6px rgba(228, 231, 236, 0.343);
+    transition: background-color 250ms;
+    cursor: pointer;
   }
   
+  .toggle-input:checked ~ .toggle-slot {
+    background-color: #1a1b1e;
+    border: 4px solid #e4e7ec;
+    box-shadow: 0px 2px 6px rgba(53, 60, 70, 0.335);
+  }
   
-  .switch-box input[type=checkbox], 
-  .switch-box input[type=checkbox]:active{
-      position:absolute;
-      top:-5000px;
-      height:0;
-      width:0;
-      opacity:0;
-      border:none;
-      outline:none;
+  .toggle-button {
+    transform: translate(4.2rem, -50%);
+    position: absolute;
+    top: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: #ffeccf;
+    box-shadow: inset 0px 0px 0px 0.25em #ffbb52;
+    transition: background-color 250ms, border-color 250ms, transform 500ms cubic-bezier(.26,2,.46,.71);
   }
-  .switch-box label{
-      display:inline-block;
-      position:relative;
-      padding:0px;
-      cursor:pointer;
+  
+  .toggle-input:checked ~ .toggle-slot .toggle-button {
+    background-color: #1a1b1e;
+    box-shadow: inset 0px 0px 0px 0.25em white;
+    transform: translate(0.3rem, -50%);
+  }
+  
+  .sun-icon {
+    position: absolute;
+    height: 2.8rem;
+    width: 2.8rem;
+    color: #ffbb52;
+  }
+  
+  .sun-icon-wrapper {
+    position: absolute;
+    height: 3.5rem;
+    width: 3.5rem;
+    opacity: 1;
+    transform: 
+                translate(0.2rem, 0.2rem) 
+                rotate(15deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2,.46,.71);
+  }
+  
+  .toggle-input:checked ~ .toggle-slot .sun-icon-wrapper {
+    opacity: 0;
+    transform: translate(3em, 2em) rotate(0deg);
+  }
+  
+  .moon-icon {
+    position: absolute;
+    height: 2.8rem;
+    width: 2.8rem;
+    color: white;
+  }
+  
+  .moon-icon-wrapper {
+    position: absolute;
+    height: 3.5em;
+    width: 3.5em;
+    opacity: 0;
+    transform: 
+                // translate(11rem, 2em) 
+                rotate(0deg);
+    transform-origin: 50% 50%;
+    transition: opacity 150ms, transform 500ms cubic-bezier(.26,2.5,.46,.71);
+  }
+  
+  .toggle-input:checked ~ .toggle-slot .moon-icon-wrapper {
+    opacity: 1;
+    transform: translate(4.5rem, -0.3rem) rotate(-15deg);
+  }
 
-  }
-   .label-left::before{
-       content:'';
-       display:block;
-       position:absolute;
-       z-index:1;
-       height:16px;
-       width:16px;
-       margin: 4px;
-       border-radius:100%;
-       right: ((8px) ) + 0px + 10px;
-       bottom: 0px;
-    //    background:#FFB200;
-       background: transparent;
-       box-shadow: -5px -5px 0 0 rgb(44, 44, 44);
-       transform: rotate(-45deg);
 
-  }
-  .label-left::after{
-      content: "";
-      display: inline-block;
-      width: (16px * 2) + (4px * 2);
-      height:16px + (4px * 2);
-      border-radius: 16px;
-      background: rgba(255, 255, 255, 0.15);
-      vertical-align: middle;
-      margin: 0 10px;
-    //   border: 2px solid #FFB200;
-      border: 2px solid rgb(34, 34, 34);
-  }
-  .switch-box input[type=checkbox]:checked + .label-left:before{
-      right: 10px;
-      box-shadow: none;
-      background: #FFB200;
-  }
-  .switch-box input[type=checkbox]:checked + .label-left:after{
-      background: rgba(0, 0, 0, 0.15);
-    //   border: 2px solid white;
-    border: 2px solid #FFB200;
-  }
-  .switch-box input[type=checkbox] + .label-left{
-      color: rgba(250, 250, 250, 0.51);
-      font-weight: bold;
-  }
-  .switch-box input[type=checkbox]:checked + .label-left{
-      color: rgba(149, 149, 149, 0.51);
-      font-weight: normal;
-  }
-  .switch-box input[type=checkbox]:checked + .label-left + .switch-box-label{
-      color: rgba(250, 250, 250, 0.51);
-      font-weight: bold;
-  }
+
+
+
   
 //////////////////////
 //   TO-TOP BUTTON
@@ -101,6 +119,8 @@
     justify-content: center;
     // border: 2px solid var(--clr-gray-light);
     @include ease(.2s);
+    opacity: 0;
+    pointer-events: none;
 
     &:hover, &:focus {
         background-color: var(--clr-primary);

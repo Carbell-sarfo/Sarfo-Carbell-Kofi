@@ -1,0 +1,15 @@
+.night {
+    --clr-white: #0C0C0C;
+    --clr-black: #fff;
+    --clr-white-rgb: 0, 0, 0;
+    --clr-gray-light: #111111;
+    --clr-gray-dark-1: #5e5e5e;
+    --clr-gray-dark-2: #E9EAED;
+}
+.no-scroll {
+    overflow-y: hidden;
+}
+.visible {
+    opacity: 1;
+    pointer-events: initial;
+}

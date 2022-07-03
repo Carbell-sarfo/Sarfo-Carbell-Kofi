@@ -20,4 +20,24 @@
             border-bottom: 1px solid var(--clr-primary);
         }
     }
+    input[type="submit"] {
+        display: inline-block;
+        margin: 0;
+        border: 0;
+        background-color: var(--clr-primary);
+        color: #fff;
+        padding: 1.5rem 2rem;
+        @include ease(.4s);
+        border: 2px solid transparent;
+        font-weight: bold;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.408);
+
+        &:hover, &:focus {
+            background: #fff;
+            color: #000;
+            border: 2px solid var(--clr-primary);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.708);
+            transform: translateY(-2px);
+        }
+    }
 }
