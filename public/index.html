@@ -13,14 +13,11 @@
      <!-- font-awesome cdn -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-     <!-- slick js styling -->
-     <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 </head>
-<body onload="toggleDarkMode()">
+<body>
     
 <!-- nav-button and overlay -->
 <div class="nav-overlay"></div>
@@ -85,7 +82,7 @@
             </div>
 
             <a href="/" class="logo">
-                <img src="/assets/images/logo-light.png" alt="Carbell Sarfo logo">
+                <img src="/assets/images/logo-light.png" alt="Carbell Sarfo logo" class="logo-img">
             </a>
             <ul class="nav-list">
                 <li class="nav-item">
@@ -126,10 +123,10 @@
         <div class="hero-container">
             <h3>hello, I'm</h3>
             <h1>Carbell</h1>
-            <p>I am a multi-disciplinary maker with experience in business management and wide range of design desciplines.</p>
+            <p>I am a multi-disciplinary maker with experience in business management and wide range of IT and design desciplines.</p>
             <div>
                 <a href="#section-footer" class="btn btn-primary">Get in touch</a>
-                <a href="#" class="btn btn-neutral">Download CV</a>
+                <a href="./assets/files/Curriculum Vitae (Carbell Sarfo).pdf" target="blank" class="btn btn-neutral">Download CV</a>
             </div>
         </div>
     </div>
@@ -168,7 +165,7 @@
                 <p>I see a future of IT, a future where innovation is a must, a future where business leaders have to be equipped in many disciplines and knowledge background. And that is the future I am painting.</p>
                 <p>In the PDF attachment below, you may learn more about my life, experience, talents, education, and much more.</p>
                 <br>
-                <a href="#" class="btn btn-primary">Download CV</a>
+                <a href="./assets/files/Curriculum Vitae (Carbell Sarfo).pdf" target="blank" class="btn btn-primary">Download CV</a>
             </div>
             <div>
                 <img src="/assets/images/about-img.jpg" alt="Carbell Kofi" class="about-img">
@@ -252,15 +249,11 @@
         </div>
         <div class="testimonials-container">
             <div class="testimonial">
-                <div class="testimonial__text">"Building a website. I thought to myself, how, where and from whom would I be able to get a simple, elegant website. Well, I worried until I found out a dear friend who gave his all in making this a reality for me. A person open and willing to listen and willing to learn to be able to provide the best for you  are qualities that best suits him. I recommend and always will, the work of a dear friend Sarfo Carbell, to provide you with the best you could only wish for."</div>
+                <div class="testimonial__text">"Building a website. I thought to myself, how, where and from whom would I be able to get a simple, elegant website. Well, I worried until I found out a dear friend who gave his all in making this a reality for me. A person open and willing to listen and willing to learn to be able to provide the best for you  are qualities that best suits him."</div>
                 <img src="/assets/images/testimonial-1.png" alt="Sameul Botchwey" class="testimonial__img">
                 <h4 class="testimonial__name">Samuel Botchwey</h4>
             </div>
-            <div class="testimonial">
-                <div class="testimonial__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro, dolore incidunt assumenda obcaecati placeat ducimus rem deserunt quae dignissimos accusantium odio quaerat earum quam quo excepturi sint hic iste alias! Inventore soluta reiciendis doloremque animi quis vitae libero aliquid dicta.</div>
-                <img src="/assets/images/testimonial-2.png" alt="Sameul Botchwey" class="testimonial__img">
-                <h4 class="testimonial__name">Samuel Botchwey</h4>
-            </div>
+            
         </div>
     </div>
 </section>
@@ -321,24 +314,6 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-    <!-- JQuery external file -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <!-- External-Slick js -->
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-    <!-- slick file -->
-    <script src="/js/slick.js"></script>
-
-
 
     <!-- ============== SECTION CONTACT ============= -->
 <section class="section-footer" id="section-footer">
@@ -414,7 +389,6 @@
 
         <!-- main js file -->
         <script src="/js/main.js"></script>
-        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
 
         <script>
             if (window.netlifyIdentity) {

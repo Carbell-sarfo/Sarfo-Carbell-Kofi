@@ -1,41 +1,78 @@
-// =========== DAY AND NIGHT SWITCH =============
-// let darkMode = localStorage.getItem("darkMode");
-// const darkModeSwitch = document.querySelector("#switch");
-// console.log(darkMode);
-
-// // Check if darkmode is enabled
-// // if it is disabled, turn it on
-// // if it is enabled, turn it off
-
-// const enableDarkMode = () => {
-//     document.body.classList.add("night");
-//     localStorage.setItem('darkMode', "enabled");
-// }
-// const disableDarkMode = () => {
-//     document.body.classList.remove("night");
-//     localStorage.setItem('darkMode', null);
-// }
-
-// if(darkMode === "enabled") {
-//     // enableDarkMode();
-//     console.log(darkMode);
-//     // darkModeSwitch.checked = true;
-// }
-
-// darkModeSwitch.addEventListener("click", toggleDarkMode);
-
-// function toggleDarkMode () {
-//     darkMode = localStorage.getItem('darkMode');
-//     if(darkMode !== "enabled") {
-//         enableDarkMode();
-//     }else {
-//         disableDarkMode();
-//     }
-// }
+// TABLE OF CONTENT 
+// 1. Theme Toggle
+// 2. Mobile Navigation button and Menu.
+// 3. Intersection Observers.
 
 
 
 
+// =========== THEME TOGGLE ===============
+const themeToggle = document.querySelector("#switch");
+const logo = document.querySelector(".logo-img");
+let darkMode = localStorage.getItem("darkMode");
+
+
+function enableDarkMode() {
+    document.body.classList.remove("light-theme");
+    document.body.classList.add("dark-theme");
+    logo.src = "/assets/images/logo-dark.png";
+    // themeToggle.checked = false;
+    localStorage.setItem("darkMode", "enabled");
+}
+function enableLightMode() {
+    document.body.classList.add("light-theme");
+    document.body.classList.remove("dark-theme");
+    logo.src = "/assets/images/logo-light.png";
+    // themeToggle.checked = true;
+    localStorage.setItem("darkMode", null);
+}
+
+if (darkMode === "enabled") {
+    enableDarkMode();
+}
+
+
+themeToggle.addEventListener('click', () => {
+    // document.body.classList.contains("dark-theme") ? enableLightMode() : enableDarkMode();
+    darkMode = localStorage.getItem("darkMode");
+    if(darkMode !== "enabled") {
+        enableDarkMode();
+        console.log(darkMode);
+    }else {
+        enableLightMode();
+        console.log(darkMode);
+    }
+})
+
+
+// CHECK IF THIS IS YOUR FIST VISIT
+window.onload = function() {
+    if(typeof window.localStorage !== "undefined" && !localStorage.getItem("visited")) {
+        localStorage.setItem("visited", true);
+
+        function setThemePreference() {
+            if(window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                enableDarkMode();
+                return;
+            }else {
+                enableLightMode();
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// ============= NAVIGATION BUTTON ===============
 const navButton = document.querySelector(".nav-btn");
 const navList = document.querySelector(".nav-list");
 const navLeft = document.querySelector(".nav-left");
@@ -93,9 +130,10 @@ function openMenu () {
 
 
 
-// INTERSECTION OBSERVER
+// ================== INTERSECTION OBSERVER =====================
 const sectionHero = document.querySelector("#hero");
 const toTopButton = document.querySelector('.to-top');
+const navBar = document.querySelector('.nav-bar');
 const options = {
     rootMargin: "-100px"
 };
@@ -103,10 +141,11 @@ const options = {
 const observer = new IntersectionObserver(function(entries, observer) {
     entries.forEach(entry => {
         if(!entry.isIntersecting) {
-            console.log(entry);
             toTopButton.classList.add("visible");
+            navBar.classList.add("box-shadow");
         }else{
             toTopButton.classList.remove("visible");
+            navBar.classList.remove("box-shadow");
         }
     })
 }, options)
@@ -136,7 +175,7 @@ observer.observe(sectionHero);
 
 
 
-// CART NOT AVAILABLE YET
+//============  CART NOT AVAILABLE YET===============
 document.querySelector(".cart").addEventListener("click", () => {
     alert("This website does not have mechandise to buy from yet. Thank you")
 })
