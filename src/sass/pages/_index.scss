@@ -28,7 +28,7 @@
             font-size: 1.8rem;
             letter-spacing: 2px;
         }
-        h1 {
+        .hero-name {
             font-size: 100px;
             text-transform: uppercase;
             font-family: 'Oswald', sans-serif;
@@ -39,6 +39,10 @@
             letter-spacing: 3px;
             line-height: 1;
             margin: 5px 0;
+            padding-inline: 10px;
+            animation: slidedown 4s infinite;
+            -webkit-animation: slidedown 4s infinite;
+            -moz-animation: slidedown 4s infinite;
         }
         p {
             margin-bottom: 30px;
@@ -52,7 +56,7 @@
 
 // ======= SECTION ABOUT =======
 .section-about {
-    padding: 10rem 0 10rem;
+    padding: 10rem 0 8rem;
     background: var(--clr-gray-light);
 
     .about-container {
@@ -67,7 +71,7 @@
 
 // ============== SECTION PORTFOLIO ==============
 .section-portfolio {
-    padding: 12rem 0 10rem;
+    padding: 5rem 0 8rem;
     background-color: var(--clr-gray-light);
     text-align: center;
 
@@ -120,7 +124,7 @@
 
 // ================ SECTION-INFO =============
 .section-info {
-    padding: 10rem 0;
+    padding: 5rem 0 10rem;
     background: url(/assets/images/info-bg.jpg);
     background-size: cover;
     background-position: bottom;
@@ -161,7 +165,7 @@
 
 // ============= SECTION TESTIMONIAL ===============
 .section-testimonials {
-    padding: 15rem 0 10rem;
+    padding: 15rem 0 4rem;
     background: var(--clr-gray-light);
 
     .testimonials-container {
@@ -221,7 +225,7 @@
 
 // ============== SECTION YOUTUBE ==============
 .section-youtube {
-    padding: 15rem 0;
+    padding: 7em 0;
     background-color: var(--clr-gray-light);
 
     .youtube-container {
@@ -254,7 +258,7 @@
 
 
 .section-blog {
-    padding: 10rem 0;
+    padding: 7rem 0;
     background: var(--clr-gray-light);
 
     .blog-container {
@@ -419,26 +423,16 @@
     }
 }
 
-@media screen and (max-width: 325px) {
- 
+
+
+@media screen and (max-width: 768px) {
+    
     .section-hero {
-        padding-top: 5rem;
-        clip-path: polygon(0 0, 100% 0, 100% 95vh, 50% 100vh, 0 95vh, 0 0);
-
-        .hero-container {
-
-            h1 {
-                font-size: 85px;
-                letter-spacing: 5px;
-                margin-bottom: 2rem;
-            }
-            .btn {
-                margin-bottom: 1rem;
-            }
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 95vh, 0 85vh, 0 0);
+        
+        .btn-primary {
+            margin-right: 1rem;
         }
-    }
-    .section-blog {
-        padding-bottom: 15rem;
     }
 }
 
@@ -473,14 +467,26 @@
     }
  
 }
-@media screen and (max-width: 768px) {
+
+@media screen and (max-width: 325px) {
  
     .section-hero {
-        clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 95vh, 0 85vh, 0 0);
+        padding-top: 5rem;
+        clip-path: polygon(0 0, 100% 0, 100% 95vh, 50% 100vh, 0 95vh, 0 0);
 
-        .btn-primary {
-            margin-right: 1rem;
+        .hero-container {
+
+            h1 {
+                font-size: 67px;
+                letter-spacing: 5px;
+                margin-bottom: 2rem;
+            }
+            .btn {
+                margin-bottom: 1rem;
+            }
         }
     }
+    .section-blog {
+        padding-bottom: 15rem;
+    }
 }
-
