@@ -199,9 +199,9 @@
     }
 }
 .btn-neutral {
-    background-color: var(--clr-gray-white);
-    color: var(--clr-gray-dark-2);
-    border: 2px solid var(--clr-gray-dark-2);
+    background-color: #fff;
+    color: #000;
+    border: 2px solid var(--clr-black);
 
     &:hover, &:focus {
         color: var(--clr-gray-dark-2);

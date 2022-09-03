@@ -10,6 +10,8 @@
     <!-- main css file -->
     <link rel="stylesheet" href="/css/main.css">
 
+
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
@@ -96,7 +98,7 @@
                     <a href="/" class="nav-link">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="/shop" class="nav-link" id="shop">Shop</a>
+                    <a href="/portfolio" class="nav-link" id="portfolio">Portfolio</a>
                 </li>
                 <li class="nav-item">
                     <a href="https://www.youtube.com/channel/UCdC_rW9x4MnQvubSJOg4ihQ/" target="_blank" class="nav-link">Youtube</a>
@@ -118,71 +120,84 @@
      
 
        
-
-<div class="individual-article__page" id="hero">
-  <div class="container wrapper">
-    <div class="container container--narrow flow">
-        <h1 class="heading-secondary"> 11ty, My way into making Blogs </h1>
-        <figure class="main-article__figure">
-          <img src="/assets/blog/11ty-logo.png" alt="11ty Rocks">
-        </figure>    
+<!-- <div class="container"> -->
   
-        <!--StartFragment-->
+  <div class="individual-article__page" id="hero">
+
+      <div class="flow">
+          <figure class="main-article__figure">
+            <img src="/assets/blog/11ty-logo.png" alt="11ty Rocks">
+          </figure>    
+          <h1 class="heading-secondary mb-20 text-center"> 11ty, My way into making Blogs </h1>
+          <h2 class="text-center description"> I searched, I kept searching for a way to be able to be in full control of my blog website. To personally write every code and see how it... </h2>
+          <p class="text-center author"> Invalid DateTime </p>
+          <hr>
+          
+          <!--StartFragment-->
 <p>I searched, I kept searching for a way to be able to be in full control of my blog website. To personally write every code and see how it performs. Well my search is almost at it end now that I have found 11ty.</p>
 <p><strong>*A friend</strong>:* &quot;Carbell, Can you make a website that has blog for me?&quot; <br>
 <em><strong>Me</strong></em>: Yes. We will meet on ... (date chosen) to go through so that we find out you actually want and how we can make it possible</p>
 <p>When I said Yes, I didn't clearly didn't know how to build a blog. But I definitely knew how to build a website. That is something I had been doing for quite a while and have really gained lots of experience and exposure.</p>
 <p>I tried once to find a way to be able to build a blog for myself a year earlier but truth be told I wasn't ready yet and the frameworks I had to learn were above the level I was in my front-end development.</p>
-<p><code>&lt;br&gt;</code></p>
 <p>Fast-forward a year and half later, I will say I am more equipped to take on a bigger bite. I always wanted to get a blog but wanted one that I had to create myself. When I was asked to build the blog and website, that was an obvious and clear challenge for me because at that time, I had not created one at least not as a side project. but YES was my answer and would always be my answer.</p>
 <p>Fast-forward a month later, not only does have his personal website designed, built and deployed, the blog is very active and if you are reading this, you know I have my blog as well.</p>
 <p>11ty made it very easy for me to be able to transform my static HTML websites that I am used to building into more dynamic static website. It made use of templating engines such as handlebars and over 11 templating engines to help produce your html code.</p>
-<p><code>&lt;br&gt;</code></p>
 <p>11ty allows you to turn markdown files into static html. making it easy for generating content on website. It has zero client-side JavaScript dependencies as other platforms and static site generators making your website a static site. cool right?</p>
 <p>With help from Kevin Powell's tutorials and 11ty rocks resources, I managed my way around a little and I am still getting there, trying stuff out and understanding how things work.</p>
-<p><code>&lt;br&gt;</code></p>
 <p>I no longer build website like I used to. I know have 11ty helping me build all my projects. If you are new to web development and on your way, you should definitely check 11ty out and embrace it as it can allow you take your web development game to another level. Once again a big thanks to <a href="https://www.kevinpowell.co/"></a><a href="https://www.kevinpowell.co/">Kevin Powell</a>  and <a href="https://www.kevinpowell.co/">Steph from 11ty</a></p>
 <p>That's my first Blog and I will be in touch soon. Till then, if you cannot see the end goal, check to see if you can see the next step, if you can see it, take it. Signing out</p>
 <p><a href="https://11ty.rocks/"></a></p>
 <!--EndFragment-->
+
+
+          <!-- Back -->
+          <a href="../" class="btn btn-neutral mt-100">&LeftArrow; Back</a>
+      </div>
     </div>
-  </div>
-</div>
+<!-- </div> -->
 
 
 
     <!-- ============== SECTION CONTACT ============= -->
 <section class="section-footer" id="section-footer">
+    <img src="/assets/images/map.png" alt="map" class="map">
     <div class="container wrapper">
 
         <!-- <h1 class="footer-animate">"CARBELL DID IT"</h1> -->
 
-        <h2 class="heading-secondary text-center">Send a message</h2>
         <div class="footer-container">
-            <form action="/form-success" class="contact-form" name="contact" method="POST" data-netlify="true">
-                <input type="text" name="Full Name" id="fname" placeholder="Full Name" required class="input-field">
-                <input type="email" name="Email Address" id="email" placeholder="Email Address" required class="input-field">
-                <input type="text" name="Telephone" id="tel" placeholder="Telephone" required class="input-field">
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required class="input-field"></textarea>
-                <input type="submit" value="Send Message &longrightarrow;" >
-            </form>
-    
-            <div class="contact-right">
+            <div class="contact-left">
+                <h2 class="heading-secondary text-center">Contact Me</h2>
+                <p>Let's make something new, different and more meaningful or make thing more visual or conceptual?</p>
                 <ul class="contact-details">
                     <li>
                         <i class="fa fa-phone"></i>
-                        <span>+233 241 105 423</span>
+                        <div>
+                            <span>Call Me</span>
+                            <p>+233 241 105 423</p>
+                        </div>
                     </li>
                     <li>
                         <i class="fa fa-envelope"></i>
-                        <span><a href="mailto:carbellsarfo@gmail.com" title="Send me an Email">Carbellsarfo@gmail.com</a></span>
+                        <div>
+                            <span>Email</span>
+                            <p><a href="mailto:carbellsarfo@gmail.com" title="Send me an Email">Carbellsarfo@gmail.com</a></p>
+                        </div>
                     </li>
                     <li>
                         <i class="fa fa-map-marker-alt"></i>
-                        <span>GB 180, Gbetsile</span>
+                        <div>
+                            <span>Address</span>
+                            <p>GB 180, Gbetsile</p>
+                        </div>
                     </li>
                 </ul>
                 <ul class="nav-social">
+                    <li>
+                        <a href="https://www.instagram.com/carbelldidit/" target="_blank" class="social-link" title="check me out on Instagram">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </li>
                     <li>
                         <a href="https://www.instagram.com/carbelldidit/" target="_blank" class="social-link" title="check me out on Instagram">
                             <i class="fab fa-instagram"></i>
@@ -218,29 +233,38 @@
                     </li>
                 </ul>
             </div>
+
+            <form action="/form-success" class="contact-form" name="contact" method="POST" data-netlify="true">
+                <h2 class="heading-secondary text-center">Send a message</h2>
+                <input type="text" name="Name" id="fname" placeholder="Full Name" required class="input-field">
+                <input type="text" name="Telephone" id="tel" placeholder="Telephone" required class="input-field">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required class="input-field"></textarea>
+                <input type="submit" value="Send Message &longrightarrow;" >
+            </form>
         </div>
         
     </div>
 </section>
 <footer>
-    <p>&copy; 2022 Carbell Kofi Sarfo.</p>
+    <p>&copy; 2022 Carbell Kofi Sarfo. All Rights Reserved</p>
 </footer>
 
-        <!-- main js file -->
-        <script src="/js/main.js"></script>
-        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
+    <!-- main js file -->
+    <script src="/js/main.js"></script>
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
 
 
-        <script>
-            if (window.netlifyIdentity) {
-              window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                  window.netlifyIdentity.on("login", () => {
-                    document.location.href = "/admin/";
-                  });
-                }
+    <script>
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
               });
             }
-          </script>
+          });
+        }
+      </script>
+
 </body>
 </html>

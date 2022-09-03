@@ -168,12 +168,12 @@ observer.observe(sectionHero);
 
 
 //============  CART NOT AVAILABLE YET===============
-document.querySelector(".cart").addEventListener("click", () => {
-    alert("This website does not have mechandise to buy from yet. Thank you")
-})
-document.querySelector("#shop").addEventListener("click", () => {
-    alert("This website does not have mechandise to buy from yet. Thank you")
-})
+// document.querySelector(".cart").addEventListener("click", () => {
+//     alert("This website does not have mechandise to buy from yet. Thank you")
+// })
+// document.querySelector("#shop").addEventListener("click", () => {
+//     alert("This website does not have mechandise to buy from yet. Thank you")
+// })
 
 
 
@@ -184,50 +184,106 @@ document.querySelector("#shop").addEventListener("click", () => {
 
 
 // 4. ======================== CHANGE TEXT WITH JS ====================
-let i = 0;
+// let i = 0;
 
-const randomizeText = () => {
-  const phrase = document.querySelector('.hero-name');
-  const compStyles = window.getComputedStyle(phrase);
-  const animation = compStyles.getPropertyValue('animation');
-  const animationTime = parseFloat(animation.match(/\d*[.]?\d+/)) * 1000;
+// const randomizeText = () => {
+//   const phrase = document.querySelector('.hero-name');
+//   const compStyles = window.getComputedStyle(phrase);
+//   const animation = compStyles.getPropertyValue('animation');
+//   const animationTime = parseFloat(animation.match(/\d*[.]?\d+/)) * 1000;
   
-  const phrases = ["Carbell", "Sarfo", "Kofi" ];
+//   const phrases = ["Carbell", "Sarfo", "Kofi" ];
   
-  i = randomNum(i, phrases.length);
-  const newPhrase = phrases[i];
+//   i = randomNum(i, phrases.length);
+//   const newPhrase = phrases[i];
   
-  setTimeout(() => {
-    phrase.textContent = newPhrase;
-  }, 400); // time to allow opacity to hit 0 before changing word
+//   setTimeout(() => {
+//     phrase.textContent = newPhrase;
+//   }, 400); // time to allow opacity to hit 0 before changing word
+// }
+
+// const randomNum = (num, max) => {
+//   let j = Math.floor(Math.random() * max);
+  
+//   // ensure diff num every time
+//   if (num === j) {
+//     return randomNum(i, max);
+//   } else {
+//     return j;
+//   }
+// }
+
+// const getAnimationTime = () => {
+//   const phrase = document.querySelector('.hero-name');
+//   const compStyles = window.getComputedStyle(phrase);
+//   let animation = compStyles.getPropertyValue('animation');
+  
+//   // firefox support for non-shorthand property
+//   animation != "" ? animation : animation = compStyles.getPropertyValue('-moz-animation-duration');
+  
+//     // webkit support for non-shorthand property
+//   animation != "" ? animation : animation = compStyles.getPropertyValue('-webkit-animation-duration');
+  
+  
+//   const animationTime = parseFloat(animation.match(/\d*[.]?\d+/)) * 1000;
+//   return animationTime;
+// }
+
+// randomizeText();
+// setInterval(randomizeText, getAnimationTime());
+
+
+
+
+
+
+
+
+
+
+
+// ===================== testimonial carousel ===================
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-const randomNum = (num, max) => {
-  let j = Math.floor(Math.random() * max);
-  
-  // ensure diff num every time
-  if (num === j) {
-    return randomNum(i, max);
-  } else {
-    return j;
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("testimonial");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
   }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
 
-const getAnimationTime = () => {
-  const phrase = document.querySelector('.hero-name');
-  const compStyles = window.getComputedStyle(phrase);
-  let animation = compStyles.getPropertyValue('animation');
-  
-  // firefox support for non-shorthand property
-  animation != "" ? animation : animation = compStyles.getPropertyValue('-moz-animation-duration');
-  
-    // webkit support for non-shorthand property
-  animation != "" ? animation : animation = compStyles.getPropertyValue('-webkit-animation-duration');
-  
-  
-  const animationTime = parseFloat(animation.match(/\d*[.]?\d+/)) * 1000;
-  return animationTime;
-}
+// let slideIndex = 0;
+// showSlides();
 
-randomizeText();
-setInterval(randomizeText, getAnimationTime());
+// function showSlides() {
+//   let i;
+//   let slides = document.getElementsByClassName("testimonial");
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+//   slideIndex++;
+//   if (slideIndex > slides.length) {slideIndex = 1}
+//   slides[slideIndex-1].style.display = "block";
+//   setTimeout(showSlides, 2000); // Change image every 2 seconds
+// }

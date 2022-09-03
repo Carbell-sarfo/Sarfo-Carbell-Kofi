@@ -10,6 +10,8 @@
     <!-- main css file -->
     <link rel="stylesheet" href="/css/main.css">
 
+
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
@@ -30,21 +32,22 @@
 
     {% include 'footer.njk' %}
 
-        <!-- main js file -->
-        <script src="/js/main.js"></script>
-        <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
+    <!-- main js file -->
+    <script src="/js/main.js"></script>
+    <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
 
 
-        <script>
-            if (window.netlifyIdentity) {
-              window.netlifyIdentity.on("init", user => {
-                if (!user) {
-                  window.netlifyIdentity.on("login", () => {
-                    document.location.href = "/admin/";
-                  });
-                }
+    <script>
+        if (window.netlifyIdentity) {
+          window.netlifyIdentity.on("init", user => {
+            if (!user) {
+              window.netlifyIdentity.on("login", () => {
+                document.location.href = "/admin/";
               });
             }
-          </script>
+          });
+        }
+      </script>
+
 </body>
 </html>
