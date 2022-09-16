@@ -1,41 +1,36 @@
+.section-blog__post {
+    margin-bottom: 10rem;
+}
 
-.articles__list {
+
+
+.blog-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-bottom: 10rem;
+}
+
+.article {
+    width: 100%;
+    text-align: center;
+    @include ease(.4s);
+    @include shadow;
+    border-radius: 7px;
+    background-color: var(--clr-white);
+    overflow: hidden;
+    padding-bottom: 10px;
 
     .snippet {
-        margin-bottom: 12rem;
-        background-color: var(--clr-white);
-        border-radius: 20px;
-        overflow: hidden;
-        @include shadow;
-        @include ease(.4s);
-    }
 
-    .snippet {
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-            "snippet-image"
-            "snippet-title"
-            "snippet-meta"
-            "snippet-body"
-            "snippet-button";
-        gap: .5rem 2rem;
-
-        &__image {
-            grid-area: snippet-image;
-            width: 100%;
-            aspect-ratio: 4 / 3;
-            object-fit: cover;  
-        }
         &__title {
-            grid-area: snippet-title;
-            font-size: 2.6rem;
-            font-family: "Oswald", sans-serif;
+            color: var(--clr-gray-dark-2);
+            font-size: 2.5rem;
             text-transform: capitalize;
-            margin: 0 1rem;
+            line-height: 1.5;
+
             a {
-                color: var(--clr-gray-dark-2);
-                @include ease(.2s);
+                color: inherit;
 
                 &:hover, &:focus {
                     color: var(--clr-primary);
@@ -43,19 +38,43 @@
             }
         }
         &__meta {
-            grid-area: snippet-meta;
             color: var(--clr-gray-dark-1);
-            font-size: 1.4rem;
+            font-size: 1.2rem;
+            margin: .5rem 0;
         }
         &__body {
-            margin-bottom: 2rem;
+            margin: 0 1rem 1rem;
+        }
+        &__image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        &__date {
+            font-weight: lighter;
+            color: darkgray;
+            font-size: 1.5rem;
+            margin: 1rem 2rem;
+        }
+        &__description {
+            margin: 1rem;
+            line-height: 1;
+        }
+        &__text {
+            margin: 0 1rem 4rem;
         }
         .btn {
-            grid-area: snippet-button;
-            align-self: start;
-            justify-self: start;
-            margin-bottom: 5rem;
+            margin-bottom: 1rem;
+            padding: 1rem 2.5rem;
         }
+    }
+
+}
+
+@media screen and (min-width: 1023px) {
+
+    .blog-container {
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
@@ -71,49 +90,49 @@
 
 
 
-@media screen and (min-width: 1020px) {
+// @media screen and (min-width: 1020px) {
 
-    .articles__list {
-        .snippet {
-          grid-template-areas:
-            "snippet-title snippet-image"
-            "snippet-meta snippet-image"
-            "snippet-body snippet-image"
-            "snippet-button snippet-image";
-          grid-column-gap: 4em;
-          grid-template-columns: 1fr 40%;
-          grid-template-rows: min-content min-content min-content 1fr;
+//     .articles__list {
+//         .snippet {
+//           grid-template-areas:
+//             "snippet-title snippet-image"
+//             "snippet-meta snippet-image"
+//             "snippet-body snippet-image"
+//             "snippet-button snippet-image";
+//           grid-column-gap: 4em;
+//           grid-template-columns: 1fr 40%;
+//           grid-template-rows: min-content min-content min-content 1fr;
 
-          &__title {
-              margin-left: 4rem;
-              margin-top: 4rem;
-          }
-          &__body {
-              margin-left: 4rem;
-          }
-          &__meta {
-              margin-left: 4rem;
-          }
+//           &__title {
+//               margin-left: 4rem;
+//               margin-top: 4rem;
+//           }
+//           &__body {
+//               margin-left: 4rem;
+//           }
+//           &__meta {
+//               margin-left: 4rem;
+//           }
 
-          .btn {
-              margin-left: 4rem;
-              align-self: end;
-          }
-        }
-    }
-  }
-@media screen and (max-width: 1019px) {
-    .articles__list {
-        .snippet {
-            text-align: center;
+//           .btn {
+//               margin-left: 4rem;
+//               align-self: end;
+//           }
+//         }
+//     }
+//   }
+// @media screen and (max-width: 1019px) {
+//     .articles__list {
+//         .snippet {
+//             text-align: center;
 
-            .btn {
-                justify-self: center;
+//             .btn {
+//                 justify-self: center;
 
-            }
-        }
-    }
-}
+//             }
+//         }
+//     }
+// }
 
 
 // table of content

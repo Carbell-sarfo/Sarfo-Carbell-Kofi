@@ -1,0 +1,13 @@
+
+  <div class="portfolio">
+    <a href="{{ post.url }}" class="portfolio__project">
+        <img src="{{ post.data.image  }}" alt="{{ post.data.imageAlt }}" class="portfolio__image">
+    </a>
+    <div class="project-overlay"></div>
+    <div class="project-details">
+        <h2> {{ post.data.name } </h2> 
+        <p> {{ post.data.description }} </p>
+        <span> {{ post.data.type }} </span>
+        <a href="{{ post.url }}" class="btn btn-neutral">Read More</a>
+    </div>
+</div>

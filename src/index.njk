@@ -82,30 +82,15 @@ layout: 'base.njk'
             <h2 class="heading-secondary">Here are some latest projects from my portfolio</h2>
         </div>
         <div class="portfolio-container">
-            <div class="portfolio">
-                <a href="https://casabellini.netlify.app/" class="portfolio__project">
-                    <img src="/assets/images/portfolio-1.jpg" alt="Cassa Bellini website" class="portfolio__img">
-                </a>
-                <div class="project-overlay"></div>
-                <div class="project-details">
-                    <h2>Casa Bellini Restaurant</h2> 
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores suscipit earum culpa porro est sed laborum vel numquam aspernatur pariatur.</p>
-                    <span>Business Website</span>
-                    <a href="#" class="btn btn-neutral">Read More</a>
-                </div>
-            </div>
-            <div class="portfolio">
-                <a href="https://casabellini.netlify.app/" class="portfolio__project">
-                    <img src="/assets/images/portfolio-1.jpg" alt="Cassa Bellini website" class="portfolio__img">
-                </a>
-                <div class="project-overlay"></div>
-                <div class="project-details">
-                    <h2>Casa Bellini Restaurant</h2> 
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores suscipit earum culpa porro est sed laborum vel numquam aspernatur pariatur.</p>
-                    <span>Business Website</span>
-                    <a href="#" class="btn btn-neutral">Read More</a>
-                </div>
-            </div>
+            <a href="/samuel-project/" class="portfolio">
+                <img src="/assets/images/portfolio-3.png" alt="Cassa Bellini website" class="portfolio__img">
+                <h3>Samuel Botchwey Website</h3>
+            </a>
+            <a href="https://bsmart.website/" class="portfolio">
+                <img src="/assets/images/portfolio-2.png" alt="Cassa Bellini website" class="portfolio__img">
+                <h3>Samuel Botchwey Website</h3>
+            </a>
+            
         </div>
 
         <div class="text-center">
@@ -120,6 +105,9 @@ layout: 'base.njk'
 <!-- ==================== SECTION-INFO ================== -->
 <section class="section-info" id="section-info">
     <div class="container wrapper">
+        <div class="text-center">
+            <h2 class="heading-secondary white-text">My Bread and Butter Services</h2>
+        </div>
         <div class="info-container">
             <div class="info">
                 <i class="fa-solid fa-camera info__icon"></i>              
@@ -169,14 +157,7 @@ layout: 'base.njk'
                 <p class="testimonial__text">"Building a website. I thought to myself, how, where and from whom would I be able to get a simple, elegant website. Well, I worried until I found out a dear friend who gave his all in making this a reality for me. A person open and willing to listen and willing to learn to be able to provide the best for you  are qualities that best suits him."</p>
             </div>
 
-            <div class="testimonial fade">
-                <div class="testimonial__frame">
-                    <img src="/assets/images/testimonial-1.png" alt="Sameul Botchwey" class="testimonial__img">
-                    <h4 class="testimonial__name">Samuel Botchwey</h4>
-                    <p class="testimonial__text">"Building a website. I thought to myself, how, where and from whom would I be able to get a simple, elegant website. Well, I worried until I found out a dear friend who gave his all in making this a reality for me. A person open and willing to listen and willing to learn to be able to provide the best for you  are qualities that best suits him."</p>
-                </div>
-
-            </div>
+            
             <!-- Next and previous buttons -->
             <a class="prev" onclick="plusSlides(-1)">
                 <i class="fa fa-chevron-left"></i>    
@@ -190,7 +171,6 @@ layout: 'base.njk'
         <div style="text-align:center">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
         </div>
     </div>
 </section>

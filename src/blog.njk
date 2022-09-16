@@ -7,7 +7,7 @@ layout: 'base.njk'
 <div class="section-blog__post" id="hero">
   <div class="container wrapper">
     <h1 class="heading-secondary">Recent articles</h1>
-    <div role="list" class="articles__list flow">
+    <div class="blog-container">
       {%- for post in collections.post | reverse -%}
         {% include 'article-snippet.njk' %}
       {%- endfor-%}
