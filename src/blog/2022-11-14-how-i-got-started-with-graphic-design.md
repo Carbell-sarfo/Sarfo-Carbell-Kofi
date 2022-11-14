@@ -9,6 +9,15 @@ date: 2022-11-13T11:22:36.002Z
 tags:
   - post
   - featured
+  - photoshop
+  - graphicdesign
+  - graphic
+  - design
+  - getting
+  - carbellsarfo
+  - carbell
+  - sarfo
+  - carbelldidit
 image: /assets/blog/getting-stated-with-ps.jpg
 imageAlt: getting started with photoshop
 ---
