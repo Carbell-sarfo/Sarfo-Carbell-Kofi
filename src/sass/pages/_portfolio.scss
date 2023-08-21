@@ -21,11 +21,40 @@
     gap: 1rem;
 
     .photo {
-        @include ease(.3s);
+        // @include ease(.3s);
+        display: inline-block;
+        position: relative;
+        background: red;
+        line-height: 0;
+        border-radius: 1rem;
+        overflow: hidden;
 
-        &:hover, &:focus {
-            scale: 1.03;
+        &:hover .photo-btn,
+         &:focus .photo-btn {
+            background-color: #fff;
+            color: var(--clr-primary);
         }
+    }
+
+    .photo-img {
+        display: block;
+
+        img {
+            object-fit: cover;
+        }
+    }
+    .photo-btn {
+        display: inline-block;
+        line-height: 1.5;
+        margin: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #fff;
+        padding: 1.5rem 3rem;
+        border: 1px solid #fff;
+        transition: .4s ease;
     }
 }
 
@@ -37,7 +66,7 @@
 // /////////////////////////////////
 
 
-@media screen and (min-width: 501px) {
+@media screen and (min-width: 769px) {
 
     .photography-container {
         grid-template-columns: 1fr 1fr;
@@ -50,6 +79,6 @@
     }
 
     .photography-container {
-        grid-template-columns: 1fr 1fr 1fr;
+        // grid-template-columns: 1fr 1fr 1fr;
     }
 }

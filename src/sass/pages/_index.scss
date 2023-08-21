@@ -405,11 +405,24 @@
 
     .section-about {
 
+        .about-text-1 {
+            grid-area: aboutText-1;
+        }
+        .about-text-2 {
+            grid-area: aboutText-2;
+        }
+        .about-text-3 {
+            grid-area: aboutText-3;
+        }
+        .about-image {
+            grid-area: aboutImage;
+        }
         .about-container {
             grid-template-columns: 1fr 1fr;
             grid-template-areas: 
-                "aboutText aboutImage"
-                "aboutText aboutImage"
+                "aboutText-1 aboutImage"
+                "aboutText-2 aboutImage"
+                "aboutText-3 aboutImage"
             ;
         }
     }
