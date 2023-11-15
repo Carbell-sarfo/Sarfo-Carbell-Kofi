@@ -18,7 +18,7 @@ function enableDarkMode() {
     document.body.classList.remove("light-theme");
     document.body.classList.add("dark-theme");
     // logo.src = "/assets/images/logo-dark.png";
-    logo.src = "/assets/images/logo-dark.png";
+    logo.src = "/assets/images/logo-light.png";
     // themeToggle.checked = false;
     localStorage.setItem("darkMode", "enabled");
 }
@@ -26,7 +26,7 @@ function enableLightMode() {
     document.body.classList.add("light-theme");
     document.body.classList.remove("dark-theme");
     // logo.src = "/assets/images/logo-light.png";
-    logo.src = "/assets/images/logo-light.png";
+    logo.src = "/assets/images/logo-dark.png";
     // themeToggle.checked = true;
     localStorage.setItem("darkMode", null);
 }
