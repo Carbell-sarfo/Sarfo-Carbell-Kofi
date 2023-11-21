@@ -261,13 +261,17 @@
             display: flex;
             position: absolute;
             top: 50%;
-            right: 10rem;
+            right: 0rem;
             transform: translate(00px, -50%);
 
             li {
                 
                 &:not(:last-child) {
-                    margin-right: 1rem;
+                    margin-right: 1.5rem;
+                }
+
+                a {
+                    font-size: 1.5rem;
                 }
             }
         }

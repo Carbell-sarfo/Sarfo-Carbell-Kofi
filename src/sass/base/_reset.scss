@@ -7,6 +7,10 @@
     text-decoration: none;
 }
 
+::selection {
+    background-color: #E5202B;
+}
+
 :root {
     --clr-primary: #E5202B;
     // --clr-white: #ffffff;
@@ -49,11 +53,13 @@ p, i, span, article {
     font-family: inherit;
     font-size: inherit;
 }
-a {
+a:not(.btn){
     font-family: "Helveitca rounded", sans-serif;
     font-weight: bold;
     cursor: pointer;
     font-size: inherit;
+    color: var(--clr-primary);
+
 }
 img {
     width: 100%;

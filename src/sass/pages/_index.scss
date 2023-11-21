@@ -264,6 +264,10 @@
         border-radius: 50%;
         display: inline-block;
         @include ease(.4s);
+
+        &:not(:last-child) {
+            margin-right: .5rem;
+        }
     }
     .active, .dot:hover, .dot:focus {
         background-color: var(--clr-primary);
@@ -311,6 +315,10 @@
     }
 }
 
+// ============= SECTION Freebies ===============
+.index-freebies {
+    padding: 15rem 0;
+}
 
 
 
@@ -492,7 +500,7 @@
 @media screen and (max-width: 768px) {
     
     .section-hero {
-        // clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 50% 95%, 0 85%, 0 0);
         overflow: visible;
 
         .hero-container {

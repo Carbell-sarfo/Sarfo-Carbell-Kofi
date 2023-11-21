@@ -1,0 +1,43 @@
+
+.section-freebies {
+    padding: 10rem 0;
+
+}
+.freebies {
+    display: inline-block;
+    color: var(--clr-black);
+    opacity: 1;
+    transition: .4s;
+
+    &:hover {
+        opacity: .5;
+    }
+
+    .image {
+        border-radius: 1rem;
+        overflow: hidden;
+        line-height: 1;
+
+        img {
+            line-height: 1;
+        }
+    }
+
+    .text {
+        h3 {
+            font-size: 2rem;
+            color: var(--clr-black);
+        }
+        .category {
+            // display: flex;
+        }
+        p {
+            font-size: 1.3rem;
+            line-height: 1;
+            display: inline-block;
+            padding-right: 1rem;
+            color: var(--clr-gray-dark);
+        }
+    }
+
+}
