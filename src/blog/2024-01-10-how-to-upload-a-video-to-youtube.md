@@ -18,12 +18,11 @@ First things first make sure you are logging into your YouTube account.
 
 If you do not have an account yet go ahead and create one. Once you are logged in, click on the top right corner, and click on YouTube Studio.
 
+` <br>`
 
+`<﻿br>`
 
-```html
-<br>
-<br>
-```
+`<﻿br>`
 
 **Step 2** **Select Upload YouTube video**
 
