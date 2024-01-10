@@ -10,7 +10,7 @@ imageAlt: "How to upload a video to YouTube: Best settings to maximize views"
 ---
 In todays video we are going to learn how to upload a video to YouTube using the right setting.
 
-**Step 1 Login to your YouTube account**
+## **Step 1 Login to your YouTube account**
 
 First things first make sure you are logging into your YouTube account.
 
@@ -20,15 +20,15 @@ If you do not have an account yet go ahead and create one. Once you are logged i
 
 
 
-**Step 2** **Select Upload YouTube video**
+## **Step 2** **Select Upload YouTube video**
 
 At the top right corner, select the camera looking icon and select upload video to begin the uploading process.
 
-**Step 3. Choose your video file**
+## **Step 3. Choose your video file**
 
 Now you can select the video file or you can drag and drop the file. YouTube support majority of video formats so compatibility will not be a big issue, however, I would recommend having your video in mp4 for the best compatibility. Also just remember that, the larger the file, the longer it will take to upload your video depending on your internet speed.
 
-**Step 4. Fill in Video details**
+## **Step 4. Fill in Video details**
 
 While your video is uploading, take a few moments to fill in the necessary details.
 
