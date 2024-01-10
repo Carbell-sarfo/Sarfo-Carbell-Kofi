@@ -10,7 +10,7 @@ imageAlt: "How to upload a video to YouTube: Best settings to maximize views"
 ---
 In todays video we are going to learn how to upload a video to YouTube using the right setting.
 
-
+<﻿br>
 
 **Step 1 Login to your YouTube account**
 
@@ -20,23 +20,20 @@ If you do not have an account yet go ahead and create one. Once you are logged i
 
 
 
+<﻿br>
 
+```
+<br>
+<br>
+```
 
 **Step 2** **Select Upload YouTube video**
 
 At the top right corner, select the camera looking icon and select upload video to begin the uploading process.
 
-
-
-
-
 **Step 3. Choose your video file**
 
 Now you can select the video file or you can drag and drop the file. YouTube support majority of video formats so compatibility will not be a big issue, however, I would recommend having your video in mp4 for the best compatibility. Also just remember that, the larger the file, the longer it will take to upload your video depending on your internet speed.
-
-
-
-
 
 **Step 4. Fill in Video details**
 
@@ -60,8 +57,6 @@ While your video is uploading, take a few moments to fill in the necessary detai
 
 ***Category***: what category does your video fall into? is it a comedy skit? is it a how to and tutorial video? there are a few options available so you can go through and select the one that applies to your video.
 
-
-
 **VIDEO ELEMENTS**
 
 ***Subtitles***: Do you have subtitles for your video? if you do, then upload it. this help YouTube to be able to recommend your videos to demographics who might not speak your language used to shoot the video but can read the subtitle to understand your video.
@@ -75,10 +70,6 @@ While your video is uploading, take a few moments to fill in the necessary detai
 Select public if you do want your video to go up live right away, you can use schedule to maintain more consistency on your channel. if you do check private, this video will be uploaded but will only be available to selected few or those with a link to the video.
 
 ![Visibility on YouTube](/assets/blog/screenshot-2024-01-10-005937.png "Choosing visibility status for YouTube.")
-
-
-
-
 
 There you have it, how to upload a video to YouTube.
 
