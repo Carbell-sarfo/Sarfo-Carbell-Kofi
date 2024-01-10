@@ -10,19 +10,15 @@ imageAlt: "How to upload a video to YouTube: Best settings to maximize views"
 ---
 In todays video we are going to learn how to upload a video to YouTube using the right setting.
 
-
-
 **Step 1 Login to your YouTube account**
 
 First things first make sure you are logging into your YouTube account.
 
 If you do not have an account yet go ahead and create one. Once you are logged in, click on the top right corner, and click on YouTube Studio.
 
-` <br>`
 
-`<﻿br>`
 
-`<﻿br>`
+
 
 **Step 2** **Select Upload YouTube video**
 
