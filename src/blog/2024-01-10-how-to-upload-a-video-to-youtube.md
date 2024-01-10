@@ -10,7 +10,7 @@ imageAlt: "How to upload a video to YouTube: Best settings to maximize views"
 ---
 In todays video we are going to learn how to upload a video to YouTube using the right setting.
 
-<﻿br>
+
 
 **Step 1 Login to your YouTube account**
 
@@ -20,9 +20,7 @@ If you do not have an account yet go ahead and create one. Once you are logged i
 
 
 
-<﻿br>
-
-```
+```html
 <br>
 <br>
 ```
