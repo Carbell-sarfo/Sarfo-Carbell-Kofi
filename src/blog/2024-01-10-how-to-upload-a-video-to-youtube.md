@@ -4,7 +4,8 @@ description: "How to upload a video to YouTube: Best settings to maximize views"
 author: Carbell Sarfo
 date: 2024-01-10T00:49:29.436Z
 tags:
-  - post featured
+  - post
+  - featured
 image: /assets/blog/youtube-thumbnail.jpg
 imageAlt: "How to upload a video to YouTube: Best settings to maximize views"
 ---
