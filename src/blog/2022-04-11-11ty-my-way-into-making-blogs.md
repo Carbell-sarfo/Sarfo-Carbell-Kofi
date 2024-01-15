@@ -6,7 +6,6 @@ author: Carbell Kofi Sarfo
 date: 2022-04-11T16:25:48.714Z
 tags:
   - post
-  - featured
 image: /assets/blog/11ty-logo.png
 imageAlt: 11ty Rocks
 ---
