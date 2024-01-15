@@ -8,7 +8,6 @@ author: Carbell Sarfo
 date: 2022-11-13T11:22:36.002Z
 tags:
   - post
-  - featured
   - photoshop
   - graphicdesign
   - graphic
