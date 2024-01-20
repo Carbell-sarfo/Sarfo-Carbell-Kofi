@@ -100,6 +100,13 @@
 }
 
 
+// ============== SECTION SPOTIFY ==============
+.section-spotify {
+    padding: 10rem 0;
+}
+
+
+
 // ============== SECTION PORTFOLIO ==============
 .section-portfolio {
     padding: 10rem 0 8rem;
@@ -321,6 +328,46 @@
 .index-freebies {
     padding: 15rem 0;
 }
+
+
+
+// ============= SECTION Podcast ===============
+.section-podcast {
+    padding: 5rem 0;
+    background-image: url(/assets/images/podcast-bg.png);
+    background-size: cover;
+
+    .col-2 {
+        align-items: center;
+    }
+    h1 {
+        font-family: 'poppins', sans-serif;
+        font-size: 6rem;
+        line-height: 1.5;
+    }
+
+    p {
+        margin-bottom: 2rem;
+    }
+
+    a {
+        color: #000;
+
+        &:hover, 
+        &:focus {
+            color: #fff;
+        }
+    }
+
+    .btn {
+        i {
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+    }
+}
+
+
 
 
 

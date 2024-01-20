@@ -3,6 +3,27 @@
     padding: 0 2rem;
     text-align: center;
 
+    select {
+        width: 90%;
+        font-family: inherit;
+        color: inherit;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        font-size: inherit;
+        background-color: var(--clr-gray-light);
+        border: 1px solid rgb(89, 89, 89);
+        margin-bottom: 2rem;
+        resize: none;
+        border-radius: 10px;
+        @include ease(.4s);
+
+        &:focus {
+            border: 1px solid var(--clr-primary);
+            width: 100%;
+        }
+    }
+
     .input-field {
         width: 90%;
         font-family: inherit;

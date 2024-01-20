@@ -264,8 +264,15 @@
 
             <form action="/form-success" class="contact-form" name="contact" method="POST" data-netlify="true">
                 <h2 class="heading-secondary text-center">Send a message</h2>
+                <select name="purpose" id="purpose">
+                    <option value="I'd like to chat about">I'd like to talk about</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Consulting Inquiry">Consulting Inquiry</option>
+                    <option value="Speaking Request">Speaking Request</option>
+                    <option value="Become a Partner">Become a Partner</option>
+                </select>
                 <input type="text" name="Name" id="fname" placeholder="Full Name" required class="input-field">
-                <input type="text" name="Telephone" id="tel" placeholder="Telephone" required class="input-field">
+                <input type="email" name="email" id="email" placeholder="Email Address" required class="input-field">
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required class="input-field"></textarea>
                 <input type="submit" value="Send Message &longrightarrow;" >
             </form>
