@@ -5,7 +5,7 @@ author: Carbell Sarfo
 date: 2022-10-03T08:16:05.614Z
 tags:
   - post
-  - featured
+  - ""
 image: /assets/blog/imposter-syndrome.jpg
 imageAlt: imposter syndrome
 ---
