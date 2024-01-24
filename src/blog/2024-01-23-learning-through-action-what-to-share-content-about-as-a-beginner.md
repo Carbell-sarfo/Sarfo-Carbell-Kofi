@@ -7,6 +7,12 @@ author: Carbell Sarfo
 date: 2024-01-23T02:32:17.452Z
 tags:
   - post
+  - featured
+  - learning
+  - contentcreation
+  - carbelldidit
+  - carbellsarfo
+  - ""
 image: /assets/blog/i-don-t-know-what-to-talk-about.jpg
 imageAlt: Content topic when starting as a beginner.
 ---
