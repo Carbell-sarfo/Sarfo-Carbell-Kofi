@@ -1,9 +1,11 @@
 .section-footer {
     background: var(--clr-white);
-    padding: 8rem 0 10rem;
+    padding: 17rem 0 10rem;
+    margin-top: 15rem;
     width: 100%;
     position: relative;
     z-index: 1;
+    clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
 
     .map {
         position: absolute;

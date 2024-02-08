@@ -102,14 +102,14 @@
 
 // ============== SECTION SPOTIFY ==============
 .section-spotify {
-    padding: 10rem 0;
+    padding: 15rem 0;
 }
 
 
 
 // ============== SECTION PORTFOLIO ==============
 .section-portfolio {
-    padding: 10rem 0 8rem;
+    padding: 15rem 0 20rem;
     background-color: var(--clr-gray-light);
     text-align: center;
 
@@ -146,10 +146,11 @@
 
 // ================ SECTION-INFO =============
 .section-info {
-    padding: 5rem 0 10rem;
+    padding: 5rem 0 15rem;
     background: url(/assets/images/info-bg.jpg);
     background-size: cover;
     background-position: bottom;
+    clip-path: polygon(100% 0, 100% 85%, 48% 100%, 0 85%, 0 0);
 
     .info-container {
         width: 100%;
@@ -207,7 +208,7 @@
 
 // ============= SECTION TESTIMONIAL ===============
 .section-testimonials {
-    padding: 15rem 0 4rem;
+    padding: 20rem 0 15rem;
     background: var(--clr-gray-light);
 
     .testimonials-container {
@@ -344,6 +345,7 @@
         font-family: 'poppins', sans-serif;
         font-size: 6rem;
         line-height: 1.5;
+        color: #fff;
     }
 
     p {
@@ -373,7 +375,7 @@
 
 // ============== SECTION YOUTUBE ==============
 .section-youtube {
-    padding: 7em 0;
+    padding: 20rem 0;
     background-color: var(--clr-gray-light);
 
     .youtube-container {
@@ -409,7 +411,7 @@
 
 // ================ Blog ==================
 .section-blog {
-    padding: 7rem 0;
+    padding: 7rem 0 0;
     background: var(--clr-gray-light);
 
     
@@ -516,7 +518,7 @@
     }
 
     .section-info {
-        padding: 12rem 0;
+        padding: 12rem 0 20rem;
 
         .info-container {
             grid-template-columns: 1fr 1fr 1fr 1fr;
