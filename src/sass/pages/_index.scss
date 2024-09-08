@@ -345,13 +345,15 @@
     }
     h1 {
         font-family: 'poppins', sans-serif;
-        font-size: 6rem;
-        line-height: 1.5;
+        font-size: 5rem;
+        line-height: 1.2;
         color: #fff;
+        margin-bottom: 1.5rem;
     }
 
     p {
         margin-bottom: 2rem;
+        color: #fff;
     }
 
     a {
@@ -598,6 +600,7 @@
     }
 
     .section-testimonials {
+        padding: 10rem 0 0rem;
 
         .testimonials-container {
             padding-left: 0;
