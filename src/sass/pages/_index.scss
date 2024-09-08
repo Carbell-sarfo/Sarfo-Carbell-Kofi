@@ -370,6 +370,21 @@
             font-size: 2rem;
             margin-right: 1rem;
         }
+
+        &.btn-neutral {
+            background-color: #fff;
+            color: #000;
+            border: 2px solid #fff;
+        
+            &:hover, &:focus {
+                color: #fff;
+                background: #fff;
+                border: 2px solid #dbdbdb;
+            }
+            &::after {
+                background-color: #000;
+            }
+        }
     }
 }
 

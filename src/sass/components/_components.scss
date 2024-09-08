@@ -204,12 +204,12 @@
     border: 2px solid var(--clr-black);
 
     &:hover, &:focus {
-        color: #000;
-        background: #fff;
+        color: #fff;
+        background: var(--clr-black);
         border: 2px solid var(--clr-gray-dark-2);
     }
     &::after {
-        background-color: #000;
+        background-color: var(--clr-white);
     }
 }
 .btn-thin {
