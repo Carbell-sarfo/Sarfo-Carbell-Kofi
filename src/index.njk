@@ -346,7 +346,7 @@ meta: I am Carbell Sarfo, a creative entrepreneur and content creator. I am a br
 
 
 <!-- =============== BLOG =================== -->
-<section class="section-blog">
+{# <section class="section-blog">
     <div class="container wrapper">
         <div class="text-center">
             <h2 class="heading-primary">My thoughts</h2>
@@ -355,13 +355,7 @@ meta: I am Carbell Sarfo, a creative entrepreneur and content creator. I am a br
             <h2 class="heading-secondary">Here are some of my recent posts</h2>
         </div>
         <div class="col-3">
-            <!-- <div class="article">
-                <img src="/assets/images/article-1.jpg" alt="blog-article-1" class="article__img">
-                <span class="article__date">March 20, 2020</span>
-                <h2 class="article__description">I nearly got run over but maybe i survived.</h2>
-                <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deserunt, rem, eveniet facilis quam vitae inventore exercitationem velit voluptatibus distinctio porro molestiae cumque reiciendis architecto fugit fugiat, soluta sit ipsa? ...</p>
-                <a href="#" class="btn btn-neutral">Read More &longrightarrow;</a>
-            </div> -->
+           
             {%- for post in collections.featured | reverse -%}
                 {% include 'article-snippet.njk' %}
             {%- endfor-%}
@@ -370,4 +364,12 @@ meta: I am Carbell Sarfo, a creative entrepreneur and content creator. I am a br
             <a href="/blog/" class="btn btn-primary">Recent Articles</a>
         </div>
     </div>
-</section>
+</section> #}
+
+ <!-- <div class="article">
+    <img src="/assets/images/article-1.jpg" alt="blog-article-1" class="article__img">
+    <span class="article__date">March 20, 2020</span>
+    <h2 class="article__description">I nearly got run over but maybe i survived.</h2>
+    <p class="article__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam deserunt, rem, eveniet facilis quam vitae inventore exercitationem velit voluptatibus distinctio porro molestiae cumque reiciendis architecto fugit fugiat, soluta sit ipsa? ...</p>
+    <a href="#" class="btn btn-neutral">Read More &longrightarrow;</a>
+</div> -->
