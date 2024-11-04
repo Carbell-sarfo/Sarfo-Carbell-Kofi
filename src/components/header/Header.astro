@@ -3,17 +3,22 @@ import './header.css';
 const { origin } = Astro.props;
 import Logo from '../Logo.astro';
 ---
+<div class="nav-overlay"></div>
 
 <header class="header">
 	<div class="header__container">
-		<Logo name="Jhon Doe"/>
+		<Logo name="Carbell Sarfo"/>
+		<button class="nav-btn" >
+			<div class="lines"></div>
+			<div class="lines"></div>
+			<div class="lines"></div>
+		</button>
 		<nav class="links"   tabindex="0.1">
-			<button class="menu__btn" >Menú</button>
-			<ul class="header__list">
+			<ul class="nav-list">
 				{
 					origin.map((data) => (
-						<li>
-							<a class="menu__link" href={data.link}>
+						<li class="nav-item">
+							<a class="nav-link" href={data.link}>
 								<span class="icon__container" >
 									<iconify-icon
 										class="icons"
@@ -31,3 +36,41 @@ import Logo from '../Logo.astro';
 		</nav>
 	</div>
 </header>
+
+
+<script>
+	const navButton = document.querySelector(".nav-btn");
+	const navList = document.querySelector(".nav-list");
+	const navOverlay = document.querySelector(".nav-overlay");
+	const navItems = document.querySelectorAll(".nav-item");
+
+	let showMenu = false;
+
+	navButton?.addEventListener("click", openMenu);
+	navOverlay?.addEventListener("click", openMenu);
+
+	function openMenu() {
+		if (!showMenu) {
+			navButton.classList.add("close");
+			navList.classList.add("show");
+			navOverlay.classList.add("show");
+			navItems.forEach(item => {
+				item.classList.add("show");
+			});
+
+			// Set the menu state to open
+			showMenu = true;
+		} else {
+			// Close the menu if it's open
+			navButton.classList.remove("close");
+			navList.classList.remove("show");
+			navOverlay.classList.remove("show");
+			navItems.forEach(item => {
+				item.classList.remove("show");
+			});
+
+			// Set the menu state to closed
+			showMenu = false;
+		}
+	}
+</script>

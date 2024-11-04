@@ -4,7 +4,7 @@ footer {
     display: flex;
     justify-content: space-between;
     min-height: 20dvh;
-    color: var(--primary-100);
+    color: var(--clr-red-100);
     align-items: center;
     padding: 1rem 4rem;
     flex-wrap: wrap;

@@ -1,21 +1,23 @@
 ---
 import './hero.css';
 import Boton from '../atoms/Boton.astro';
+
+import { Image } from 'astro:assets';
+import HeroImage from "../../assets/logo.jpg"
 ---
 
 <section class="hero">
 
 	<div class="hero__container">
-		<div class="text__content">
-			<h1 class="hero__title color__gradiente">Jhon Doe</h1>
-			<p class="hero__text">
-				Una descripción breve y llamativa sobre el tema principal del sitio
-			</p>
-			<Boton href="#" texto="Quiero saber más"/>
+		<div class="text__content text-center md:text-left">
+			<p>Hi, I am</p>
+			<h1 class="hero__title">Carbell Sarfo</h1>
+			<p class="mb-8">With me, you will blend strategic thinking and creative skills. <br> I develop brands, educates audiences, and drives progress through the power of technology.</p>
+			<a href="#" class="btn btn-red">Lorem Ipsum</a>
 		</div>
-    <img
+    <Image
 		class="hero__img"
-		src="/img/jhon-doe.webp"
+		src={HeroImage}
 		alt="Jhon Doe"
 		width="384"
     	height="384"
