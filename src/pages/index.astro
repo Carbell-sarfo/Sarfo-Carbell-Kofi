@@ -9,17 +9,180 @@ import Portfolio from '../components/Portfolio.astro';
 import Skills from '../components/skills/Skills.astro';
 import Layout from '../layouts/Layout.astro';
 import SquareLines from '../components/square-lines.astro';
+import Testimonial from '../components/testimonial.astro';
+
+import { Image } from 'astro:assets';
+import PodcastImg from '../assets/podcast-img.png';
+import Podcast from '../components/Podcast.astro';
 ---
 
 <Layout title="Carbell Sarfo | Creative Entrepreneur">
 	<Header origin={mainMenu} />
 	<SquareLines />
-	<main class="self-center w-full">
-		<Hero />
-		<About />
-		<Skills />
-		<Portfolio />
-		<BlogHome />
-	</main>
-	<Footer/>
+
+	<!-- Section Hero -->
+	<Hero />
+
+	<!-- Section podcast Banner -->
+	<section class="section-podcast">
+		<div class="container wrapper">
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+				<div>
+					<Image src={PodcastImg} alt="Carbell Sarfo's Podcast" />
+				</div>
+				<div class="md:col-span-2">
+					<h1>Come alive, learn how to do what you love.</h1>
+					<p>
+						<a
+							href="https://open.spotify.com/show/32GLcEgLjFgqqpUXkEg0ej"
+							>Build with Carbell Sarfo</a
+						> dives into the importance of online presence, personal
+						brand and practical means to do this. I make assets available
+						and share how I do it so we can all learn. Ready, take a
+						look.
+					</p>
+					<div>
+						<a
+							href="https://open.spotify.com/show/32GLcEgLjFgqqpUXkEg0ej"
+							class="btn btn-neutral mr-20"
+							target="_blank"
+						>
+							<i class="fa-brands fa-spotify"></i>
+							Listen on Spotify
+						</a>
+						<a
+							href="https://podcasts.apple.com/us/podcast/build-with-carbell-sarfo/id1719901160"
+							class="btn btn-neutral"
+							target="_blank"
+						>
+							<i class="fa-solid fa-podcast"></i>
+							Listen on Apple Podcast
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- End of section podcast banner -->
+
+	<About />
+
+	<Podcast />
+
+	<!-- My Bread and Butter -->
+	<section class="section-info" id="section-info">
+		<div class="container wrapper">
+			<div class="text-center">
+				<h2 class="heading-secondary white-text">
+					My Bread and Butter Services
+				</h2>
+			</div>
+			<div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+				<div class="info">
+					<i class="fa-solid fa-camera info__icon"></i>
+					<!-- <span class="info__number">30</span> -->
+					<span class="info__detail">photography</span>
+				</div>
+				<div class="info">
+					<i class="fa-solid fa-code info__icon"></i>
+					<!-- <span class="info__number">10</span> -->
+					<span class="info__detail">Web Development</span>
+				</div>
+				<div class="info">
+					<i class="fa-solid fa-pen-ruler info__icon"></i>
+					<!-- <span class="info__number">30</span> -->
+					<span class="info__detail">Graphic Design</span>
+				</div>
+				<div class="info">
+					<i class="fa-solid fa-bullhorn info__icon"></i>
+					<!-- <span class="info__number">5</span> -->
+					<span class="info__detail">Public Speaking</span>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<Testimonial />
+	<!-- <Skills /> -->
+	<!-- <Portfolio /> -->
+	<!-- <BlogHome /> -->
 </Layout>
+<Footer />
+
+<style lang="scss">
+	.section-podcast {
+		background-image: url(/img/podcast-bg.jpg);
+		padding: 4rem 0;
+	}
+
+	// ================ SECTION-INFO =============
+	.section-info {
+		padding: 5rem 0 15rem;
+		background-image: url(/img/info-bg.jpg);
+		background-size: cover;
+		background-position: bottom;
+		clip-path: polygon(100% 0, 100% 85%, 48% 100%, 0 85%, 0 0);
+
+		.info-container {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: auto;
+			gap: 10rem 3rem;
+			align-items: center;
+			justify-items: center;
+		}
+
+		.info {
+			width: 100%;
+			height: 100%;
+			text-align: center;
+			color: #fff;
+			background: rgba(0, 0, 0, 0.829);
+			padding: 2rem;
+			border-radius: 8px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			box-shadow: 0 5px 5px rgba(0, 0, 0, 0.364);
+			transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+			&:hover,
+			&:focus {
+				transform: translateY(-3px);
+				box-shadow: 0 10px 10px rgba(0, 0, 0, 0.164);
+			}
+
+			&__icon {
+				display: flex;
+				font-size: 1.6rem;
+				margin-bottom: 2rem;
+				width: 60px;
+				height: 60px;
+				border-radius: 40%;
+				border: 2px solid #fff;
+				align-items: center;
+				justify-content: center;
+			}
+			&__number {
+				display: block;
+				font-size: 5rem;
+				font-weight: bold;
+				margin: 2rem 0 1rem;
+				text-shadow: 1px 1px 0px #000;
+			}
+			&__detail {
+				display: block;
+				text-shadow: 1px 1px 0px #000;
+			}
+		}
+	}
+
+	@media screen and (min-width: 769px) {
+		.section-testimonials {
+			.testimonial {
+				max-width: 1000px;
+			}
+		}
+	}
+</style>

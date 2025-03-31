@@ -1,40 +1,424 @@
 ---
+import { Image } from 'astro:assets';
 import Logo from '../Logo.astro';
 import SocialIcons from '../SocialIcons.astro';
 import './Footer.css';
+
+import Map from "../../assets/map.png";
 ---
 
-<footer>
-	<div class="footer__container">
-		<Logo name="Jhon Doe" />
-		<SocialIcons width="23" height="23" />
-	</div>
 
-	<aside class="footer__links">
-		<ul>
-			<li>
-				<a class="footer__link" href="mailto:jhon.doe@gmail.com"
-					><span
-						><iconify-icon
-							icon="fluent:mail-28-regular"
-							width="27"
-							height="27"
-							style="color: #dcd8fc"></iconify-icon></span
-					>jhon.doe@gmail.com</a>
-			</li>
-			<li>
-				<a class="footer__link"
-                href="https://github.com/SofiDevO/primer-blog"
-                target="_blank"
-                rel="nofollow noreferrer noopener"
-					><span
-						><iconify-icon
-							icon="mdi:github"
-							width="27"
-							height="27"
-							style="color: #dcd8fc"></iconify-icon></span
-					>@JhonDoe</a>
-			</li>
-		</ul>
-	</aside>
+<!-- ============== SECTION CONTACT ============= -->
+<section class="section-footer" id="section-footer">
+    <!-- <img src="/assets/images/map.png" alt="map" class="map"> -->
+	<Image src={Map} alt="map of the world" class="map"/>
+    <div class="container wrapper">
+
+        <!-- <h1 class="footer-animate">"CARBELL DID IT"</h1> -->
+
+        <div class="footer-container">
+            <div class="contact-left">
+                <h2 class="heading-secondary text-center">Contact Me</h2>
+                <p>Let's make something new, different and more meaningful or make thing more visual or conceptual?</p>
+                <ul class="contact-details">
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <div>
+                            <span>Call Me</span>
+                            <p>+233 241 105 423</p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <div>
+                            <span>Email</span>
+                            <p><a href="mailto:carbellsarfo@gmail.com" title="Send me an Email">Carbellsarfo@gmail.com</a></p>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fa fa-map-marker-alt"></i>
+                        <div>
+                            <span>Address</span>
+                            <p>GB 180, Gbetsile</p>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="nav-social">
+                    <li>
+                        <a href="https://whatsapp.com/channel/0029VaDIw810G0Xl4zDqI90y" target="_blank" class="social-link" title="check me out on Instagram">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/carbellsarfo/" target="_blank" class="social-link" title="check me out on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://web.facebook.com/profile.php?id=100079153059971" target="_blank" class="social-link" title="Let's be freinds on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/carbellsarfo/" target="_blank" class="social-link" title="Let's connect on Linked In">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Carbell-sarfo" target="_blank" class="social-link" title="Github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
+                    <!-- <li>
+                        <a href="https://twitter.com/Carbelldidit" target="_blank" class="social-link" title="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li> -->
+                </ul>
+                <ul class="policy">
+                    <li>
+                        <a href="/privacy-policy">Privacy Policy</a>
+                    </li>
+                    <li>
+                        <a href="/terms-of-service">Terms of Use</a>
+                    </li>
+                </ul>
+            </div>
+
+            <form action="/form-success" class="contact-form" name="contact" method="POST" data-netlify="true">
+                <h2 class="heading-secondary text-center">Send a message</h2>
+                <select name="purpose" id="purpose">
+                    <option value="I'd like to chat about">I'd like to talk about</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Consulting Inquiry">Consulting Inquiry</option>
+                    <option value="Speaking Request">Speaking Request</option>
+                    <option value="Become a Partner">Become a Partner</option>
+                </select>
+                <input type="text" name="Name" id="fname" placeholder="Full Name" required class="input-field">
+                <input type="email" name="email" id="email" placeholder="Email Address" required class="input-field">
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Message" required class="input-field"></textarea>
+                <input type="submit" value="Send Message &longrightarrow;" >
+            </form>
+        </div>
+        
+    </div>
+</section>
+<footer>
+	<div class="container wrapper">
+		<!-- <p>&copy; {% year %} Carbell Kofi Sarfo. All Rights Reserved</p> -->
+		<p>&copy; 2024 Carbell Kofi Sarfo. All Rights Reserved</p>
+	</div>
 </footer>
+
+
+
+
+<style lang="scss">
+.section-footer {
+    background: var(--clr-black);
+    padding: 17rem 0 10rem;
+    margin-top: 8rem;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    clip-path: polygon(50% 10%, 100% 0, 100% 100%, 0 100%, 0 0);
+
+    .map {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 300px;
+        z-index: -1;
+    }
+
+    .footer-container {
+        width: 100%;
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5rem 1rem;
+    }
+
+    .footer-animate {
+        font-size: 100px;
+        text-transform: uppercase;
+        font-family: 'Oswald', sans-serif;
+        font-weight: bolder;
+        font-style: italic;
+        text-shadow: 3px 5px 0px var(--clr-red);
+        color: var(--clr-black);
+        letter-spacing: 3px;
+        line-height: 1;
+        margin: 5px 0;
+        padding-inline: 10px;
+    }
+
+    .contact-left {
+
+        ul {
+            list-style: none;
+            width: 100%;
+        }
+    }
+
+    .contact-details {
+        // padding-left: 7rem;
+        margin: 2rem 0;
+
+        li {
+            margin-bottom: 3rem;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            font-size: 1.4rem;
+
+            a {
+                color: var(--clr-gray-dark-2);
+                transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                font-family: "Poppins", sans-serif;
+                font-weight: 400;
+                text-overflow: wrap;
+
+                &:hover, &:focus {
+                    transform: scale(1.1) skew(5deg, 3deg);
+                    color: var(--clr-red);
+                }
+            }
+
+            i {
+                font-size: 1.5rem;
+                margin-right: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 60px;
+                height: 60px;
+                border-radius: 40%;
+                border: 2px solid var(--clr-gray-dark-2);
+            }
+
+            span {
+                // color: var(--clr-gray-light);
+                font-weight: lighter;
+            }
+        }
+    }
+
+    .nav-social {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+
+        li {
+
+            &:hover a, &:focus {
+                color: #fff;
+            }
+
+            &:nth-child(1) {
+                &:hover a, &:focus a {
+                    background-color: rgb(1, 165, 1);
+                    border-color: green;
+
+                }
+            }
+            &:nth-child(2) {
+                &:hover a, &:focus a {
+                    background-color: #c32aa3;
+                    border-color: #c32aa3;
+
+                }
+            }
+            &:nth-child(3) {
+                &:hover a, &:focus a {
+                    background-color: #3b5998;
+                    border-color: #3b5998;
+                }
+            }
+            &:nth-child(4) {
+                &:hover a, &:focus a {
+                    background-color: #0e76a8;
+                    border-color: #0e76a8
+                }
+            }
+            &:nth-child(5) {
+                &:hover a, &:focus a {
+                    background-color: #333 ;
+                    border-color: #333;
+                }
+            }
+            &:nth-child(6) {
+                &:hover a, &:focus a {
+                    background-color: #1da1f2;
+                    border-color: #1da1f2;
+                }
+            }
+        }
+
+        .social-link {
+            display: flex;
+            width: 60px;
+            height: 60px;
+            border-radius: 40%;
+            background: var(--clr-gray-light);
+            align-items: center;
+            justify-content: center;
+            color: var(--clr-black);
+            box-shadow: 0 4px 10px rgba(5, 0, 41, 0.274);
+            border: 3px solid var(--clr-white);
+            // margin: 3rem 0;
+            transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            i {
+                font-size: 2rem;
+            }
+
+            &:hover, &:focus {
+                transform: scale(.9) translateY(2px);
+                outline: 4px solid var(--clr-gray-dark-2);
+                outline-offset: 4px;
+                color: #fff;
+            }
+        }
+    }
+    .policy {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 250px;
+        margin: 5rem auto 0;
+
+        a {
+            display: inline-block;
+            color: var(--clr-gray-light);
+            transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+            &:hover, &:focus {
+                transform: scale(1.1) skew(5deg, 3deg);
+                color: var(--clr-red);
+            }
+        }
+    }
+}
+
+.contact-form {
+    width: 100%;
+    padding: 0 2rem;
+    text-align: center;
+
+    select {
+        width: 90%;
+        font-family: inherit;
+        color: inherit;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        font-size: inherit;
+        background-color: var(--clr-gray-dark-2);
+        border: 1px solid rgb(89, 89, 89);
+        margin-bottom: 2rem;
+        resize: none;
+        border-radius: 10px;
+        transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        &:focus {
+            border: 1px solid var(--clr-red);
+            width: 100%;
+        }
+    }
+
+    .input-field {
+        width: 90%;
+        font-family: inherit;
+        color: inherit;
+        border: none;
+        outline: none;
+        padding: 1rem;
+        font-size: 1.4rem;
+        background-color: var(--clr-gray-dark-2);
+        border: 1px solid rgb(89, 89, 89);
+        margin-bottom: 2rem;
+        resize: none;
+        border-radius: 10px;
+        transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+        &:focus, &:valid {
+            border: 1px solid var(--clr-red);
+            width: 100%;
+        }
+    }
+    input[type="submit"] {
+        display: inline-block;
+        margin: 0;
+        border: 0;
+        background-color: var(--clr-red);
+        color: #fff;
+        padding: 1.5rem 2rem;
+        transition: .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 2px solid transparent;
+        font-weight: bold;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.408);
+
+        &:hover, &:focus {
+            background: #fff;
+            color: #000;
+            border: 2px solid var(--clr-red);
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.708);
+            transform: translateY(-2px);
+        }
+    }
+}
+
+
+footer {
+    background-color: var(--clr-black);
+    text-align: center;
+    padding: 5px 0;
+
+    p {
+        font-size: 1.6rem;
+        color: var(--clr-gray-light)
+    }
+}
+
+
+
+
+
+
+
+/////////////////////////////////////
+        // Media Querries
+///////////////////////////////////
+/* Begin Media Queries*/
+@media screen and (min-width: 1020px) {
+
+    .section-footer .footer-container {
+        grid-template-columns: 1fr 2fr;
+        gap: 3rem;
+    }
+
+    .section-footer {
+
+        .contact-right {
+            padding-top: 8rem;
+
+            .contact-details {
+                padding-left: 2rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1019px) {
+    .section-footer {
+        .contact-right {
+            padding-top: 10rem;
+        }
+    }
+}
+</style>

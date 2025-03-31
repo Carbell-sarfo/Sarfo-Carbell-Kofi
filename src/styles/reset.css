@@ -50,7 +50,9 @@
 		var(--clr-white) 100%
 	);
 }
-*{
+*,
+*::before,
+*::after{
 	box-sizing: border-box;
 }
 html {
@@ -60,6 +62,7 @@ html {
 }
 body {
 	font-family: "poppins", sans-serif;
+	font-size: 1.3rem;
 	width: 100%;
 	background: var(--clr-gray-dark-2) no-repeat;
 	color: var(--clr-white);
@@ -88,8 +91,26 @@ p{
 }
 
 
+/* // ========== Container ============= */
+.container {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    max-width: 2580px;
+    height: 100%;
+}
+.wrapper {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+@media (min-width: 768px) {
+    .wrapper {
+        padding-right: 150px;
+        padding-left: 150px;
+    }
 
-
+}
 
 
 

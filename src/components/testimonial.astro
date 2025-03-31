@@ -1,0 +1,271 @@
+---
+import { Image } from 'astro:assets';
+
+import Test1 from '../assets/testimonial-1.png';
+import Test2 from '../assets/testimonial-2.png';
+import Test3 from '../assets/winnard.png';
+---
+
+<!-- My Testimonial --><!-- =============== SECTION TESTIMONIAL ================= -->
+<section class="section-testimonials" id="testimonials">
+	<div class="container wrapper">
+		<div class="text-center">
+			<h2 class="heading-primary">testimonials</h2>
+		</div>
+		<div class="text-center">
+			<h2 class="heading-secondary">
+				Here is what some client have to say
+			</h2>
+		</div>
+
+		<div class="testimonials-container">
+			<div class="testimonial fade">
+				<Image
+					src={Test1}
+					alt="Sameul Botchwey"
+					class="testimonial__img"
+				/>
+				<h4 class="testimonial__name">Samuel Botchwey</h4>
+				<p class="testimonial__text">
+					"Building a website. I thought to myself, how, where and
+					from whom would I be able to get a simple, elegant website.
+					Well, I worried until I found out a dear friend who gave his
+					all in making this a reality for me. A person open and
+					willing to listen and willing to learn to be able to provide
+					the best for you are qualities that best suits him."
+				</p>
+			</div>
+			<div class="testimonial fade">
+				<Image
+					src={Test2}
+					alt="Winnard Bansah"
+					class="testimonial__img"
+				/>
+				<h4 class="testimonial__name">Winnard Bansah</h4>
+				<p class="testimonial__text">
+					"Using words like 'hardworking' and 'amazing' sound cliché
+					but Carbell is an embodiment of that. Working with him gave
+					me a first person view as he was able to build and fully
+					implement multiple brand strategies from ground up with
+					great quality.
+					<br />
+					And there's even so much more behind the curtains"
+				</p>
+			</div>
+			<div class="testimonial fade">
+				<Image
+					src={Test3}
+					alt="Albert Owusu"
+					class="testimonial__img"
+				/>
+				<h4 class="testimonial__name">Albert Owusu</h4>
+				<p class="testimonial__text">
+					"Sarfo has helped me build my personal brand both online and
+					offline and has also directed me to deliver picture and
+					performance-driven video creative content with excellent
+					results. He is the best, and I strongly recommend him to
+					anyone who is interested in branding, communications, or
+					social development. "
+				</p>
+			</div>
+
+			<!-- Next and previous buttons -->
+			<a class="prev" onclick="plusSlides(-1)">
+				<i class="fa fa-chevron-left"></i>
+			</a>
+			<a class="next" onclick="plusSlides(1)">
+				<i class="fa fa-chevron-right"></i>
+			</a>
+		</div>
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+	</div>
+</section>
+
+<script lang="js">
+	// ===================== testimonial carousel ===================
+
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	// Next/previous controls
+	function plusSlides(n) {
+		showSlides((slideIndex += n));
+	}
+
+	// Thumbnail image controls
+	function currentSlide(n) {
+		showSlides((slideIndex = n));
+	}
+
+	function showSlides(n) {
+		let i;
+		let slides = document.getElementsByClassName('testimonial');
+		let dots = document.getElementsByClassName('dot');
+		if (n > slides.length) {
+			slideIndex = 1;
+		}
+		if (n < 1) {
+			slideIndex = slides.length;
+		}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = 'none';
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(' active', '');
+		}
+		slides[slideIndex - 1].style.display = 'block';
+		dots[slideIndex - 1].className += ' active';
+	}
+</script>
+
+<!-- ================= CSS Styling  -->
+<style lang="scss">
+	// ============= SECTION TESTIMONIAL ===============
+	.section-testimonials {
+		padding: 15rem 0 0;
+		background: var(--clr-gray-dark);
+
+		.testimonials-container {
+			position: relative;
+			padding: 0rem 120px 5rem;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 100px;
+			width: 100%;
+
+			// overflow-x: auto;
+			// overscroll-behavior-inline: contain;
+		}
+
+		/* Fading animation */
+		.fade {
+			animation-name: fade;
+			animation-duration: 1.5s;
+		}
+
+		@keyframes fade {
+			from {
+				opacity: 0.4;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+
+		.hide {
+			// display: none;
+		}
+		.prev,
+		.next {
+			cursor: pointer;
+			width: 50px;
+			height: 50px;
+			border-radius: 40%;
+			background-color: transparent;
+			border: 2px solid var(--clr-gray-dark-1);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			position: absolute;
+			top: 40%;
+
+			&:hover,
+			&:focus {
+				background-color: var(--clr-red);
+				color: #fff;
+			}
+		}
+		.prev {
+			left: 0;
+		}
+		.next {
+			right: 0;
+		}
+
+		// dashes at the bottom
+		.dot {
+			cursor: pointer;
+			height: 12px;
+			width: 12px;
+			background-color: var(--clr-gray-dark-2);
+			border-radius: 50%;
+			display: inline-block;
+			transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+			&:not(:last-child) {
+				margin-right: 0.5rem;
+			}
+		}
+		.active,
+		.dot:hover,
+		.dot:focus {
+			background-color: var(--clr-red);
+		}
+
+		.testimonial {
+			background: var(--clr-black);
+			width: 100%;
+			text-align: center;
+			border-radius: 10px;
+			transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			padding: 2.5rem 2rem;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.329);
+			margin-left: auto;
+			margin-right: auto;
+			transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			border-bottom: 2px solid var(--clr-red);
+			// position: relative;
+			// z-index: 1;
+			display: none;
+
+			&:hover {
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.129);
+				transform: translateY(-3px);
+			}
+
+			&__text {
+				text-align: center;
+			}
+
+			&__img {
+				width: auto;
+				height: 100px;
+				margin: 0rem auto;
+				margin-top: -50px;
+				border: 1px solid var(--clr-red);
+				border-radius: 50%;
+			}
+
+			&__name {
+				text-align: center;
+				margin-bottom: 3rem;
+			}
+		}
+	}
+
+
+
+
+
+
+	@media screen and (max-width: 768px) {
+		.section-testimonials {
+
+            .testimonials-container {
+                padding-inline: 0;
+            }
+
+			.prev,
+			.next {
+				cursor: pointer;
+				top: 100%;
+			}
+		}
+	}
+</style>

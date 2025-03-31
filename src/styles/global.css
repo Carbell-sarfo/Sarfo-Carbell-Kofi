@@ -2,4 +2,7 @@
 @import "./reset.css";
 
 /* Components */
-@import "./components.css"
+@import "./components.css";
+
+/* typography */
+@import "./typography.css";

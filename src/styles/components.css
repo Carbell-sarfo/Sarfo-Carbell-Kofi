@@ -1,10 +1,91 @@
+/* mixins */
+/* --ease:  cubic-bezier(0.175, 0.885, 0.32, 1.275); */
+
+
+/* ////////////////////// */
+/* //   BUTTONS */
+/* ///////////////////// */
 .btn {
-    padding: 1.8rem 4rem;
     display: inline-block;
-    font-size: 1.4rem;
+    outline: none;
+    border: none;
+    padding: 1.5rem 3rem;
+    font-family: "helvetica rounded", sans-serif;
+    font-size: 1.3rem;
+    border: 2px solid transparent;
+    box-shadow: 5px 5px 0px var(--clr-gray-dark-2),
+                7px 7px 0px var(--clr-red);
+    transition: ease .4s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
 }
+.btn:hover, .btn:focus {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.542);
+    transform: translateY(3px);
+}
+
+.btn:hover::after, .btn:focus::after {
+    top: 00%;
+}
+
+.btn::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: -1;
+    transition: ease .4s;
+}
+
+
+
 
 .btn-red {
     background-color: var(--clr-red);
-    color: var(--clr-white);
+    color: #fff;
+    border: 2px solid var(--clr-red);
+    box-shadow: 5px 5px 0px var(--clr-white),
+                7px 7px 0px var(--clr-red);
+
+}
+.btn-red:hover, .btn-red:focus {
+    color: var(--clr-red);
+    background: #fff;
+    border: 2px solid var(--clr-red);
+}
+.btn-red::after {
+    background-color: #fff;
+}
+
+
+
+.btn-neutral {
+    background-color: #fff;
+    color: #000;
+    border: 2px solid var(--clr-white);
+
+}
+.btn-neutral:hover, .btn-neutral:focus {
+    color: #fff;
+    background: var(--clr-black);
+    border: 2px solid var(--clr-white);
+}
+.btn-neutral::after {
+    background-color: var(--clr-black);
+}
+
+
+.btn-thin {
+    padding: 2rem 3rem;
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--clr-primary);
+
+}
+.btn-thin:hover, .btn-thin:focus {
+  color: darkred;
 }

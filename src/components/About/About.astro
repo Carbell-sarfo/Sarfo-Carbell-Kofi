@@ -1,30 +1,106 @@
 ---
+import { Image } from 'astro:assets';
 import SocialIcons from '../SocialIcons.astro';
 import Title from '../atoms/Title.astro';
 import "./about.css"
 
+import About1 from "../../assets/about-img-2.jpg"
+
+
 
 ---
 
-<section id="about" class="about">
-	<div class="about__container">
-		<img
-			class="about__img"
-			src="https://www.bpocenter.com.bo/wp-content/uploads/2017/11/10.jpg"
-			alt="Foto de perfil de Jhon Doe"
-		/>
-
-		<div class="about__content">
-			<Title margin="1rem" contenido="Sobre mí" />
-			<p class="about__text">
-				Habla sobre tí, tu profesión, lo que te gusta, cual es tu
-				pasatiempos, que haces en tu ratos libres, que cosas te apasionan y
-				has aprendido, ¿porqué elegiste está profesión?, ¿Tienes mascota?
-				¿Te gusta ir a caminar al parque? ¿Estudiaste algo más? ¿En que eres
-				bueno?
-			</p>
-			<SocialIcons width="25" height="25"/>
-		</div>
-	</div>
-
+<section class="section-about py-32" id="section-about">
+    <div class="container wrapper">
+        <div class="text-center">
+            <h2 class="heading-primary">About Me</h2>
+        </div>
+        <div class="text-center">
+            <h2 class="heading-secondary">this should be a brief bio</h2>
+        </div>
+        <div class="about-container grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div  class="about-text-1">
+                <h3 class="heading-tertiary">Who am I</h3>
+                <p>
+                    Hi, I am Carbell Kofi Sarfo.
+                    <br>
+                    I'm Carbell Kofi Sarfo, a creative entrepreneur and content creator, web designer and developer who shares my knowledge and documents my life on my YouTube channel and on my podcast.
+                    <br>
+                    In addition to creating YouTube content, I serve as a Brand Strategist at <a href="segulaglobal.com">Segula Global</a>. I'm known for my versatility, taking on diverse roles including leadership, graphic design, web development, and more.
+                </p>
+                <br>
+                <p>I don't like to define myself by the work I have done. I define myself by the work towards the goals I am headed. Skills can be taught, personality is inherent. I am addicted to learning, continually challenging myself, and do interesting things that are both aligned and not aligned to my future goals.</p>
+            </div>
+            <div class="about-image">
+				<Image src={About1} alt="Carbell Sarfo" />
+            </div>
+            <div class="about-text-2">
+                <h3 class="heading-tertiary">Where I am at the Moment</h3>
+                <p>Currently, I serve as a Brand Strategist at Segula Global, an executive branding organization that transforms leaders into thought leaders. In this role, I have continued building both hard and soft skills, while gaining valuable leadership abilities.</p>
+               
+            </div>
+            <div class="about-text-3">
+                <h3 class="heading-tertiary">Where I am headed</h3>
+                <p>I see a future of IT and brands, a future where innovation is a must, a future where business leaders have to be equipped in many disciplines and knowledge background. A future where you have to have a personal brand. And that is the future I am painting.</p>
+                <br>
+                <p>I am on the journey of discovering the limit to my abilities. To cause a change in someones <strong>THINKING</strong>. To instill in people the believe that "you don't need to be a superhero to be able to do it". Just a simple first step and then figure it on the way.</p>
+                <p>In the PDF attachment below, you may learn more about my life, experience, talents, education, and much more.</p>
+                <br>
+                <a href="./assets/files/Curriculum Vitae (Carbell Sarfo).pdf" target="blank" class="btn btn-red">Download CV</a>
+            </div>
+            
+        </div>
+    </div>
 </section>
+
+
+
+
+
+<style lang="scss">
+
+	.section-about {
+		border-bottom: 1px solid light gray;
+	}
+
+///////////////////////////////////////////////
+  //             MEDIA QUERIES
+  /////////////////////////////////////////////////
+
+@media screen and (min-width: 769px) {
+    .section-about {
+
+        .about-text-1 {
+            grid-area: aboutText-1;
+        }
+        .about-text-2 {
+            grid-area: aboutText-2;
+        }
+        .about-text-3 {
+            grid-area: aboutText-3;
+        }
+        .about-image {
+            grid-area: aboutImage;
+        }
+        .about-container {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+                "aboutText-1 aboutImage"
+                "aboutText-2 aboutImage"
+                "aboutText-3 aboutImage"
+            ;
+        }
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+
+    .section-about {
+        text-align: center;
+    }
+
+ 
+}
+
+</style>
