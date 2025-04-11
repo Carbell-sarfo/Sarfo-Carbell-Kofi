@@ -3,16 +3,612 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/header/Header.astro";
 import { mainMenu } from "../components/data/menuData";
 import Footer from "../components/Footer/Footer.astro";
+
+import { Image } from "astro:assets";
+import AboutImg from "../assets/speaker-about.png"
+
+import Featured1 from "../assets/alx-ventures.png";
+import Featured2 from "../assets/koforiduah-tech.png";
+import Featured3 from "../assets/upsa.png";
+import Featured4 from "../assets/comssa-upsa.png";
+import Test1 from "../assets/testimonial-1.png"
+
+import Type1 from "../assets/type-1.png"
+import Type2 from "../assets/type-2.png"
+import Type3 from "../assets/type-3.png"
+
+
 ---
 
-<Layout title="Acerca de Nosotros">
+<Layout title="Carbell Sarfo is a well groomed and practical speaker and workshop leader">
 
     <Header origin={mainMenu} />
 
+    <!-- Section hero -->
+    <section class="section-hero">
+        <div class="container wrapper">
+            <div class="hero-text">
+                <h1>Lorem Ipsum</h1>
+                <p>Carbell went above and beyond, traveling from Accra to Koforidua to support our mission of bridging the gap between TVET, digitalization, entrepreneurship, and sustainability. His session on Branding and Personal Development was not only insightful but also deeply impactful, equipping participants with the confidence and knowledge to position themselves effectively in their careers.</p>
+            </div>
+        </div>
+    </section>
+    <!-- end of section hero -->
 
+    <!-- section message -->
+    <section class="section-message">
+        <div class="container wrapper">
+            <div class="message-container">
+                <div class="message">
+                    <h3 class="mb-12">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis perspiciatis vel repellat, iure et accusantium?</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, illo?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Section About -->
+    <section class="section-about py-40">
+        <div class="container wrapper">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-20 items-center">
+                <div>
+                    <Image src={AboutImg} alt="Carbell's headshot" />
+                </div>
+                <div class="col-span-2">
+                    <h1 class="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ex dolorem fugit velit.</h1>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse quasi distinctio possimus quis facere itaque rerum a magni, culpa obcaecati, ducimus totam pariatur error, illo labore. Modi nulla excepturi minus? Maiores mollitia laboriosam est nesciunt non? Expedita voluptatibus vitae distinctio.</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <!-- End of about section -->
+
+
+
+    <!-- As featured section -->
+    <section class="section-featured bg-white py-40">
+        <div class="container wrapper">
+            <div class="text-center">
+                <h1 class="heading-primary text-black">As Featured In</h1>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 w-full items-center gap-20">
+                <div class="featured-icon">
+                    <Image src={Featured1} alt="Alx Ventures" />
+                </div>
+                <div class="featured-icon">
+                    <Image src={Featured2} alt="Alx Ventures" />
+                </div>
+                <div class="featured-icon">
+                    <Image src={Featured3} alt="Alx Ventures" />
+                </div>
+                <div class="featured-icon">
+                    <Image src={Featured4} alt="Alx Ventures" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End of as features section -->
+
+
+    <!-- My Testimonial --><!-- =============== SECTION TESTIMONIAL ================= -->
+<section class="section-testimonials" id="testimonials">
+	<div class="container wrapper">
+		<div class="text-center">
+			<h2 class="heading-primary">testimonials</h2>
+		</div>
+		<div class="text-center">
+			<h2 class="heading-secondary">
+				Here is what some client have to say
+			</h2>
+		</div>
+
+		<div class="testimonials-container">
+			<div class="testimonial fade">
+				<Image
+					src={Test1}
+					alt="Sameul Botchwey"
+					class="testimonial__img"
+				/>
+				<h4 class="testimonial__name">Dina Akpalu-Benson</h4>
+				<p class="testimonial__text">
+					"Carbell went above and beyond, traveling from Accra to Koforidua to support our mission of bridging the gap between TVET, digitalization, entrepreneurship, and sustainability. His session on Branding and Personal Development was not only insightful but also deeply impactful, equipping participants with the confidence and knowledge to position themselves effectively in their careers."
+				</p>
+			</div>
+
+			<!-- Next and previous buttons -->
+			<a class="prev" onclick="plusSlides(-1)">
+				<i class="fa fa-chevron-left"></i>
+			</a>
+			<a class="next" onclick="plusSlides(1)">
+				<i class="fa fa-chevron-right"></i>
+			</a>
+		</div>
+		<!-- The dots/circles -->
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+		</div>
+	</div>
+</section>
+<!-- End of section testimonials -->
+
+
+    <!-- Section Workshop types -->
+    <section class="section-types py-36">
+        <div class="container wrapper">
+            <div class="text-center">
+                <h1 class="heading-primary">Speaking Themes</h1>
+            </div>
+
+            <!-- speaking themes -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-20">
+                <!-- KeyNotes -->
+                <div class="type">
+                    <Image src={Type1} alt="Carbell's Keynotes" class="type-img" />
+                    <div class="type-overlay"></div>
+                    <h2 class="type-title">Workshops</h2>
+                    <p class="type-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, nulla!</p>
+                </div>
+
+                <!-- Virtual -->
+                <div class="type">
+                    <Image src={Type3} alt="Carbell's Keynotes" class="type-img" />
+                    <div class="type-overlay"></div>
+                    <h2 class="type-title">Workshops</h2>
+                    <p class="type-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, nulla!</p>
+                </div>
+
+                <!-- Workshops -->
+                <div class="type">
+                    <Image src={Type2} alt="Carbell's Keynotes" class="type-img" />
+                    <div class="type-overlay"></div>
+                    <h2 class="type-title">Workshops</h2>
+                    <p class="type-details">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facilis, nulla!</p>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <!-- End of workshop types -->
+
+
+
+    <!-- Section for bookings -->
+    <section class="section-booking">
+        <div class="container wrapper">
+            <div class="section-book mb-28 text-center md:px-28">
+                <h1 class="mb-12">All keynotes can be customized to fit the audience and industry needs. All keynotes can be delivered in-person or virtually.</h1>
+                <a href="/contact" class="btn btn-neutral">Book Carbell</a>
+            </div>
+
+            <div class="section-types mb-20 md:px-28">
+                <h1 class="heading-secondary text-center">Keynotes are designed for:</h1>
+                <div class="grid grid-cols-2 gap-8 md:ml-20">
+                    <ul class="keynote-list">
+                        <li>Corporations</li>
+                        <li>Corporations</li>
+                        <li>Corporations</li>
+                        <li>Corporations</li>
+                    </ul>
+                    <ul class="keynote-list">
+                        <li>Corporations</li>
+                        <li>Corporations</li>
+                        <li>Corporations</li>
+                        <li>Corporations</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="text-center md:px-28">And lots more! Contact us with your event details today, and we’ll walk through what a speaking engagement with Kindra can do for your organization.</p>
+        </div>
+    </section>
+    <!-- End of section for bookings -->
     
+
+
+    <!-- Download speaking profile -->
+    <section class="section-download pt-40 text-center">
+        <div class="container wrapper">
+            <h1 class="heading-primary">Downloads</h1>
+            <h2 class="heading-secondary">For before & during an event</h2>
+            <a href="/assets/carbell-sarfo (speaking profile).pdf" target="_blank" class="btn btn-neutral">Download Speaker Profile</a>
+        </div>
+    </section>
+    <!-- End of download speaking profile -->
     
-    
-    
+
+
+
     <Footer />
 </Layout>
+
+
+
+
+<style lang="scss">
+
+.section-hero {
+    width: 100%;
+    height: 100vh;
+    min-height: 90vh;
+    background-image: url(./../assets/speaking-bg.png);
+    background-size: cover;
+    background-position: center;
+
+    .hero-text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        max-width: 768px;
+        margin-inline: auto;
+
+        h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            font-style: italic;
+        }
+    }
+}
+
+
+.section-message {
+    width: 100%;
+    margin-top: -5rem;
+    
+    .message-container {
+        background-color: var(--clr-red);
+        padding: 7rem 2rem;
+        border-radius: 1rem;
+    }
+
+    .message {
+        text-align: center;
+        max-width: 768px;
+        margin-inline: auto;
+
+        h3 {
+            font-size: 2rem;
+            line-height: 1.5;
+        }
+    }
+}
+
+
+
+
+// ========= section featured
+.section-featured {
+
+    .featured-icon {
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+        border: 2px solid #b9b9b9;
+        display: flex;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.478);
+        transition: .4s;
+
+        &:hover,
+        &:focus {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.278);
+        }
+    }
+}
+// End of section featured
+
+
+
+
+// ========= Section workshop types ===============
+.section-types {
+    border-top: 1px solid rgb(54, 54, 54);
+
+    .type {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.282);
+        transition: .4s;
+
+        .type-overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.825);
+            position: absolute;
+            top: 0;
+            left: 0;
+            // z-index: -1;
+        }
+
+        .type-img {
+            width: 100%;
+            transition: .3s;
+        }
+
+        .type-title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 2rem;
+            font-weight: bolder;
+            transition: .4s;
+        }
+
+        .type-details {
+            width: 100%;
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            padding-inline: 3rem;
+            opacity: 0;
+                    }
+
+        // When card is hovered upon
+        &:hover {
+            transform: scale(1.07) translateY(5px);
+
+            .type-img {
+                filter: blur(10px);
+                transform: scale(1.1);
+            }
+
+            .type-title {
+                top: 35%;
+                left: 50%;
+                color: var(--clr-red);
+            }
+            .type-details {
+                opacity: 1;
+                transition: .4s;
+                transition-delay: .2s;
+            }
+        }
+    }
+}
+// End of section workshop
+
+
+
+
+
+// ================= section-booking 
+.section-booking {
+    width: 100%;
+    background-image: url(../assets/red-bg.png);
+    background-size: cover;
+    padding: 10rem 0;
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bolder;
+        line-height: 1.5;
+
+    }
+
+    .keynote-list {
+        // list-style: disc;
+
+        li {
+            // display: block;
+            position: relative;
+            width: 100%;
+            padding-left: 2.5rem;
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 1.5rem;
+                height: 1.5rem;
+                background-color: #000;
+                position: absolute;
+                left: 0;
+                top: 5px;
+                box-shadow: 2px 3px 0px #fff;
+            }
+
+        }
+    }
+}
+// End of section booking
+
+
+
+
+// ============= SECTION TESTIMONIAL ===============
+.section-testimonials {
+		padding: 15rem 0;
+		background: var(--clr-gray-dark);
+
+		.testimonials-container {
+			position: relative;
+			padding: 0rem 120px 5rem;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 100px;
+			width: 100%;
+
+			// overflow-x: auto;
+			// overscroll-behavior-inline: contain;
+		}
+
+		/* Fading animation */
+		.fade {
+			animation-name: fade;
+			animation-duration: 1.5s;
+		}
+
+		@keyframes fade {
+			from {
+				opacity: 0.4;
+			}
+			to {
+				opacity: 1;
+			}
+		}
+
+		.hide {
+			// display: none;
+		}
+		.prev,
+		.next {
+			cursor: pointer;
+			width: 50px;
+			height: 50px;
+			border-radius: 40%;
+			background-color: transparent;
+			border: 2px solid var(--clr-gray-dark-1);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			position: absolute;
+			top: 40%;
+
+			&:hover,
+			&:focus {
+				background-color: var(--clr-red);
+				color: #fff;
+			}
+		}
+		.prev {
+			left: 0;
+		}
+		.next {
+			right: 0;
+		}
+
+		// dashes at the bottom
+		.dot {
+			cursor: pointer;
+			height: 12px;
+			width: 12px;
+			background-color: var(--clr-gray-dark-2);
+			border-radius: 50%;
+			display: inline-block;
+			transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+			&:not(:last-child) {
+				margin-right: 0.5rem;
+			}
+		}
+		.active,
+		.dot:hover,
+		.dot:focus {
+			background-color: var(--clr-red);
+		}
+
+		.testimonial {
+			background: var(--clr-black);
+			width: 100%;
+			text-align: center;
+			border-radius: 10px;
+			transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			padding: 2.5rem 2rem;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.329);
+			margin-left: auto;
+			margin-right: auto;
+			transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+			border-bottom: 2px solid var(--clr-red);
+			// position: relative;
+			// z-index: 1;
+			display: none;
+
+			&:hover {
+				box-shadow: 0 5px 10px rgba(0, 0, 0, 0.129);
+				transform: translateY(-3px);
+			}
+
+			&__text {
+				text-align: center;
+			}
+
+			&__img {
+				width: auto;
+				height: 100px;
+				margin: 0rem auto;
+				margin-top: -50px;
+				border: 1px solid var(--clr-red);
+				border-radius: 50%;
+			}
+
+			&__name {
+				text-align: center;
+				margin-bottom: 3rem;
+			}
+		}
+	}
+	@media screen and (max-width: 768px) {
+		.section-testimonials {
+
+            .testimonials-container {
+                padding-inline: 0;
+            }
+
+			.prev,
+			.next {
+				cursor: pointer;
+				top: 100%;
+			}
+		}
+	}
+</style>
+
+
+
+
+
+<script lang="js">
+	// ===================== testimonial carousel ===================
+
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	// Next/previous controls
+	function plusSlides(n) {
+		showSlides((slideIndex += n));
+	}
+
+	// Thumbnail image controls
+	function currentSlide(n) {
+		showSlides((slideIndex = n));
+	}
+
+	function showSlides(n) {
+		let i;
+		let slides = document.getElementsByClassName('testimonial');
+		let dots = document.getElementsByClassName('dot');
+		if (n > slides.length) {
+			slideIndex = 1;
+		}
+		if (n < 1) {
+			slideIndex = slides.length;
+		}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = 'none';
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(' active', '');
+		}
+		slides[slideIndex - 1].style.display = 'block';
+		dots[slideIndex - 1].className += ' active';
+	}
+</script>

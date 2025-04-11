@@ -1,10 +1,134 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Header from "../components/header/Header.astro";
+import { mainMenu } from "../components/data/menuData";
+import Footer from "../components/Footer/Footer.astro";
 
-
+import Image from "astro/components/Image.astro";
+import AboutImg from "./../assets/about-img-3.png"
+import Podcast from "../components/Podcast.astro";
 ---
 
-<Layout title="Acerca de Nosotros">
+<Layout title="About Carbell Sarfo">
 
-    <h2>Holi moli</h2>
+    <Header origin={mainMenu} />
+
+    <!-- About BG -->
+    <section class="section-hero">
+        <div class="container wrapper">
+            <div class="about-text">
+                <h1>Lorem Ipsam sit amet</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi culpa nemo nihil ad, quibusdam cupiditate aperiam ratione. Rerum, aperiam mollitia!</p>
+            </div>
+        </div>
+    </section>
+    <!-- end of about hero -->
+
+
+    <!-- section mission -->
+    <section class="section-mission">
+        <div class="container wrapper">
+            <div class="mission-container">
+                <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi illum aperiam velit magni quis obcaecati, soluta voluptas fugit modi repellat. Similique inventore, magnam suscipit sed ipsam voluptates quidem exercitationem sint.</h3>
+    
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, officiis?</p>
+            </div>
+        </div>
+    </section>
+    <!-- End of section mission -->
+
+
+    <section class="section-about py-40">
+        <div class="container wrapper">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+                <div>
+                    <Image src={AboutImg} alt="Carbell's headshot" />
+                </div>
+                <div class="col-span-2">
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse quasi distinctio possimus quis facere itaque rerum a magni, culpa obcaecati, ducimus totam pariatur error, illo labore. Modi nulla excepturi minus? Maiores mollitia laboriosam est nesciunt non? Expedita voluptatibus vitae distinctio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- section podcast -->
+    <Podcast />
+
+
+    <!-- Section youTube -->
+     <section class="section-youtube">
+        <div class="container wrapper">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3qtmpFjg3Tw?si=pZwz-baSjeemGkF2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="yt"></iframe>
+        </div>
+     </section>
+    
+    
+    
+    <Footer />
 </Layout>
+
+
+
+
+
+
+<style lang="scss">
+.section-hero {
+    width: 100%;
+    height: 90vh;
+    background-image: url(./../assets/about-bg.png);
+    background-size: cover;
+    background-position: right;
+    background-attachment: fixed;
+
+    .about-text {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        max-width: 760px;
+        margin-inline: auto;
+        text-align: center;
+
+
+        h1 {
+            font-size: 5rem;
+            font-weight: bold;
+        }
+    }
+}
+
+
+
+.section-mission {
+    width: 100%;
+    padding: 10rem 0;
+    text-align: center;
+    background-color: var(--clr-red);
+
+    .mission-container {
+        width: 100%;
+        max-width: 850px;
+        margin-inline: auto;
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+}
+
+
+.section-youtube {
+
+    .yt {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+    }
+}
+</style>

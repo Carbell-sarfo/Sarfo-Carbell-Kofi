@@ -78,6 +78,9 @@ p{
 	color: var(--clr-red-100);
 	font-size: var(--text-general);
 }
+img {
+	width: 100%;
+}
 
 .color__gradiente {
 	background: var(--text-gradient);
